@@ -1,0 +1,93 @@
+package com.smartech.vendorportal.services;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.smartech.vendorportal.entities.Rfq;
+import com.smartech.vendorportal.entities.RfqDto;
+import com.smartech.vendorportal.entities.RfqLine;
+import com.smartech.vendorportal.entities.RfqLineDto;
+import com.smartech.vendorportal.repositories.RfqLineRepository;
+import com.smartech.vendorportal.repositories.RfqRepository;
+
+@Service
+public class RfqServiceImpl implements RfqService {
+	@Autowired
+	RfqRepository rfqRepository;
+	@Autowired
+	RfqLineRepository rfqLineRepository;
+
+	@Override
+	public List<Rfq> retriveAllRFQ() {
+
+		return rfqRepository.findAll();
+	}
+
+	@Override
+	public Rfq addRFQ(Rfq rfq) {
+		for (int i = 0; i < rfq.getRfqline().size(); i++) {
+			rfqLineRepository.save(rfq.getRfqline().get(i));
+		}
+		return rfqRepository.save(rfq);
+	}
+
+	@Override
+	public void deleteRFQById(Long id) {
+		rfqRepository.deleteById(id);
+
+	}
+
+	@Override
+	public Rfq updateRFQ(Rfq rfq) {
+		return rfqRepository.save(rfq);
+	}
+
+	@Override
+	public Rfq retrieveOneById(Long id) {
+
+		return rfqRepository.findById(id).get();
+	}
+
+	@Override
+	public List<Rfq> retriveAllRfqByUser(String email) {
+		return rfqRepository.findAllRfqByUser(email);
+	}
+
+	public RfqDto addRfqTORfqDtomaximo(Long id) {
+
+		Rfq rfq = retrieveOneById(id);
+		List<RfqLine> rfqline = rfq.getRfqline();
+		List<RfqLineDto> rfqLinesDto = new ArrayList<>();
+		RfqLineDto rfqLineDto = new RfqLineDto();
+		RfqDto rfqDto = new RfqDto();
+		rfqDto.setRfqnum(rfq.getRfqnum());
+		rfqDto.setSiteid(rfq.getSiteid());
+		rfqDto.setVendor(rfq.getUser().getUsername());
+		rfqDto.setDescription(rfq.getDescription());
+		rfqDto.setStatus(rfq.getStatus());
+		rfqDto.setRequireddate(rfq.getRequireddate());
+		rfqDto.setPurchaseagent(rfq.getPurchaseagent());
+
+		for (int i = 0; i < rfqline.size(); i++) {
+			rfqLineDto.setRfqlinenum(rfqline.get(i).getRfqlinenum());
+			rfqLineDto.setItemnum(rfqline.get(i).getItemnum());
+			rfqLineDto.setDescription(rfqline.get(i).getDescription());
+			rfqLineDto.setOrderqty(rfqline.get(i).getOrderqty());
+			rfqLineDto.setOrderunit(rfqline.get(i).getOrderunit());
+			rfqLineDto.setUnitcost(rfqline.get(i).getUnitcost());
+			rfqLineDto.setLinecost(rfqline.get(i).getLinecost());
+			rfqLineDto.setQuotationqty(rfqline.get(i).getQuotationqty());
+			rfqLineDto.setQuoteStartDate(rfqline.get(i).getQuoteStartDate());
+			rfqLineDto.setQuoteEndDate(rfqline.get(i).getQuoteEndDate());
+			rfqLineDto.setDelivryDate(rfqline.get(i).getDelivryDate());
+			rfqLinesDto.add(rfqLineDto);
+		}
+		rfqDto.setRfqline(rfqLinesDto);
+
+		return rfqDto;
+
+	}
+
+	
+}
