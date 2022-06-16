@@ -47,6 +47,7 @@ import org.apache.logging.log4j.LogManager;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.time.LocalDate;
 import java.util.Base64;
 
 import net.bytebuddy.utility.RandomString;
@@ -128,6 +129,8 @@ public class AuthController {
 					signUpRequest.getRevenu(), signUpRequest.getDateestablished(), userverified.getVerifyAccountToken(),
 					userverified.getDateCreation());
 			user.setRoles(userverified.getRoles());
+			LocalDate today = LocalDate.now();
+			user.setDateCreation(java.sql.Date.valueOf(today));
 			user.setStatus(EStatus.Submitted);
 			userControlservice.addUser(user);
 			userControlservice.saveHistory(user, "", user.getStatus());

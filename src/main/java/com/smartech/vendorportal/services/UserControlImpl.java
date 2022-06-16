@@ -246,8 +246,10 @@ public class UserControlImpl implements UserControl {
 		LocalDate today = LocalDate.now();
 		LocalDate newdate = today.minusDays(5);
 		for (int i = 0; i < userUnconfirmed.size(); i++) {
-			if (userUnconfirmed.get(i).getStatus().equals(EStatus.Draft)
-					&& userUnconfirmed.get(i).getDateCreation().equals(java.sql.Date.valueOf(newdate)))
+			if ((userUnconfirmed.get(i).getStatus().equals(EStatus.Draft)
+					&& userUnconfirmed.get(i).getDateCreation().equals(java.sql.Date.valueOf(newdate))) || 
+			(userUnconfirmed.get(i).getStatus().equals(EStatus.Submitted)
+					&& userUnconfirmed.get(i).getDateCreation().equals(java.sql.Date.valueOf(newdate))))
 				userRepository.delete(userUnconfirmed.get(i));
 			String message = "your Account has been deleted cause it is not verified";
 			utilities.sendEmail(userUnconfirmed.get(i).getEmail(), message);

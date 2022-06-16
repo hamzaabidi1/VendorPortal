@@ -140,5 +140,7 @@ public class VendorController {
 	public Boolean findRequest(@PathVariable("email") String email) {
 		return requestUpdateProfileService.findRequestByEmail(email);
 	}
+	
+	
 
 }
