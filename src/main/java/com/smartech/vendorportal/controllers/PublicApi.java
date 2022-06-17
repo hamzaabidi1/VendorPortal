@@ -34,5 +34,14 @@ public class PublicApi {
 		return rfqService.addRFQ(rfq);
 		
 	}
+	
+	
+	@PostMapping("/addRfqUsername/{username}")
+	public Rfq addRfqUserName(@RequestBody Rfq rfq,@PathVariable("username") String username) {
+		User user=userControl.getbyUserName(username);
+		rfq.setUser(user);
+		return rfqService.addRFQ(rfq);
+		
+	}
 
 }
