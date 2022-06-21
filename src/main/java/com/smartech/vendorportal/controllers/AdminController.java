@@ -149,12 +149,9 @@ public class AdminController {
 		RestTemplate restTemplate = new RestTemplate();
 		// HttpHeaders
 		HttpHeaders headers = new HttpHeaders();
-		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
-		// Request to return JSON format
-		headers.setContentType(MediaType.APPLICATION_JSON);
+	
 		headers.set(key, value);
-		headers.set("x-method-override", "PATCH");
-		headers.set("properties", "*");
+		
 		// Data attached to the request.
 		HttpEntity<MaximoRequest> requestBody = new HttpEntity<>(maximoRequest, headers);
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
@@ -163,21 +160,19 @@ public class AdminController {
 				+ maximoRequest.getCompany() + "\"";
 		ResponseEntity<MaximoRequestList> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,
 				MaximoRequestList.class);
-		if (resultGet.getBody().getMember().get(0).getCompany() == null) { // Send request with POST method.
-			ResponseEntity<MaximoRequest> result = restTemplate.postForEntity(
-					maximourl+"/maxrest/oslc/os/MXVENDOR?lean=1", requestBody,
-					MaximoRequest.class);
+		if (resultGet.getBody().getMember().size() == 0) { // Send request with POST method.
+			ResponseEntity<Integer> result = restTemplate.exchange(maximourl+"/maxrest/oslc/os/MXVENDOR?lean=1", HttpMethod.POST, requestBody,
+					Integer.class);
 			System.out.println("Status code:" + result.getStatusCode());
 			// Code = 201.
 			if (result.getStatusCode() == HttpStatus.CREATED) {
 				System.out.println("(Client Side) Vendor Created: ");
 				return ResponseEntity.ok().body(true);
 			}
-		} else { // Send request with POST method.
-			ResponseEntity<MaximoRequest> result = restTemplate.postForEntity(
-					maximourl+"/maxrest/oslc/os/MXVENDOR/"
-							+ resultGet.getBody().getMember().get(0).getCompaniesid() + "?lean=1",
-					requestBody, MaximoRequest.class);
+		} else { 
+			Long s=resultGet.getBody().getMember().get(0).getCompaniesid();
+			ResponseEntity<Integer> result = restTemplate.exchange(maximourl+"/maxrest/oslc/os/MXVENDOR/"+s+"?lean=1", HttpMethod.POST, requestBody,
+					Integer.class);
 			System.out.println("Status code:" + result.getStatusCode());
 			// Code = 200.
 			if (result.getStatusCode() == HttpStatus.OK) {
