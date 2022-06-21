@@ -150,7 +150,12 @@ public class AdminController {
 		// HttpHeaders
 		HttpHeaders headers = new HttpHeaders();
 	
+		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
+		// Request to return JSON format
+		headers.setContentType(MediaType.APPLICATION_JSON);
 		headers.set(key, value);
+		headers.set("x-method-override", "PATCH");
+		headers.set("properties", "*");
 		
 		// Data attached to the request.
 		HttpEntity<MaximoRequest> requestBody = new HttpEntity<>(maximoRequest, headers);
@@ -171,8 +176,8 @@ public class AdminController {
 			}
 		} else { 
 			Long s=resultGet.getBody().getMember().get(0).getCompaniesid();
-			ResponseEntity<Integer> result = restTemplate.exchange(maximourl+"/maxrest/oslc/os/MXVENDOR/"+s+"?lean=1", HttpMethod.POST, requestBody,
-					Integer.class);
+			ResponseEntity<MaximoRequest> result = restTemplate.exchange(maximourl+"/maxrest/oslc/os/MXVENDOR/"+s+"?lean=1", HttpMethod.POST, requestBody,
+					MaximoRequest.class);
 			System.out.println("Status code:" + result.getStatusCode());
 			// Code = 200.
 			if (result.getStatusCode() == HttpStatus.OK) {
