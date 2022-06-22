@@ -27,7 +27,7 @@ public class MaximoRequest implements Serializable {
 	private String phone;
 	@JsonProperty("sm_pwemail")
 	private String sm_pwemail;
-	@JsonProperty("sm_country")
+	@JsonProperty("sm_country_description")
 	private String sm_country;
 	@JsonProperty("address1")
 	private String address1;

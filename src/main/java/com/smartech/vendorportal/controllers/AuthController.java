@@ -224,5 +224,12 @@ public class AuthController {
 		return requestUpdateProfileService.numberofRequest();
 
 	}
+	
+	
+	@GetMapping("/retrievestatusoneuserbyemail/{email}")
+	public String retrieveStatusOneUserByEmail(@Valid @PathVariable("email")String email) {
+		return userControlservice.retrieveStatusOneUserByEmail( email);
+
+	}
 
 }

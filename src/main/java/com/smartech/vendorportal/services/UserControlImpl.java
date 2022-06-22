@@ -257,4 +257,10 @@ public class UserControlImpl implements UserControl {
 
 	}
 
+	@Override
+	public String retrieveStatusOneUserByEmail(String email) {
+		User user= userRepository.findByEmail(email);
+		return user.getStatus().toString();
+	}
+
 }

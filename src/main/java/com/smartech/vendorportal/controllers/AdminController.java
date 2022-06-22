@@ -157,6 +157,15 @@ public class AdminController {
 		headers.set("x-method-override", "PATCH");
 		headers.set("properties", "*");
 		
+		
+		HttpHeaders headersadd = new HttpHeaders();
+		
+		headersadd.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
+		// Request to return JSON format
+		headersadd.setContentType(MediaType.APPLICATION_JSON);
+		headersadd.set(key, value);
+		headersadd.set("properties", "*");
+		HttpEntity<MaximoRequest> addbody = new HttpEntity<>(maximoRequest, headersadd);
 		// Data attached to the request.
 		HttpEntity<MaximoRequest> requestBody = new HttpEntity<>(maximoRequest, headers);
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
@@ -166,8 +175,8 @@ public class AdminController {
 		ResponseEntity<MaximoRequestList> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,
 				MaximoRequestList.class);
 		if (resultGet.getBody().getMember().size() == 0) { // Send request with POST method.
-			ResponseEntity<Integer> result = restTemplate.exchange(maximourl+"/maxrest/oslc/os/MXVENDOR?lean=1", HttpMethod.POST, requestBody,
-					Integer.class);
+			ResponseEntity<MaximoRequest> result = restTemplate.exchange(maximourl+"/maxrest/oslc/os/MXVENDOR?lean=1", HttpMethod.POST, addbody,
+					MaximoRequest.class);
 			System.out.println("Status code:" + result.getStatusCode());
 			// Code = 201.
 			if (result.getStatusCode() == HttpStatus.CREATED) {
