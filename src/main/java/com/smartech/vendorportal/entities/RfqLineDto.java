@@ -1,6 +1,5 @@
 package com.smartech.vendorportal.entities;
 
-import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,33 +8,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RfqLineDto {
 	@JsonProperty("rfqlinenum")
 	private String rfqlinenum;
-	private String itemnum;
-	private String description;
-	private double orderqty;
-
-	private String orderunit;
 	@JsonProperty("cost")
 	private double unitcost;
-	private double linecost;
 	@JsonProperty("quantity")
 	private double quotationqty;
 	@JsonProperty("QUOTESTARTDATE")
-	private Date quoteStartDate;
+	private String quoteStartDate;
 	@JsonProperty("QUOTEENDDATE")
-	private Date quoteEndDate;
+	private String quoteEndDate;
 	@JsonProperty("DELIVERYDATE")
-	private Date delivryDate;
+	private String delivryDate;
 
-	public RfqLineDto(String rfqlinenum, String itemnum, String description, double orderqty, String orderunit,
-			double unitcost, double linecost,double quotationqty,Date quoteStartDate,Date quoteEndDate, Date delivryDate) {
+	public RfqLineDto(String rfqlinenum ,
+			double unitcost, double linecost,double quotationqty,String quoteStartDate,String quoteEndDate, String delivryDate) {
 		super();
 		this.rfqlinenum = rfqlinenum;
-		this.itemnum = itemnum;
-		this.description = description;
-		this.orderqty = orderqty;
-		this.orderunit = orderunit;
 		this.unitcost = unitcost;
-		this.linecost = linecost;
 		this.quotationqty=quotationqty;
 		this.quoteStartDate=quoteStartDate;
 		this.quoteEndDate=quoteEndDate;
@@ -54,37 +42,7 @@ public class RfqLineDto {
 		this.rfqlinenum = rfqlinenum;
 	}
 
-	public String getItemnum() {
-		return itemnum;
-	}
 
-	public void setItemnum(String itemnum) {
-		this.itemnum = itemnum;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public double getOrderqty() {
-		return orderqty;
-	}
-
-	public void setOrderqty(double orderqty) {
-		this.orderqty = orderqty;
-	}
-
-	public String getOrderunit() {
-		return orderunit;
-	}
-
-	public void setOrderunit(String orderunit) {
-		this.orderunit = orderunit;
-	}
 
 	public double getUnitcost() {
 		return unitcost;
@@ -92,14 +50,6 @@ public class RfqLineDto {
 
 	public void setUnitcost(double unitcost) {
 		this.unitcost = unitcost;
-	}
-
-	public double getLinecost() {
-		return linecost;
-	}
-
-	public void setLinecost(double linecost) {
-		this.linecost = linecost;
 	}
 
 	public double getQuotationqty() {
@@ -110,27 +60,27 @@ public class RfqLineDto {
 		this.quotationqty = quotationqty;
 	}
 
-	public Date getQuoteStartDate() {
+	public String getQuoteStartDate() {
 		return quoteStartDate;
 	}
 
-	public void setQuoteStartDate(Date quoteStartDate) {
+	public void setQuoteStartDate(String quoteStartDate) {
 		this.quoteStartDate = quoteStartDate;
 	}
 
-	public Date getQuoteEndDate() {
+	public String getQuoteEndDate() {
 		return quoteEndDate;
 	}
 
-	public void setQuoteEndDate(Date quoteEndDate) {
+	public void setQuoteEndDate(String quoteEndDate) {
 		this.quoteEndDate = quoteEndDate;
 	}
 
-	public Date getDelivryDate() {
+	public String getDelivryDate() {
 		return delivryDate;
 	}
 
-	public void setDelivryDate(Date delivryDate) {
+	public void setDelivryDate(String delivryDate) {
 		this.delivryDate = delivryDate;
 	}
 	

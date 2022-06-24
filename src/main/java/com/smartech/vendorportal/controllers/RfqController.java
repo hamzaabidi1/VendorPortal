@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import com.smartech.vendorportal.entities.MaximoRequest;
 import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqLine;
@@ -99,7 +103,10 @@ public class RfqController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.set(key,"bWF4YWRtaW46bWF4YWRtaW4xMjM=");
 		HttpEntity<RfqDto> requestBody = new HttpEntity<>(rfqDto, headers);
-		 restTemplate.postForEntity(uri, requestBody, RfqDto.class);	
+		
+		ResponseEntity<Integer> result = restTemplate.exchange(uri, HttpMethod.POST, requestBody,
+				Integer.class);
+		 //restTemplate.postForEntity(uri, requestBody, RfqDto.class);	
 		 Rfq rfq=rfqService.retrieveOneById(id);
 		 rfq.setStatusofSend(true);
 		 LocalDate today = LocalDate.now();

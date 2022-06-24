@@ -19,23 +19,14 @@ public class RfqDto implements Serializable {
 	private String siteid;
 	@JsonProperty("VENDOR")
 	private String vendor;
-	private String description;
-	private String status;
-	private String requireddate;
-	private String purchaseagent;
 	@JsonProperty("rfqline")
 	private List<RfqLineDto> rfqline;
 	
-	public RfqDto(String rfqnum,String siteid,String vendor, String description, String status, String requireddate, String purchaseagent,
-			List<RfqLineDto> rfqline) {
+	public RfqDto(String rfqnum,String siteid,String vendor,List<RfqLineDto> rfqline) {
 		super();
 		this.rfqnum = rfqnum;
 		this.siteid=siteid;
 		this.vendor=vendor;
-		this.description = description;
-		this.status = status;
-		this.requireddate = requireddate;
-		this.purchaseagent = purchaseagent;
 		this.rfqline = rfqline;
 		
 	}
@@ -72,37 +63,7 @@ public class RfqDto implements Serializable {
 		this.vendor = vendor;
 	}
 
-	public String getDescription() {
-		return description;
-	}
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public String getRequireddate() {
-		return requireddate;
-	}
-
-	public void setRequireddate(String requireddate) {
-		this.requireddate = requireddate;
-	}
-
-	public String getPurchaseagent() {
-		return purchaseagent;
-	}
-
-	public void setPurchaseagent(String purchaseagent) {
-		this.purchaseagent = purchaseagent;
-	}
 
 	public List<RfqLineDto> getRfqline() {
 		return rfqline;

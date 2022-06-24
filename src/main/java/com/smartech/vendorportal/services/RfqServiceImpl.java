@@ -65,24 +65,15 @@ public class RfqServiceImpl implements RfqService {
 		rfqDto.setRfqnum(rfq.getRfqnum());
 		rfqDto.setSiteid(rfq.getSiteid());
 		rfqDto.setVendor(rfq.getUser().getUsername());
-		rfqDto.setDescription(rfq.getDescription());
-		rfqDto.setStatus(rfq.getStatus());
-		rfqDto.setRequireddate(rfq.getRequireddate());
-		rfqDto.setPurchaseagent(rfq.getPurchaseagent());
 		int i = 0;
 		while (i < rfqline.size()) {
 			RfqLineDto rfqLineDto = new RfqLineDto();
 			rfqLineDto.setRfqlinenum(rfqline.get(i).getRfqlinenum());
-			rfqLineDto.setItemnum(rfqline.get(i).getItemnum());
-			rfqLineDto.setDescription(rfqline.get(i).getDescription());
-			rfqLineDto.setOrderqty(rfqline.get(i).getOrderqty());
-			rfqLineDto.setOrderunit(rfqline.get(i).getOrderunit());
 			rfqLineDto.setUnitcost(rfqline.get(i).getUnitcost());
-			rfqLineDto.setLinecost(rfqline.get(i).getLinecost());
 			rfqLineDto.setQuotationqty(rfqline.get(i).getQuotationqty());
-			rfqLineDto.setQuoteStartDate(rfqline.get(i).getQuoteStartDate());
-			rfqLineDto.setQuoteEndDate(rfqline.get(i).getQuoteEndDate());
-			rfqLineDto.setDelivryDate(rfqline.get(i).getDelivryDate());
+			rfqLineDto.setQuoteStartDate(rfqline.get(i).getQuoteStartDate().toString());
+			rfqLineDto.setQuoteEndDate(rfqline.get(i).getQuoteEndDate().toString());
+			rfqLineDto.setDelivryDate(rfqline.get(i).getDelivryDate().toString());
 			rfqLinesDto.add(rfqLineDto);
 			i++;
 		}
