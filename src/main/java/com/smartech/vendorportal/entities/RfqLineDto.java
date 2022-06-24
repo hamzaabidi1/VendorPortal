@@ -2,19 +2,28 @@ package com.smartech.vendorportal.entities;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RfqLineDto {
-
+	@JsonProperty("rfqlinenum")
 	private String rfqlinenum;
 	private String itemnum;
 	private String description;
 	private double orderqty;
+
 	private String orderunit;
+	@JsonProperty("cost")
 	private double unitcost;
-	private double linecost;	
+	private double linecost;
+	@JsonProperty("quantity")
 	private double quotationqty;
+	@JsonProperty("QUOTESTARTDATE")
 	private Date quoteStartDate;
+	@JsonProperty("QUOTEENDDATE")
 	private Date quoteEndDate;
+	@JsonProperty("DELIVERYDATE")
 	private Date delivryDate;
 
 	public RfqLineDto(String rfqlinenum, String itemnum, String description, double orderqty, String orderunit,

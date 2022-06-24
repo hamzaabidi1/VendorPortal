@@ -23,6 +23,7 @@ public class RfqDto implements Serializable {
 	private String status;
 	private String requireddate;
 	private String purchaseagent;
+	@JsonProperty("rfqline")
 	private List<RfqLineDto> rfqline;
 	
 	public RfqDto(String rfqnum,String siteid,String vendor, String description, String status, String requireddate, String purchaseagent,
