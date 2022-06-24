@@ -53,13 +53,14 @@ public class RfqServiceImpl implements RfqService {
 	public List<Rfq> retriveAllRfqByUser(String email) {
 		return rfqRepository.findAllRfqByUser(email);
 	}
+	
+	
 
 	public RfqDto addRfqTORfqDtomaximo(Long id) {
 
 		Rfq rfq = retrieveOneById(id);
 		List<RfqLine> rfqline = rfq.getRfqline();
 		List<RfqLineDto> rfqLinesDto = new ArrayList<>();
-		RfqLineDto rfqLineDto = new RfqLineDto();
 		RfqDto rfqDto = new RfqDto();
 		rfqDto.setRfqnum(rfq.getRfqnum());
 		rfqDto.setSiteid(rfq.getSiteid());
@@ -68,8 +69,9 @@ public class RfqServiceImpl implements RfqService {
 		rfqDto.setStatus(rfq.getStatus());
 		rfqDto.setRequireddate(rfq.getRequireddate());
 		rfqDto.setPurchaseagent(rfq.getPurchaseagent());
-
-		for (int i = 0; i < rfqline.size(); i++) {
+		int i = 0;
+		while (i < rfqline.size()) {
+			RfqLineDto rfqLineDto = new RfqLineDto();
 			rfqLineDto.setRfqlinenum(rfqline.get(i).getRfqlinenum());
 			rfqLineDto.setItemnum(rfqline.get(i).getItemnum());
 			rfqLineDto.setDescription(rfqline.get(i).getDescription());
@@ -82,6 +84,7 @@ public class RfqServiceImpl implements RfqService {
 			rfqLineDto.setQuoteEndDate(rfqline.get(i).getQuoteEndDate());
 			rfqLineDto.setDelivryDate(rfqline.get(i).getDelivryDate());
 			rfqLinesDto.add(rfqLineDto);
+			i++;
 		}
 		rfqDto.setRfqline(rfqLinesDto);
 
