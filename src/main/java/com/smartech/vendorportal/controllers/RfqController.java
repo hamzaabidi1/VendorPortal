@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.smartech.vendorportal.entities.MaximoRequest;
 import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqLine;
@@ -38,82 +37,74 @@ public class RfqController {
 	UserControl userControl;
 	@Autowired
 	RfqLineService rfqLineService;
-	
+
 	@Value("${VendorPortal.app.urlmaximo}")
 	private String maximourl;
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
 	@Value("${VendorPortal.app.header.value}")
 	private String value;
-	
+
 	@PostMapping("/addRfq/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
-	public Rfq addRfq(@RequestBody Rfq rfq,@PathVariable("email") String email) {
-		User user=userControl.retrieveOneUserByEmail(email);
+	public Rfq addRfq(@RequestBody Rfq rfq, @PathVariable("email") String email) {
+		User user = userControl.retrieveOneUserByEmail(email);
 		rfq.setUser(user);
 		return rfqService.addRFQ(rfq);
-		
+
 	}
-	
-	
 
 	@GetMapping("/GetRfq/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<Rfq> getAllRfq(@PathVariable("email") String email) {
 		return rfqService.retriveAllRfqByUser(email);
-		
+
 	}
-	
+
 	@GetMapping("/GetRfqdetails/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public Rfq getRfqDetails(@PathVariable("id") Long id) {
 		return rfqService.retrieveOneById(id);
-		
+
 	}
-	
-	
+
 	@GetMapping("/GetRfqLines/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<RfqLine> getRfqLines(@PathVariable("id") Long id) {
 		return rfqLineService.retriveAllRfqLine(id);
-		
+
 	}
-	
+
 	@GetMapping("/GetRfqLine/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public RfqLine getRfqLineByid(@PathVariable("id") Long id) {
 		return rfqLineService.retriveRfqLine(id);
-		
+
 	}
 
 	@PutMapping("/updateRfqLine")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public RfqLine updateRfqLineByid(@RequestBody RfqLine rfqline) {
 		return rfqLineService.updateRFQLine(rfqline);
-		
+
 	}
-	
 
 	@PostMapping("/addRfqmaximo/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
-	public void addRfqmaximo(@PathVariable("id") Long id) {
-		RfqDto rfqDto=rfqService.addRfqTORfqDtomaximo(id);
-		String uri="http://demo.smartech-tn.com/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
+	public ResponseEntity<String> addRfqmaximo(@PathVariable("id") Long id) {
+		RfqDto rfqDto = rfqService.addRfqTORfqDtomaximo(id);
+		String uri = "http://demo.smartech-tn.com/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set(key,"bWF4YWRtaW46bWF4YWRtaW4xMjM=");
+		headers.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
 		HttpEntity<RfqDto> requestBody = new HttpEntity<>(rfqDto, headers);
-		
-		ResponseEntity<Integer> result = restTemplate.exchange(uri, HttpMethod.POST, requestBody,
-				Integer.class);
-		 //restTemplate.postForEntity(uri, requestBody, RfqDto.class);	
-		 Rfq rfq=rfqService.retrieveOneById(id);
-		 rfq.setStatusofSend(true);
-		 LocalDate today = LocalDate.now();
-		 rfq.setDateEnvoie(java.sql.Date.valueOf(today));
-		 rfqService.updateRFQ(rfq);
+		ResponseEntity<String> result = restTemplate.exchange(uri, HttpMethod.POST, requestBody, String.class);
+		Rfq rfq = rfqService.retrieveOneById(id);
+		rfq.setStatusofSend(true);
+		LocalDate today = LocalDate.now();
+		rfq.setDateEnvoie(java.sql.Date.valueOf(today));
+		rfqService.updateRFQ(rfq);
+		return result;
 	}
-	
-	
 
 }

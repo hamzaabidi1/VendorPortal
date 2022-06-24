@@ -2307,3 +2307,156 @@ com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct in
 2022-06-24 11:54:48.360  INFO 17528 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
 2022-06-24 11:54:48.361  INFO 17528 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
 2022-06-24 11:54:48.361  INFO 17528 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-06-24 11:54:48.365  INFO 17528 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-06-24 11:54:48.365  INFO 17528 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
+2022-06-24 11:54:48.365  INFO 17528 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
+2022-06-24 13:01:30.226  WARN 17528 --- [HikariPool-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=55m24s534ms501µs900ns).
+2022-06-24 13:22:22.625  WARN 17528 --- [HikariPool-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=52s152ms575µs400ns).
+2022-06-24 13:56:02.463  INFO 17528 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 13:56:02.465  INFO 17528 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-06-24 13:56:02.467  INFO 17528 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-06-24 13:56:02.634  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 17528 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-06-24 13:56:02.635  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 13:56:03.352  INFO 17528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 13:56:03.406  INFO 17528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 11 JPA repository interfaces.
+2022-06-24 13:56:03.675  INFO 17528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 13:56:03.676  INFO 17528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 13:56:03.676  INFO 17528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-24 13:56:03.709  INFO 17528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 13:56:03.709  INFO 17528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1071 ms
+2022-06-24 13:56:03.762  WARN 17528 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 13:56:03.825  INFO 17528 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 13:56:03.833  INFO 17528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-06-24 13:56:03.838  INFO 17528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-06-24 13:56:03.838  INFO 17528 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-24 13:56:03.925  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-06-24 13:56:03.941  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-06-24 13:56:03.967  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-06-24 13:56:03.988  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-06-24 13:56:04.119  INFO 17528 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 13:56:04.119  INFO 17528 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 13:56:04.444  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-06-24 13:56:04.449  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-06-24 13:56:04.516  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-06-24 13:56:04.520  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-06-24 13:56:04.634  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-06-24 13:56:04.635  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-06-24 13:56:04.636  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-06-24 13:56:04.636  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-06-24 13:56:05.019  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-06-24 13:56:05.019  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-06-24 13:56:05.031  INFO 17528 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-24 13:56:05.536  INFO 17528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-24 13:56:05.560  INFO 17528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-24 13:56:05.564  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 2.98 seconds (JVM running for 7783.571)
+2022-06-24 13:56:05.565  INFO 17528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-24 13:56:49.886  INFO 17528 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 13:56:49.886  INFO 17528 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-06-24 13:56:49.888  INFO 17528 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-06-24 13:56:50.005  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 17528 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-06-24 13:56:50.006  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 13:56:50.260  INFO 17528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 13:56:50.311  INFO 17528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 11 JPA repository interfaces.
+2022-06-24 13:56:50.524  INFO 17528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 13:56:50.525  INFO 17528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 13:56:50.525  INFO 17528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-24 13:56:50.560  INFO 17528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 13:56:50.560  INFO 17528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 552 ms
+2022-06-24 13:56:50.608  WARN 17528 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 13:56:50.670  INFO 17528 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 13:56:50.676  INFO 17528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-06-24 13:56:50.680  INFO 17528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-06-24 13:56:50.681  INFO 17528 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-24 13:56:50.762  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-06-24 13:56:50.778  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-06-24 13:56:50.806  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-06-24 13:56:50.827  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-06-24 13:56:50.875  INFO 17528 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 13:56:50.875  INFO 17528 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 13:56:51.202  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-06-24 13:56:51.207  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-06-24 13:56:51.273  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-06-24 13:56:51.278  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-06-24 13:56:51.388  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-06-24 13:56:51.388  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-06-24 13:56:51.389  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-06-24 13:56:51.390  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-06-24 13:56:51.770  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-06-24 13:56:51.771  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-06-24 13:56:51.779  INFO 17528 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-24 13:56:52.245  INFO 17528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-24 13:56:52.265  INFO 17528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-24 13:56:52.270  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 2.298 seconds (JVM running for 7830.277)
+2022-06-24 13:56:52.271  INFO 17528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-24 13:57:06.278  INFO 17528 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 13:57:06.278  INFO 17528 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2022-06-24 13:57:06.280  INFO 17528 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2022-06-24 13:57:06.411  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 17528 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-06-24 13:57:06.411  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 13:57:06.674  INFO 17528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 13:57:06.732  INFO 17528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 11 JPA repository interfaces.
+2022-06-24 13:57:06.947  INFO 17528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 13:57:06.948  INFO 17528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 13:57:06.948  INFO 17528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-24 13:57:06.981  INFO 17528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 13:57:06.981  INFO 17528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 567 ms
+2022-06-24 13:57:07.031  WARN 17528 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 13:57:07.101  INFO 17528 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 13:57:07.108  INFO 17528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-06-24 13:57:07.111  INFO 17528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-06-24 13:57:07.112  INFO 17528 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-24 13:57:07.189  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-06-24 13:57:07.204  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-06-24 13:57:07.228  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-06-24 13:57:07.251  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-06-24 13:57:07.297  INFO 17528 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 13:57:07.297  INFO 17528 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 13:57:07.617  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-06-24 13:57:07.622  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-06-24 13:57:07.688  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-06-24 13:57:07.694  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-06-24 13:57:07.802  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-06-24 13:57:07.803  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-06-24 13:57:07.806  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-06-24 13:57:07.806  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-06-24 13:57:08.185  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-06-24 13:57:08.186  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-06-24 13:57:08.198  INFO 17528 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-24 13:57:08.666  INFO 17528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-24 13:57:08.685  INFO 17528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-24 13:57:08.689  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 2.327 seconds (JVM running for 7846.696)
+2022-06-24 13:57:08.690  INFO 17528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-24 13:57:15.398  INFO 17528 --- [Thread-48] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 13:57:15.398  INFO 17528 --- [Thread-48] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2022-06-24 13:57:15.399  INFO 17528 --- [Thread-48] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2022-06-24 13:57:15.510  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 17528 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-06-24 13:57:15.511  INFO 17528 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 13:57:15.770  INFO 17528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 13:57:15.826  INFO 17528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 11 JPA repository interfaces.
+2022-06-24 13:57:16.039  INFO 17528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 13:57:16.039  INFO 17528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 13:57:16.040  INFO 17528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-24 13:57:16.073  INFO 17528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 13:57:16.073  INFO 17528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 559 ms
+2022-06-24 13:57:16.121  WARN 17528 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 13:57:16.182  INFO 17528 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 13:57:16.189  INFO 17528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2022-06-24 13:57:16.194  INFO 17528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2022-06-24 13:57:16.195  INFO 17528 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-24 13:57:16.265  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-06-24 13:57:16.287  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-06-24 13:57:16.312  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-06-24 13:57:16.333  INFO 17528 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-06-24 13:57:16.382  INFO 17528 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 13:57:16.382  INFO 17528 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 13:57:16.717  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-06-24 13:57:16.723  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-06-24 13:57:16.789  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-06-24 13:57:16.793  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-06-24 13:57:16.903  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-06-24 13:57:16.903  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-06-24 13:57:16.904  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-06-24 13:57:16.904  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-06-24 13:57:17.297  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-06-24 13:57:17.298  INFO 17528 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-06-24 13:57:17.306  INFO 17528 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
