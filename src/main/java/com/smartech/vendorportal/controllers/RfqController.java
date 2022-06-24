@@ -91,20 +91,19 @@ public class RfqController {
 
 	@PostMapping("/addRfqmaximo/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
-	public ResponseEntity<String> addRfqmaximo(@PathVariable("id") Long id) {
+	public void addRfqmaximo(@PathVariable("id") Long id) {
 		RfqDto rfqDto = rfqService.addRfqTORfqDtomaximo(id);
 		String uri = "http://demo.smartech-tn.com/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
 		HttpEntity<RfqDto> requestBody = new HttpEntity<>(rfqDto, headers);
-		ResponseEntity<String> result = restTemplate.exchange(uri, HttpMethod.POST, requestBody, String.class);
+		restTemplate.exchange(uri, HttpMethod.POST, requestBody, String.class);
 		Rfq rfq = rfqService.retrieveOneById(id);
 		rfq.setStatusofSend(true);
 		LocalDate today = LocalDate.now();
 		rfq.setDateEnvoie(java.sql.Date.valueOf(today));
 		rfqService.updateRFQ(rfq);
-		return result;
 	}
 
 }
