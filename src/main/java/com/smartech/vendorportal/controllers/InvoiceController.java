@@ -24,63 +24,56 @@ import com.smartech.vendorportal.services.UserControl;
 @RestController
 @RequestMapping("/api/invoice")
 public class InvoiceController {
-	
-	
+
 	@Autowired
 	InvoiceService invoiceService;
 	@Autowired
 	UserControl userControl;
 	@Autowired
 	InvoiceLineService invoiceLineService;
-	
-	
+
 	@PostMapping("/addinvoice/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
-	public Invoice addInvoice(@RequestBody Invoice invoice ,@PathVariable("email") String email) {
-		User user=userControl.retrieveOneUserByEmail(email);
+	public Invoice addInvoice(@RequestBody Invoice invoice, @PathVariable("email") String email) {
+		User user = userControl.retrieveOneUserByEmail(email);
 		invoice.setUser(user);
 		return invoiceService.addInvoice(invoice);
-		
+
 	}
-	
-	
 
 	@GetMapping("/Getinvoice/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<Invoice> getAllInvoice(@PathVariable("email") String email) {
 		return invoiceService.retriveAllInvoiceByUser(email);
-		
+
 	}
-	
+
 	@GetMapping("/Getinvoicedetails/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public Invoice getInvoiceDetails(@PathVariable("id") Long id) {
 		return invoiceService.retrieveOneInvoiceById(id);
-		
+
 	}
-	
-	
+
 	@GetMapping("/GetInvoiceLines/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<InvoiceLine> getInvoiceLines(@PathVariable("id") Long id) {
 		return invoiceLineService.retriveAllInvoiceLine(id);
-		
+
 	}
-	
+
 	@GetMapping("/GetInvoiceLine/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public InvoiceLine getInvoiceLineByid(@PathVariable("id") Long id) {
 		return invoiceLineService.retriveInvoiceLine(id);
-		
+
 	}
 
 	@PutMapping("/updateinvoiceLine")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public InvoiceLine updateInvoiceLineByid(@RequestBody InvoiceLine invoiceline) {
 		return invoiceLineService.updateInvoiceLine(invoiceline);
-		
-	}
 
-	
+	}
 
 }

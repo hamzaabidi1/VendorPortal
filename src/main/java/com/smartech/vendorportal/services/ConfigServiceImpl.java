@@ -9,8 +9,8 @@ import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.repositories.ConfigRepository;
 
 @Service
-public class ConfigServiceImpl  implements ConfigService{
-	
+public class ConfigServiceImpl implements ConfigService {
+
 	@Autowired
 	ConfigRepository configRepository;
 
@@ -19,12 +19,9 @@ public class ConfigServiceImpl  implements ConfigService{
 		return configRepository.findAll();
 	}
 
-
 	@Override
 	public Config updateConfig(Config config) {
 		return configRepository.save(config);
 	}
-	
-	
 
 }

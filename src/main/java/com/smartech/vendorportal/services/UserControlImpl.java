@@ -24,8 +24,6 @@ import com.smartech.vendorportal.repositories.UserHistoryRepository;
 import com.smartech.vendorportal.repositories.UserRepository;
 import com.smartech.vendorportal.utils.TaskException;
 
-
-
 @Service
 public class UserControlImpl implements UserControl {
 	@Value("${VendorPortal.app.vendor.org}")
@@ -37,7 +35,7 @@ public class UserControlImpl implements UserControl {
 	RoleRepository roleRepository;
 	@Autowired
 	Utilities utilities;
-	
+
 	@Autowired
 	UserHistoryRepository userHistoryRepository;
 	@Autowired
@@ -57,7 +55,7 @@ public class UserControlImpl implements UserControl {
 
 	public void deleteUser(Long idUser, String email) {
 		if (!userRepository.findById(idUser).isPresent())
-			throw new TaskException(HttpStatus.NOT_FOUND,"User Not Found!");
+			throw new TaskException(HttpStatus.NOT_FOUND, "User Not Found!");
 		saveHistory(userRepository.findById(idUser).get(), email, EStatus.Deleted);
 		userRepository.deleteById(idUser);
 	}
@@ -76,7 +74,7 @@ public class UserControlImpl implements UserControl {
 
 	public User retrieveOneUser(Long idUser) {
 		if (!userRepository.findById(idUser).isPresent())
-			throw new TaskException(HttpStatus.NOT_FOUND,"User Not Found!");
+			throw new TaskException(HttpStatus.NOT_FOUND, "User Not Found!");
 		return userRepository.findById(idUser).get();
 
 	}
@@ -140,7 +138,6 @@ public class UserControlImpl implements UserControl {
 		}
 	}
 
-
 	public void verifiedUser(User user) {
 		user.setEnabled(true);
 		userRepository.save(user);
@@ -148,7 +145,7 @@ public class UserControlImpl implements UserControl {
 
 	public User getbyUserName(String username) {
 		if (!userRepository.findByUsername(username).isPresent())
-			throw new TaskException(HttpStatus.NOT_FOUND,"User Not Found!");
+			throw new TaskException(HttpStatus.NOT_FOUND, "User Not Found!");
 		return userRepository.findByUsername(username).get();
 	}
 
@@ -247,9 +244,9 @@ public class UserControlImpl implements UserControl {
 		LocalDate newdate = today.minusDays(5);
 		for (int i = 0; i < userUnconfirmed.size(); i++) {
 			if ((userUnconfirmed.get(i).getStatus().equals(EStatus.Draft)
-					&& userUnconfirmed.get(i).getDateCreation().equals(java.sql.Date.valueOf(newdate))) || 
-			(userUnconfirmed.get(i).getStatus().equals(EStatus.Submitted)
-					&& userUnconfirmed.get(i).getDateCreation().equals(java.sql.Date.valueOf(newdate))))
+					&& userUnconfirmed.get(i).getDateCreation().equals(java.sql.Date.valueOf(newdate)))
+					|| (userUnconfirmed.get(i).getStatus().equals(EStatus.Submitted)
+							&& userUnconfirmed.get(i).getDateCreation().equals(java.sql.Date.valueOf(newdate))))
 				userRepository.delete(userUnconfirmed.get(i));
 			String message = "your Account has been deleted cause it is not verified";
 			utilities.sendEmail(userUnconfirmed.get(i).getEmail(), message);
@@ -259,7 +256,7 @@ public class UserControlImpl implements UserControl {
 
 	@Override
 	public String retrieveStatusOneUserByEmail(String email) {
-		User user= userRepository.findByEmail(email);
+		User user = userRepository.findByEmail(email);
 		return user.getStatus().toString();
 	}
 

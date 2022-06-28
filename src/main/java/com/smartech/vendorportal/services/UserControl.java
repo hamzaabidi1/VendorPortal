@@ -52,7 +52,7 @@ public interface UserControl {
 	List<User> findallUserSubmitted();
 
 	User retrieveOneUserByEmail(String email);
-	
+
 	String retrieveStatusOneUserByEmail(String email);
 
 	List<User> retriveAllVendor();

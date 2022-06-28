@@ -7,22 +7,19 @@ import org.springframework.stereotype.Service;
 import com.smartech.vendorportal.entities.RfqLine;
 import com.smartech.vendorportal.repositories.RfqLineRepository;
 
-
 @Service
-public class RfqLineServiceImpl implements  RfqLineService {
-	
+public class RfqLineServiceImpl implements RfqLineService {
+
 	@Autowired
 	RfqLineRepository rfqLineRepository;
-	
-	
-	
+
 	@Override
 	public void addRFQLine(List<RfqLine> rfqline) {
-		for (int i=0;i<rfqline.size();i++)
+		for (int i = 0; i < rfqline.size(); i++)
 			rfqLineRepository.save(rfqline.get(i));
-		
+
 	}
-	
+
 	@Override
 	public List<RfqLine> retriveAllRfqLine(Long rfqid) {
 		return rfqLineRepository.findAllRfqByUser(rfqid);
@@ -30,15 +27,14 @@ public class RfqLineServiceImpl implements  RfqLineService {
 
 	@Override
 	public RfqLine retriveRfqLine(Long rfqLineid) {
-		
+
 		return rfqLineRepository.findById(rfqLineid).get();
 	}
 
 	@Override
 	public RfqLine updateRFQLine(RfqLine rfqline) {
-		
+
 		return rfqLineRepository.save(rfqline);
 	}
-
 
 }

@@ -55,7 +55,7 @@ public class VendorController {
 	@GetMapping("/invoices/{vendor}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<InvoiceDto> getinvoice(@PathVariable("vendor") String vendor) {
-		String uri = maximourl+"/maxrest/oslc/os/SMINVOICE?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\""
+		String uri = maximourl + "/maxrest/oslc/os/SMINVOICE?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\""
 				+ vendor + "\"";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
@@ -80,8 +80,8 @@ public class VendorController {
 	@ResponseBody
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<PoDto> getPo(@PathVariable("vendor") String vendor) {
-		String uri = maximourl+"/maxrest/oslc/os/SMPO?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\""
-				+ vendor + "\"";
+		String uri = maximourl + "/maxrest/oslc/os/SMPO?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\"" + vendor
+				+ "\"";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
@@ -103,8 +103,9 @@ public class VendorController {
 	@RequestMapping("/rfq/{vendor}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<RfqDto> getRfq(@PathVariable("vendor") String vendor) {
-		String uri = maximourl+"/maxrest/oslc/os/SMRFQ?lean=1&oslc.select=*&_dropnulls=0&oslc.where=rfqvendor.vendor=\""
-				+ vendor + "\"";
+		String uri = maximourl
+				+ "/maxrest/oslc/os/SMRFQ?lean=1&oslc.select=*&_dropnulls=0&oslc.where=rfqvendor.vendor=\"" + vendor
+				+ "\"";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.set(key, value);
@@ -140,7 +141,5 @@ public class VendorController {
 	public Boolean findRequest(@PathVariable("email") String email) {
 		return requestUpdateProfileService.findRequestByEmail(email);
 	}
-	
-	
 
 }

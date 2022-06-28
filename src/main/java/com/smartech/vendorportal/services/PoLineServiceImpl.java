@@ -9,16 +9,15 @@ import com.smartech.vendorportal.entities.PoLine;
 import com.smartech.vendorportal.repositories.PoLineRepository;
 
 @Service
-public class PoLineServiceImpl implements  PoLineService{
+public class PoLineServiceImpl implements PoLineService {
 	@Autowired
 	PoLineRepository poLineRepository;
-	
 
 	@Override
 	public List<PoLine> retriveAllPoLine(Long poid) {
-		 return poLineRepository.findAllPoByUser(poid);
+		return poLineRepository.findAllPoByUser(poid);
 	}
-	
+
 	@Override
 	public PoLine retrivePOLine(Long poLineid) {
 		return poLineRepository.findById(poLineid).get();
@@ -26,14 +25,14 @@ public class PoLineServiceImpl implements  PoLineService{
 
 	@Override
 	public void addPOLine(List<PoLine> poline) {
-		for (int i=0;i<poline.size();i++)
+		for (int i = 0; i < poline.size(); i++)
 			poLineRepository.save(poline.get(i));
-		
+
 	}
 
 	@Override
 	public PoLine updatePOLine(PoLine poline) {
-		
+
 		return poLineRepository.save(poline);
 	}
 

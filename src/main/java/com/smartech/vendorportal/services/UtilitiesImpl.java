@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UtilitiesImpl implements Utilities {
-	
+
 	@Autowired
 	private JavaMailSender mailSender;
-	
+
 	public void sendEmail(String recipientEmail, String messageText) {
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setTo(recipientEmail);

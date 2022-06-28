@@ -20,38 +20,31 @@ import com.smartech.vendorportal.utils.PropertiesCache;
 @RestController
 @RequestMapping("/api/config")
 public class ConfigController {
-	
 
 	@Autowired
 	ConfigService configService;
 	@Autowired
 	PropertiesCache configProperties;
-	
+
 	@PutMapping("/update")
 	public ResponseEntity<?> updateConfig(@RequestBody Config config) {
 		try {
 			configService.updateConfig(config);
 			configProperties.writeToProperties(config);
-		
+
 			return ResponseEntity.ok(new MessageResponse("Config Updated successfully!"));
-		}catch (Exception e)
-		{
-			 return ResponseEntity.badRequest().body(new MessageResponse("unexpected problems! "));
+		} catch (Exception e) {
+			return ResponseEntity.badRequest().body(new MessageResponse("unexpected problems! "));
 		}
-		
+
 	}
-	
 
 	@GetMapping("/get")
 	public Config getConfig() {
 
-			List<Config> configs=configService.retriveAllConfig();
-			return configs.get(0);
-					
-		
-	
-		
+		List<Config> configs = configService.retriveAllConfig();
+		return configs.get(0);
+
 	}
-	
 
 }

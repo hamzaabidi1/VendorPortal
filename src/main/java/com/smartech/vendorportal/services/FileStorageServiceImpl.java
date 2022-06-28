@@ -11,26 +11,24 @@ import org.springframework.web.multipart.MultipartFile;
 import com.smartech.vendorportal.entities.FileDB;
 import com.smartech.vendorportal.repositories.FileDBRepository;
 
-
-
 @Service
-public class FileStorageServiceImpl  implements FileStorageService {
+public class FileStorageServiceImpl implements FileStorageService {
 
-  @Autowired
-  private FileDBRepository fileDBRepository;
+	@Autowired
+	private FileDBRepository fileDBRepository;
 
-  public FileDB store(MultipartFile file) throws IOException {
-    String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-    FileDB FileDB = new FileDB(fileName, file.getContentType(), file.getBytes());
+	public FileDB store(MultipartFile file) throws IOException {
+		String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+		FileDB FileDB = new FileDB(fileName, file.getContentType(), file.getBytes());
 
-    return fileDBRepository.save(FileDB);
-  }
+		return fileDBRepository.save(FileDB);
+	}
 
-  public FileDB getFile(String id) {
-    return fileDBRepository.findById(id).get();
-  }
-  
-  public Stream<FileDB> getAllFiles() {
-    return fileDBRepository.findAll().stream();
-  }
+	public FileDB getFile(String id) {
+		return fileDBRepository.findById(id).get();
+	}
+
+	public Stream<FileDB> getAllFiles() {
+		return fileDBRepository.findAll().stream();
+	}
 }

@@ -14,7 +14,6 @@ import com.smartech.vendorportal.services.RfqLineService;
 import com.smartech.vendorportal.services.RfqService;
 import com.smartech.vendorportal.services.UserControl;
 
-
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/public/Rfq")
@@ -25,25 +24,21 @@ public class PublicApi {
 	UserControl userControl;
 	@Autowired
 	RfqLineService rfqLineService;
-	
-	
-	@PostMapping("/addRfq/{email}")
-	public Rfq addRfq(@RequestBody Rfq rfq,@PathVariable("email") String email) {
-		User user=userControl.retrieveOneUserByEmail(email);
-		rfq.setUser(user);
-		return rfqService.addRFQ(rfq);
-		
-	}
-	
-	
-	@PostMapping("/addRfqUsername/{username}")
-	public Rfq addRfqUserName(@RequestBody Rfq rfq,@PathVariable("username") String username) {
-		User user=userControl.getbyUserName(username);
-		rfq.setUser(user);
-		return rfqService.addRFQ(rfq);
-		
-	}
-	
 
+	@PostMapping("/addRfq/{email}")
+	public Rfq addRfq(@RequestBody Rfq rfq, @PathVariable("email") String email) {
+		User user = userControl.retrieveOneUserByEmail(email);
+		rfq.setUser(user);
+		return rfqService.addRFQ(rfq);
+
+	}
+
+	@PostMapping("/addRfqUsername/{username}")
+	public Rfq addRfqUserName(@RequestBody Rfq rfq, @PathVariable("username") String username) {
+		User user = userControl.getbyUserName(username);
+		rfq.setUser(user);
+		return rfqService.addRFQ(rfq);
+
+	}
 
 }

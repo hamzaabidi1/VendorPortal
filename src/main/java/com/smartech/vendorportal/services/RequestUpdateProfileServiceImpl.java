@@ -15,7 +15,7 @@ public class RequestUpdateProfileServiceImpl implements RequestUpdateProfileServ
 	RequestUpdateProfileRepository profileRepository;
 	@Autowired
 	Utilities utilities;
-	
+
 	@Override
 	public List<RequestUpdateProfile> retriveAllRequestUpdateProfile() {
 		return profileRepository.findAll();
@@ -61,7 +61,7 @@ public class RequestUpdateProfileServiceImpl implements RequestUpdateProfileServ
 
 	@Override
 	public void deleteRequestUpdateProfile(RequestUpdateProfile requestUpdateProfile) {
-		String message="your request for upadting Account information has been refused";
+		String message = "your request for upadting Account information has been refused";
 		utilities.sendEmail(requestUpdateProfile.getEmail(), message);
 		profileRepository.delete(requestUpdateProfile);
 

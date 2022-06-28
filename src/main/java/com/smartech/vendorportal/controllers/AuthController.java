@@ -56,13 +56,12 @@ import net.bytebuddy.utility.RandomString;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
-	
+
 	Logger logger = LogManager.getLogger(AuthController.class);
-	
+
 	@Value("${VendorPortal.app.header.path}")
 	private String path;
-	
-	
+
 	@Autowired
 	AuthenticationManager authenticationManager;
 	@Autowired
@@ -143,10 +142,10 @@ public class AuthController {
 	}
 
 	@PostMapping("/forgetpassword/{email}")
-	public ResponseEntity<?> processForgotPassword(@Valid @PathVariable("email") String email, @RequestBody  String url)
+	public ResponseEntity<?> processForgotPassword(@Valid @PathVariable("email") String email, @RequestBody String url)
 			throws AccountNotFoundException, UnsupportedEncodingException {
 		String token = RandomString.make(30);
-		String encodedValue= StringUtils.chop(URLDecoder.decode(url, "UTF-8")); 
+		String encodedValue = StringUtils.chop(URLDecoder.decode(url, "UTF-8"));
 		userControlservice.updateResetPasswordToken(token, email);
 		String resetPasswordLink = encodedValue + "/passwordsConfirmation?token=" + token;
 		String message = "Hello You have requested to reset your password."
@@ -165,11 +164,12 @@ public class AuthController {
 	}
 
 	@PostMapping("/verify/{email}")
-	public ResponseEntity<?> requestverifyAccount(@Valid @PathVariable("email") String email, @RequestBody  String url) throws UnsupportedEncodingException {
+	public ResponseEntity<?> requestverifyAccount(@Valid @PathVariable("email") String email, @RequestBody String url)
+			throws UnsupportedEncodingException {
 		try {
 			String token = RandomString.make(30);
-			 String encodedValue= StringUtils.chop(URLDecoder.decode(url, "UTF-8")); 	 
-			String verfyLink = encodedValue+"/signup?token=" + token;
+			String encodedValue = StringUtils.chop(URLDecoder.decode(url, "UTF-8"));
+			String verfyLink = encodedValue + "/signup?token=" + token;
 			String message = "Hello You have to verify your account by using this link."
 					+ "Click the link below to verify your account: " + verfyLink;
 			utilities.sendEmail(email, message);
@@ -224,11 +224,10 @@ public class AuthController {
 		return requestUpdateProfileService.numberofRequest();
 
 	}
-	
-	
+
 	@GetMapping("/retrievestatusoneuserbyemail/{email}")
-	public String retrieveStatusOneUserByEmail(@Valid @PathVariable("email")String email) {
-		return userControlservice.retrieveStatusOneUserByEmail( email);
+	public String retrieveStatusOneUserByEmail(@Valid @PathVariable("email") String email) {
+		return userControlservice.retrieveStatusOneUserByEmail(email);
 
 	}
 

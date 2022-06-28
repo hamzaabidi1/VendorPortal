@@ -53,8 +53,6 @@ public class RfqServiceImpl implements RfqService {
 	public List<Rfq> retriveAllRfqByUser(String email) {
 		return rfqRepository.findAllRfqByUser(email);
 	}
-	
-	
 
 	public RfqDto addRfqTORfqDtomaximo(Long id) {
 
@@ -83,5 +81,4 @@ public class RfqServiceImpl implements RfqService {
 
 	}
 
-	
 }

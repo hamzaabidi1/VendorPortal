@@ -62,14 +62,12 @@ public class AdminController {
 	public void deleteUser(@Valid @PathVariable("idUser") Long idUser, @Valid @PathVariable("email") String email) {
 		usercontrol.deleteUser(idUser, email);
 	}
-	
+
 	@GetMapping("/getvendor/{email}")
 	@PreAuthorize("hasRole('ADMIN')")
 	public User getVendorDetails(@PathVariable("email") String email) {
 		return usercontrol.retrieveOneUserByEmail(email);
 	}
-	
-
 
 	@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/changestatus/{idUser}/{status}/{email}")
@@ -125,7 +123,7 @@ public class AdminController {
 	@GetMapping("/allcompanies")
 	@PreAuthorize("hasRole('ADMIN')")
 	public String retrieveAllCompanies() {
-		String url = maximourl+"/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0";
+		String url = maximourl + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0";
 		// HttpHeaders
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
@@ -143,23 +141,21 @@ public class AdminController {
 	@RequestMapping("/addcompany/{idUser}/{email}")
 	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<?> addCompany(@Valid @PathVariable("idUser") Long idUser,
-			@Valid @PathVariable("email") String email)
-			throws JsonMappingException, JsonProcessingException {
+			@Valid @PathVariable("email") String email) throws JsonMappingException, JsonProcessingException {
 		MaximoRequest maximoRequest = usercontrol.addUserToMaximo(idUser, email);
 		RestTemplate restTemplate = new RestTemplate();
 		// HttpHeaders
 		HttpHeaders headers = new HttpHeaders();
-	
+
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		headers.set(key, value);
 		headers.set("x-method-override", "PATCH");
 		headers.set("properties", "*");
-		
-		
+
 		HttpHeaders headersadd = new HttpHeaders();
-		
+
 		headersadd.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
 		headersadd.setContentType(MediaType.APPLICATION_JSON);
@@ -170,22 +166,23 @@ public class AdminController {
 		HttpEntity<MaximoRequest> requestBody = new HttpEntity<>(maximoRequest, headers);
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
 		// send get method
-		String url = maximourl+"/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0&oslc.where=company=\""
+		String url = maximourl + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0&oslc.where=company=\""
 				+ maximoRequest.getCompany() + "\"";
 		ResponseEntity<MaximoRequestList> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,
 				MaximoRequestList.class);
 		if (resultGet.getBody().getMember().size() == 0) { // Send request with POST method.
-			ResponseEntity<MaximoRequest> result = restTemplate.exchange(maximourl+"/maxrest/oslc/os/MXVENDOR?lean=1", HttpMethod.POST, addbody,
-					MaximoRequest.class);
+			ResponseEntity<MaximoRequest> result = restTemplate.exchange(maximourl + "/maxrest/oslc/os/MXVENDOR?lean=1",
+					HttpMethod.POST, addbody, MaximoRequest.class);
 			System.out.println("Status code:" + result.getStatusCode());
 			// Code = 201.
 			if (result.getStatusCode() == HttpStatus.CREATED) {
 				System.out.println("(Client Side) Vendor Created: ");
 				return ResponseEntity.ok().body(true);
 			}
-		} else { 
-			Long s=resultGet.getBody().getMember().get(0).getCompaniesid();
-			ResponseEntity<MaximoRequest> result = restTemplate.exchange(maximourl+"/maxrest/oslc/os/MXVENDOR/"+s+"?lean=1", HttpMethod.POST, requestBody,
+		} else {
+			Long s = resultGet.getBody().getMember().get(0).getCompaniesid();
+			ResponseEntity<MaximoRequest> result = restTemplate.exchange(
+					maximourl + "/maxrest/oslc/os/MXVENDOR/" + s + "?lean=1", HttpMethod.POST, requestBody,
 					MaximoRequest.class);
 			System.out.println("Status code:" + result.getStatusCode());
 			// Code = 200.

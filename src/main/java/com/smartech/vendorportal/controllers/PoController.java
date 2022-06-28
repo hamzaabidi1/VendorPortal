@@ -23,60 +23,56 @@ import com.smartech.vendorportal.services.UserControl;
 @RestController
 @RequestMapping("/api/po")
 public class PoController {
-	
+
 	@Autowired
 	PoService poService;
 	@Autowired
 	UserControl userControl;
 	@Autowired
 	PoLineService poLineService;
-	
-	
+
 	@PostMapping("/addpo/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
-	public Po addPo(@RequestBody Po po ,@PathVariable("email") String email) {
-		User user=userControl.retrieveOneUserByEmail(email);
+	public Po addPo(@RequestBody Po po, @PathVariable("email") String email) {
+		User user = userControl.retrieveOneUserByEmail(email);
 		po.setUser(user);
 		return poService.addPO(po);
-		
+
 	}
-	
-	
 
 	@GetMapping("/GetPo/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<Po> getAllPo(@PathVariable("email") String email) {
 		return poService.retriveAllPOByUser(email);
-		
+
 	}
-	
+
 	@GetMapping("/GetPodetails/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public Po getPoDetails(@PathVariable("id") Long id) {
 		return poService.retrieveOneById(id);
-		
+
 	}
-	
-	
+
 	@GetMapping("/GetpoLines/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<PoLine> getPoLines(@PathVariable("id") Long id) {
 		return poLineService.retriveAllPoLine(id);
-		
+
 	}
-	
+
 	@GetMapping("/GetpoLine/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public PoLine getPoLineByid(@PathVariable("id") Long id) {
 		return poLineService.retrivePOLine(id);
-		
+
 	}
 
 	@PutMapping("/updatepoLine")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public PoLine updatePoLineByid(@RequestBody PoLine poline) {
 		return poLineService.updatePOLine(poline);
-		
+
 	}
 
 }
