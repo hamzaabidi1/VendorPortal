@@ -65,6 +65,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/api/auth/**").permitAll()
 				.antMatchers("/public/Rfq/**").permitAll()
 				.antMatchers("/api/config/**").permitAll()
+				.antMatchers("/api/file/**").permitAll()
 				.antMatchers("/api/admin/**").hasRole("ADMIN")
 				.antMatchers("/api/profile/**").hasRole("ADMIN")
 				.antMatchers("/api/Rfq/**").hasRole("FOURNISSEUR")

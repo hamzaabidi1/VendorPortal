@@ -35,11 +35,14 @@ public class Rfq {
 	private boolean statusofSend;
 	@Temporal(TemporalType.DATE)
 	private Date dateEnvoie;
-
-	
-	@OneToMany
+    @OneToMany
 	@JoinColumn(name = "rfq_id")
 	List<RfqLine> rfqline;
+    
+    
+    @OneToMany
+	@JoinColumn(name = "rfq_id")
+	List<FileDB> files;
 
 
 	@ManyToOne
@@ -47,7 +50,7 @@ public class Rfq {
 	private User user;
 
 	public Rfq(Long id, String rfqnum,String siteid, String description, String status, String requireddate, String purchaseagent,
-			Date dateEnvoie,boolean statusofSend,User user,List<RfqLine> rfqline) {
+			Date dateEnvoie,boolean statusofSend,User user,List<RfqLine> rfqline,List<FileDB> files) {
 		super();
 		this.id = id;
 		this.rfqnum = rfqnum;
@@ -60,6 +63,7 @@ public class Rfq {
 		this.dateEnvoie=dateEnvoie;
 		this.user = user;
 		this.rfqline=rfqline;
+		this.files=files;
 		
 	}
 
@@ -145,6 +149,14 @@ public class Rfq {
 
 	public void setRfqline(List<RfqLine> rfqline) {
 		this.rfqline = rfqline;
+	}
+
+	public List<FileDB> getFiles() {
+		return files;
+	}
+
+	public void setFiles(List<FileDB> files) {
+		this.files = files;
 	}
 
 	public User getUser() {
