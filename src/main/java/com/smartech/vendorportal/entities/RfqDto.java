@@ -3,6 +3,8 @@ package com.smartech.vendorportal.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -21,13 +23,15 @@ public class RfqDto implements Serializable {
 	private String vendor;
 	@JsonProperty("rfqline")
 	private List<RfqLineDto> rfqline;
+	private List<MultipartFile> file;
 	
-	public RfqDto(String rfqnum,String siteid,String vendor,List<RfqLineDto> rfqline) {
+	public RfqDto(String rfqnum,String siteid,String vendor,List<RfqLineDto> rfqline,List<MultipartFile> file) {
 		super();
 		this.rfqnum = rfqnum;
 		this.siteid=siteid;
 		this.vendor=vendor;
 		this.rfqline = rfqline;
+		this.file=file;
 		
 	}
 
@@ -72,5 +76,15 @@ public class RfqDto implements Serializable {
 	public void setRfqline(List<RfqLineDto> rfqline) {
 		this.rfqline = rfqline;
 	}
+
+	public List<MultipartFile> getFile() {
+		return file;
+	}
+
+	public void setFile(List<MultipartFile> file) {
+		this.file = file;
+	}
+	
+	
 
 }
