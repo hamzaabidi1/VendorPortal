@@ -1,6 +1,7 @@
 package com.smartech.vendorportal.services;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.stream.Stream;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -15,4 +16,5 @@ public interface FileStorageService {
 	FileDB getFile(String id);
 	Stream<FileDB> getAllFiles();
 	Stream<FileDB> getAllFilesPerRfq(Long id);
+	List<FileDB> getAllFilesRfq(Long id);
 }

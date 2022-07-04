@@ -1,6 +1,5 @@
 package com.smartech.vendorportal.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -41,7 +40,7 @@ public class FileController {
 		String message = "";
 		ResponseEntity<ResponseMessage> re = ResponseEntity.status(HttpStatus.EXPECTATION_FAILED)
 				.body(new ResponseMessage("no file to upload"));
-		List<FileDB> files = new ArrayList<>();
+		List<FileDB> files = storageService.getAllFilesRfq(idrfq);
 		Rfq rfq = rfqService.retrieveOneById(idrfq);
 		for (int i = 0; i < file.size(); i++) {
 

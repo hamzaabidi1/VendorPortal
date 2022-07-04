@@ -1,6 +1,7 @@
 package com.smartech.vendorportal.services;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +35,9 @@ public class FileStorageServiceImpl implements FileStorageService {
 	
 	public Stream<FileDB> getAllFilesPerRfq(Long id) {
 		return fileDBRepository.getAllFilePerRfq(id).stream();
+	}
+
+	public List<FileDB> getAllFilesRfq(Long id) {
+		return fileDBRepository.getAllFilePerRfq(id);
 	}
 }
