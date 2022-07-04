@@ -31,4 +31,8 @@ public class FileStorageServiceImpl implements FileStorageService {
 	public Stream<FileDB> getAllFiles() {
 		return fileDBRepository.findAll().stream();
 	}
+	
+	public Stream<FileDB> getAllFilesPerRfq(Long id) {
+		return fileDBRepository.getAllFilePerRfq(id).stream();
+	}
 }

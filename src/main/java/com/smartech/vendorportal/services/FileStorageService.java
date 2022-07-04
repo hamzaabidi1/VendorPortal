@@ -14,4 +14,5 @@ public interface FileStorageService {
 	FileDB store(MultipartFile file) throws IOException;
 	FileDB getFile(String id);
 	Stream<FileDB> getAllFiles();
+	Stream<FileDB> getAllFilesPerRfq(Long id);
 }

@@ -60,10 +60,10 @@ public class FileController {
 		return re;
 	}
 
-	@GetMapping("/files")
-	public ResponseEntity<List<ResponseFile>> getListFiles() {
-		List<ResponseFile> files = storageService.getAllFiles().map(dbFile -> {
-			String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/files/")
+	@GetMapping("/allfiles/{id}")
+	public ResponseEntity<List<ResponseFile>> getListFilesPerRfq(@PathVariable("id") Long id) {
+		List<ResponseFile> files = storageService.getAllFilesPerRfq(id).map(dbFile -> {
+			String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/file/files/")
 					.path(dbFile.getId()).toUriString();
 
 			return new ResponseFile(dbFile.getName(), fileDownloadUri, dbFile.getType(), dbFile.getData().length);
@@ -73,7 +73,7 @@ public class FileController {
 	}
 
 	@GetMapping("/files/{id}")
-	public ResponseEntity<byte[]> getFile(@PathVariable String id) {
+	public ResponseEntity<byte[]> getFile(@PathVariable("id") String id) {
 		FileDB fileDB = storageService.getFile(id);
 
 		return ResponseEntity.ok()
