@@ -17,4 +17,5 @@ public interface FileStorageService {
 	Stream<FileDB> getAllFiles();
 	Stream<FileDB> getAllFilesPerRfq(Long id);
 	List<FileDB> getAllFilesRfq(Long id);
+	void deleteFile(String id);
 }

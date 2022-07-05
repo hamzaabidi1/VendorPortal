@@ -40,4 +40,8 @@ public class FileStorageServiceImpl implements FileStorageService {
 	public List<FileDB> getAllFilesRfq(Long id) {
 		return fileDBRepository.getAllFilePerRfq(id);
 	}
+
+	public void deleteFile(String id) {	
+		fileDBRepository.deleteById(id);
+	}
 }
