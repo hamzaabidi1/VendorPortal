@@ -1,8 +1,9 @@
 FROM maven:3.6.3 AS maven
-COPY . .
-RUN mvn clean package -Dmaven.test.skip=true
+COPY src /home/app/src
+COPY vendorportal.sql /home/app/vendorportal.sql
+COPY pom.xml /home/app
+RUN mvn -f /home/app/pom.xml clean install -Dmaven.test.skip=true
 
 FROM openjdk:11
-ADD target/vendorportal-0.0.1-SNAPSHOT.jar vendorportal-0.0.1-SNAPSHOT.jar
-ADD ./vendorportal.sql /docker-entrypoint-initdb.d
+COPY --from=maven /home/app/target/*.jar vendorportal-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java","-jar","vendorportal-0.0.1-SNAPSHOT.jar"]
