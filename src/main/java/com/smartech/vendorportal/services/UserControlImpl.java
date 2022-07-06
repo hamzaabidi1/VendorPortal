@@ -119,6 +119,24 @@ public class UserControlImpl implements UserControl {
 			System.out.println(e.getMessage());
 		}
 	}
+	
+	
+	public void updateUserPassword (String email,String newPassword) {
+		User user= userRepository.findByEmail(email);
+		
+		try {
+			if (user != null) {
+				BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+				String encodedPassword = passwordEncoder.encode(newPassword);
+				user.setPassword(encodedPassword);
+				userRepository.save(user);
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
+	}
 
 	public void updateVerifyAccountToken(String token, String email) throws AccountNotFoundException {
 		User user = userRepository.findByEmail(email);

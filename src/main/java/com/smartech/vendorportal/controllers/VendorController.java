@@ -141,5 +141,12 @@ public class VendorController {
 	public Boolean findRequest(@PathVariable("email") String email) {
 		return requestUpdateProfileService.findRequestByEmail(email);
 	}
+	
+	
+	@PostMapping("/updateuserpassword/{email}/{password}")
+	@PreAuthorize("hasRole('FOURNISSEUR')")
+	public void updateUserPassword(@PathVariable("email") String email,@PathVariable("password")  String password) {
+		userControl.updateUserPassword ( email, password);
+	}
 
 }

@@ -70,4 +70,6 @@ public interface UserControl {
 	void deleteUnconfirmedUser();
 
 	User checkUser(String password, String username);
+	
+	void updateUserPassword (String email,String password);
 }
