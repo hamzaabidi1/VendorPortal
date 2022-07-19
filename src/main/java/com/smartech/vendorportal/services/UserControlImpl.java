@@ -94,7 +94,7 @@ public class UserControlImpl implements UserControl {
 	public void updateResetPasswordToken(String token, String email) throws AccountNotFoundException {
 		User user = userRepository.findByEmail(email);
 		if (user != null) {
-			userRepository.delete(user);
+			//userRepository.delete(user);
 			user.setResetPasswordToken(token);
 			userRepository.save(user);
 		} else {
