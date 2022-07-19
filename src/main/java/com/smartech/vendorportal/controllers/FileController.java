@@ -1,5 +1,6 @@
 package com.smartech.vendorportal.controllers;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -36,7 +37,7 @@ public class FileController {
 
 	@PostMapping("/upload/{idrfq}")
 	public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") List<MultipartFile> file,
-			@PathVariable("idrfq") Long idrfq) {
+			@PathVariable("idrfq") Long idrfq) throws IOException {
 		String message = "";
 		ResponseEntity<ResponseMessage> re = ResponseEntity.status(HttpStatus.EXPECTATION_FAILED)
 				.body(new ResponseMessage("no file to upload"));
