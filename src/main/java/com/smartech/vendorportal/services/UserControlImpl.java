@@ -257,6 +257,7 @@ public class UserControlImpl implements UserControl {
 	@Override
 	@Scheduled(cron = "0 0 0 * * *")
 	public void deleteUnconfirmedUser() {
+		try {
 		List<User> userUnconfirmed = userRepository.findAllUserDraft();
 		LocalDate today = LocalDate.now();
 		LocalDate newdate = today.minusDays(5);
@@ -269,7 +270,9 @@ public class UserControlImpl implements UserControl {
 			String message = "your Account has been deleted cause it is not verified";
 			utilities.sendEmail(userUnconfirmed.get(i).getEmail(), message);
 		}
-
+		}catch(Exception e) {
+			System.out.println(e);
+		}
 	}
 
 	@Override
