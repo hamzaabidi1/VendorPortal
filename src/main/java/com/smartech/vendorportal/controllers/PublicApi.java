@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import com.smartech.vendorportal.entities.FileDB;
@@ -53,8 +53,13 @@ public class PublicApi {
 	}
 	
 	
+
+	
+	
 	@PostMapping("/AddRfqwithfile/{username}")
-	public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("rfq") Rfq rfq, @RequestParam("file") List<MultipartFile> file, @PathVariable("username") String username) {
+	public ResponseEntity<ResponseMessage> uploadFile( @RequestPart Rfq rfq, 
+			@RequestPart List<MultipartFile> file
+			, @PathVariable("username") String username) {
 		User user = userControl.getbyUserName(username);
 		rfq.setUser(user);
 		
