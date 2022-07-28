@@ -1,6 +1,8 @@
 package com.smartech.vendorportal.controllers;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,6 +19,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import com.smartech.vendorportal.entities.Docklinks;
+import com.smartech.vendorportal.entities.MaximoSendFileDto;
 import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqLine;
@@ -100,6 +105,30 @@ public class RfqController {
 		HttpEntity<RfqDto> requestBody = new HttpEntity<>(rfqDto, headers);
 		restTemplate.exchange(uri, HttpMethod.POST, requestBody, String.class);
 		Rfq rfq = rfqService.retrieveOneById(id);
+		HttpHeaders headersfile = new HttpHeaders();
+		headersfile.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
+		headersfile.set("x-method-override", "PATCH");
+		headersfile.set("patchtype", "MERGE");
+		MaximoSendFileDto maximoSendFileDto = new MaximoSendFileDto();
+		maximoSendFileDto.setRfqnum(rfq.getRfqnum());
+		maximoSendFileDto.setSiteid(rfq.getSiteid());
+		List<Docklinks> docklist = new ArrayList<>();
+		for (int i=0 ; i<rfq.getFiles().size();i++) {
+			Docklinks docklinks=new Docklinks();
+			docklinks.setUrlname(rfq.getFiles().get(i).getName());
+			docklinks.setDescription(rfq.getFiles().get(i).getName());
+			docklinks.setDocumentdata(rfq.getFiles().get(i).getData().toString());
+			docklinks.setUrltype("FILE");
+			docklinks.setDoctype("Attachments");
+			docklist.add(docklinks);
+			
+		}
+		maximoSendFileDto.setDoclinks(docklist);
+		HttpEntity<?> getBodyFile = new HttpEntity<>(maximoSendFileDto,headers);
+		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
+		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
+		String urifile = "http://192.168.1.202:9875/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
+		restTemplate.exchange(urifile, HttpMethod.GET, getBodyFile,String.class);
 		rfq.setStatusofSend(true);
 		LocalDate today = LocalDate.now();
 		rfq.setDateEnvoie(java.sql.Date.valueOf(today));

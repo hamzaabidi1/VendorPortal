@@ -1,12 +1,9 @@
 package com.smartech.vendorportal.controllers;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -25,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import com.smartech.vendorportal.entities.FileDB;
 import com.smartech.vendorportal.entities.FileExchangeMaximoDto;
-import com.smartech.vendorportal.entities.MaximoRequest;
 import com.smartech.vendorportal.entities.ResponseMessage;
 import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.User;
@@ -64,14 +60,14 @@ public class PublicApi {
 	public Rfq addRfqUserName(@RequestBody Rfq rfq, @PathVariable("username") String username) throws IOException {
 		User user = userControl.getbyUserName(username);
 		rfq.setUser(user);
-		Rfq rfqcreated=rfqService.addRFQ(rfq);
+		
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
 		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
-		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
+		HttpEntity<Rfq> getBody = new HttpEntity<>(headers);
 		String url = "http://192.168.1.202:9875/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
 		ResponseEntity<FileExchangeMaximoDto> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,FileExchangeMaximoDto.class);
 		System.out.println("********  success ********");
@@ -88,10 +84,8 @@ public class PublicApi {
 			dbfiles.add(dbfile);
 		}
 		
-		
-		
 		rfq.setFiles(dbfiles);
-		return rfqcreated;
+		return rfqService.addRFQ(rfq);
 
 	}
 	

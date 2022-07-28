@@ -1,7 +1,7 @@
 package com.smartech.vendorportal.entities;
 
 import java.io.Serializable;
-import java.util.List;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonRootName;
@@ -26,15 +26,9 @@ public class fileExchange implements Serializable {
 	}
 	
 	
-	
-
-
 	public fileExchange() {
 		super();
 	}
-
-
-
 
 
 	public String getHref() {

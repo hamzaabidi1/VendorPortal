@@ -8,6 +8,7 @@ import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqLine;
 import com.smartech.vendorportal.entities.RfqLineDto;
+import com.smartech.vendorportal.repositories.FileDBRepository;
 import com.smartech.vendorportal.repositories.RfqLineRepository;
 import com.smartech.vendorportal.repositories.RfqRepository;
 
@@ -17,6 +18,8 @@ public class RfqServiceImpl implements RfqService {
 	RfqRepository rfqRepository;
 	@Autowired
 	RfqLineRepository rfqLineRepository;
+	@Autowired
+	private FileDBRepository fileDBRepository;
 
 	@Override
 	public List<Rfq> retriveAllRFQ() {
@@ -28,6 +31,11 @@ public class RfqServiceImpl implements RfqService {
 	public Rfq addRFQ(Rfq rfq) {
 		for (int i = 0; i < rfq.getRfqline().size(); i++) {
 			rfqLineRepository.save(rfq.getRfqline().get(i));
+		}
+		if (rfq.getFiles() != null)
+		for (int i=0 ;i<rfq.getFiles().size();i++)
+		{
+			fileDBRepository.save(rfq.getFiles().get(i));
 		}
 		return rfqRepository.save(rfq);
 	}
