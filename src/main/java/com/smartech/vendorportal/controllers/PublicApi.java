@@ -68,7 +68,7 @@ public class PublicApi {
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
 		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes());
 		HttpEntity<Rfq> getBody = new HttpEntity<>(headers);
-		String url = "http://192.168.1.202:9875/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
+		String url = "http://demo.smartech-tn.com/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
 		ResponseEntity<FileExchangeMaximoDto> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,FileExchangeMaximoDto.class);
 		System.out.println("********  success ********");
 		
