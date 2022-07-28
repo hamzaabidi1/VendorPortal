@@ -66,7 +66,7 @@ public class PublicApi {
 		HttpHeaders headers = new HttpHeaders();
 		headers.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
-		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
+		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes());
 		HttpEntity<Rfq> getBody = new HttpEntity<>(headers);
 		String url = "http://192.168.1.202:9875/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
 		ResponseEntity<FileExchangeMaximoDto> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,FileExchangeMaximoDto.class);

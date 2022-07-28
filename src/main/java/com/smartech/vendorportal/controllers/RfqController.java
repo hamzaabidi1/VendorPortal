@@ -111,6 +111,7 @@ public class RfqController {
 		headersfile.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
 		headersfile.set("x-method-override", "PATCH");
 		headersfile.set("patchtype", "MERGE");
+		headersfile.set("Content-Type", "application/json");
 		MaximoSendFileDto maximoSendFileDto = new MaximoSendFileDto();
 		maximoSendFileDto.setRfqnum(rfq.getRfqnum());
 		maximoSendFileDto.setSiteid(rfq.getSiteid());
@@ -119,18 +120,18 @@ public class RfqController {
 			Docklinks docklinks=new Docklinks();
 			docklinks.setUrlname(rfq.getFiles().get(i).getName());
 			docklinks.setDescription(rfq.getFiles().get(i).getName());
-			docklinks.setDocumentdata(rfq.getFiles().get(i).getData().toString());
+			docklinks.setDocumentdata(Base64.getEncoder().encodeToString(rfq.getFiles().get(i).getData()));
 			docklinks.setUrltype("FILE");
 			docklinks.setDoctype("Attachments");
 			docklist.add(docklinks);
 			
 		}
 		maximoSendFileDto.setDoclinks(docklist);
-		HttpEntity<?> getBodyFile = new HttpEntity<>(maximoSendFileDto,headers);
+		HttpEntity<?> getBodyFile = new HttpEntity<>(maximoSendFileDto,headersfile);
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
 		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
 		String urifile = "http://demo.smartech-tn.com/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
-		ResponseEntity<String> resultGetfile = restTemplate.exchange(urifile, HttpMethod.GET, getBodyFile,String.class);
+		ResponseEntity<String> resultGetfile = restTemplate.exchange(urifile, HttpMethod.POST, getBodyFile,String.class);
 		rfq.setStatusofSend(true);
 		LocalDate today = LocalDate.now();
 		rfq.setDateEnvoie(java.sql.Date.valueOf(today));
