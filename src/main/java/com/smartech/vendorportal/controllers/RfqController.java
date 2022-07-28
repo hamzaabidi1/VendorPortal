@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.smartech.vendorportal.entities.Docklinks;
+import com.smartech.vendorportal.entities.FileExchangeMaximoDto;
 import com.smartech.vendorportal.entities.MaximoSendFileDto;
 import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.RfqDto;
@@ -103,7 +105,7 @@ public class RfqController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
 		HttpEntity<RfqDto> requestBody = new HttpEntity<>(rfqDto, headers);
-		restTemplate.exchange(uri, HttpMethod.POST, requestBody, String.class);
+		ResponseEntity<String> resultGet = restTemplate.exchange(uri, HttpMethod.POST, requestBody, String.class);
 		Rfq rfq = rfqService.retrieveOneById(id);
 		HttpHeaders headersfile = new HttpHeaders();
 		headersfile.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
@@ -127,8 +129,8 @@ public class RfqController {
 		HttpEntity<?> getBodyFile = new HttpEntity<>(maximoSendFileDto,headers);
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
 		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
-		String urifile = "http://192.168.1.202:9875/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
-		restTemplate.exchange(urifile, HttpMethod.GET, getBodyFile,String.class);
+		String urifile = "http://demo.smartech-tn.com/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
+		ResponseEntity<String> resultGetfile = restTemplate.exchange(urifile, HttpMethod.GET, getBodyFile,String.class);
 		rfq.setStatusofSend(true);
 		LocalDate today = LocalDate.now();
 		rfq.setDateEnvoie(java.sql.Date.valueOf(today));

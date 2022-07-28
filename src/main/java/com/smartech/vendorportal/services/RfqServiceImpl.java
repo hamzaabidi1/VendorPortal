@@ -84,6 +84,7 @@ public class RfqServiceImpl implements RfqService {
 			i++;
 		}
 		rfqDto.setRfqline(rfqLinesDto);
+		rfqDto.setFile(rfq.getFiles());
 
 		return rfqDto;
 
