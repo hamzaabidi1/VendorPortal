@@ -20,9 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
 import com.smartech.vendorportal.entities.Docklinks;
-import com.smartech.vendorportal.entities.FileExchangeMaximoDto;
 import com.smartech.vendorportal.entities.MaximoSendFileDto;
 import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.RfqDto;
@@ -64,7 +62,12 @@ public class RfqController {
 	@GetMapping("/GetRfq/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<Rfq> getAllRfq(@PathVariable("email") String email) {
-		return rfqService.retriveAllRfqByUser(email);
+		List <Rfq> lstrfq=rfqService.retriveAllRfqByUser(email);
+		for (int i=0;i<lstrfq.size();i++) {
+			lstrfq.get(i).setFiles(null);
+			lstrfq.get(i).setUser(null);
+		}
+		return lstrfq;
 
 	}
 
