@@ -21,15 +21,18 @@ public class RfqDto implements Serializable {
 	private String siteid;
 	@JsonProperty("VENDOR")
 	private String vendor;
+	@JsonProperty("USERMAXIMO")
+	private String userMaximo;
 	@JsonProperty("rfqline")
 	private List<RfqLineDto> rfqline;
 	List<FileDB> files;
 	
-	public RfqDto(String rfqnum,String siteid,String vendor,List<RfqLineDto> rfqline,List<FileDB> file) {
+	public RfqDto(String rfqnum,String siteid,String vendor,String userMaximo,List<RfqLineDto> rfqline,List<FileDB> file) {
 		super();
 		this.rfqnum = rfqnum;
 		this.siteid=siteid;
 		this.vendor=vendor;
+		this.userMaximo=userMaximo;
 		this.rfqline = rfqline;
 		this.files=file;
 		
@@ -84,6 +87,16 @@ public class RfqDto implements Serializable {
 	public void setFile(List<FileDB> file) {
 		this.files = file;
 	}
+
+	public String getUserMaximo() {
+		return userMaximo;
+	}
+
+	public void setUserMaximo(String userMaximo) {
+		this.userMaximo = userMaximo;
+	}
+	
+	
 	
 	
 

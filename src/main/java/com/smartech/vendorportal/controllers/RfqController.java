@@ -20,12 +20,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.Docklinks;
 import com.smartech.vendorportal.entities.MaximoSendFileDto;
 import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqLine;
 import com.smartech.vendorportal.entities.User;
+import com.smartech.vendorportal.services.ConfigService;
 import com.smartech.vendorportal.services.RfqLineService;
 import com.smartech.vendorportal.services.RfqService;
 import com.smartech.vendorportal.services.UserControl;
@@ -41,7 +44,7 @@ public class RfqController {
 	@Autowired
 	RfqLineService rfqLineService;
 	@Autowired
-	
+	ConfigService configService;
 
 	@Value("${VendorPortal.app.urlmaximo}")
 	private String maximourl;
@@ -74,7 +77,10 @@ public class RfqController {
 	@GetMapping("/GetRfqdetails/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public Rfq getRfqDetails(@PathVariable("id") Long id) {
-		return rfqService.retrieveOneById(id);
+		Rfq rfq=rfqService.retrieveOneById(id);
+		rfq.setUser(null);
+		rfq.setFiles(null);
+		return rfq;
 
 	}
 
@@ -103,6 +109,9 @@ public class RfqController {
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public void addRfqmaximo(@PathVariable("id") Long id) {
 		RfqDto rfqDto = rfqService.addRfqTORfqDtomaximo(id);
+		List<Config> configs = configService.retriveAllConfig();
+		String usermAXIMO = configs.get(0).getUsermaximo();
+		rfqDto.setUserMaximo(usermAXIMO);
 		String uri = maximourl+"/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
