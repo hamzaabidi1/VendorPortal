@@ -1,7 +1,8 @@
 package com.smartech.vendorportal.services;
 
-import java.util.List;
 
+import java.util.Base64;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,13 +16,16 @@ public class ConfigServiceImpl implements ConfigService {
 	ConfigRepository configRepository;
 
 	@Override
-	public List<Config> retriveAllConfig() {
-		return configRepository.findAll();
+	public Config retriveAllConfig() {
+		return configRepository.findAll().get(0);
 	}
 
 	@Override
 	public Config updateConfig(Config config) {
-		return configRepository.save(config);
+		String originalInput =config.getUsermaximo()+":"+config.getPasswordmaximo();
+		String header = Base64.getEncoder().encodeToString(originalInput.getBytes());
+			config.setHeaderMaximo(header);
+			return configRepository.save(config);
 	}
 
 }

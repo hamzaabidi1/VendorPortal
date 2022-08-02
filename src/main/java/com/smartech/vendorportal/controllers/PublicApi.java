@@ -20,11 +20,14 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.FileDB;
 import com.smartech.vendorportal.entities.FileExchangeMaximoDto;
 import com.smartech.vendorportal.entities.ResponseMessage;
 import com.smartech.vendorportal.entities.Rfq;
 import com.smartech.vendorportal.entities.User;
+import com.smartech.vendorportal.services.ConfigService;
 import com.smartech.vendorportal.services.FileStorageService;
 import com.smartech.vendorportal.services.RfqLineService;
 import com.smartech.vendorportal.services.RfqService;
@@ -43,13 +46,13 @@ public class PublicApi {
 	RfqLineService rfqLineService;
 	@Autowired
 	private FileStorageService storageService;
+	@Autowired
+	ConfigService configService;
 	
-	@Value("${VendorPortal.app.urlmaximo}")
-	private String maximourl;
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
-	@Value("${VendorPortal.app.header.value}")
-	private String value;
+
+	
 
 	@PostMapping("/addRfq/{email}")
 	public Rfq addRfq(@RequestBody Rfq rfq, @PathVariable("email") String email) {
@@ -61,17 +64,18 @@ public class PublicApi {
 
 	@PostMapping("/addRfqUsername/{username}")
 	public Rfq addRfqUserName(@RequestBody Rfq rfq, @PathVariable("username") String username) throws IOException {
+		Config configs = configService.retriveAllConfig();
 		User user = userControl.getbyUserName(username);
 		rfq.setUser(user);
 		
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set(key,value);
+		headers.set(key,configs.getHeaderMaximo());
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
 		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes());
 		HttpEntity<Rfq> getBody = new HttpEntity<>(headers);
-		String url = maximourl+"/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
+		String url = configs.getMaximopath()+"/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
 		ResponseEntity<FileExchangeMaximoDto> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,FileExchangeMaximoDto.class);
 		System.out.println("********  success ********");
 		

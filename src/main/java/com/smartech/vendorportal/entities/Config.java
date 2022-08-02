@@ -20,8 +20,10 @@ public class Config {
 	private String logpath;
 	private String usermaximo;
 	private String passwordmaximo;
+	private String headerMaximo;
+	private String organization;
 	
-	public Config(Long id, String email, String password, String maximopath, String logpath, String usermaximo,String passwordmaximo) {
+	public Config(Long id, String email, String password, String maximopath, String logpath, String usermaximo,String passwordmaximo,String headerMaximo, String organization) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -30,6 +32,8 @@ public class Config {
 		this.logpath = logpath;
 		this.usermaximo=usermaximo;
 		this.passwordmaximo=passwordmaximo;
+		this.headerMaximo=headerMaximo;
+		this.organization=organization;
 	}
 	public Config() {
 		super();
@@ -76,6 +80,22 @@ public class Config {
 	public void setPasswordmaximo(String passwordmaximo) {
 		this.passwordmaximo = passwordmaximo;
 	}
+	public String getHeaderMaximo() {
+		return headerMaximo;
+	}
+	public void setHeaderMaximo(String headerMaximo) {
+		this.headerMaximo = headerMaximo;
+	}
+	public String getOrganization() {
+		return organization;
+	}
+	public void setOrganization(String organization) {
+		this.organization = organization;
+	}
+	
+	
+	
+	
 	
 	
 	

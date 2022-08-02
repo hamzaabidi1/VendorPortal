@@ -1,6 +1,5 @@
 package com.smartech.vendorportal.controllers;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.MessageResponse;
 import com.smartech.vendorportal.services.ConfigService;
@@ -41,10 +39,7 @@ public class ConfigController {
 
 	@GetMapping("/get")
 	public Config getConfig() {
-
-		List<Config> configs = configService.retriveAllConfig();
-		return configs.get(0);
-
+		return configService.retriveAllConfig();
 	}
 
 }

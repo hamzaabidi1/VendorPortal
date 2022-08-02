@@ -46,12 +46,9 @@ public class RfqController {
 	@Autowired
 	ConfigService configService;
 
-	@Value("${VendorPortal.app.urlmaximo}")
-	private String maximourl;
+
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
-	@Value("${VendorPortal.app.header.value}")
-	private String value;
 
 	@PostMapping("/addRfq/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
@@ -109,18 +106,18 @@ public class RfqController {
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public void addRfqmaximo(@PathVariable("id") Long id) {
 		RfqDto rfqDto = rfqService.addRfqTORfqDtomaximo(id);
-		List<Config> configs = configService.retriveAllConfig();
-		String usermAXIMO = configs.get(0).getUsermaximo();
+		Config configs = configService.retriveAllConfig();
+		String usermAXIMO = configs.getUsermaximo();
 		rfqDto.setUserMaximo(usermAXIMO);
-		String uri = maximourl+"/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
+		String uri = configs.getMaximopath()+"/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set(key, value);
+		headers.set(key, configs.getHeaderMaximo());
 		HttpEntity<RfqDto> requestBody = new HttpEntity<>(rfqDto, headers);
 		ResponseEntity<String> resultGet = restTemplate.exchange(uri, HttpMethod.POST, requestBody, String.class);
 		Rfq rfq = rfqService.retrieveOneById(id);
 		HttpHeaders headersfile = new HttpHeaders();
-		headersfile.set(key, value);
+		headersfile.set(key, configs.getHeaderMaximo());
 		headersfile.set("x-method-override", "PATCH");
 		headersfile.set("patchtype", "MERGE");
 		headersfile.set("Content-Type", "application/json");
@@ -142,7 +139,7 @@ public class RfqController {
 		HttpEntity<?> getBodyFile = new HttpEntity<>(maximoSendFileDto,headersfile);
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
 		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
-		String urifile =maximourl+ "/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
+		String urifile =configs.getMaximopath()+ "/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
 		ResponseEntity<String> resultGetfile = restTemplate.exchange(urifile, HttpMethod.POST, getBodyFile,String.class);
 		rfq.setStatusofSend(true);
 		LocalDate today = LocalDate.now();

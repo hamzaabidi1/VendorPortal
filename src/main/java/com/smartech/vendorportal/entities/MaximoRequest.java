@@ -17,10 +17,10 @@ public class MaximoRequest implements Serializable {
 	private Long companiesid;
 	@JsonProperty("company")
 	private String company;
-	@JsonProperty("orgid")
-	private String orgid;
 	@JsonProperty("name")
 	private String name;
+	@JsonProperty("orgid")
+	private String orgid;
 	@JsonProperty("changeby")
 	private String changeby;
 	@JsonProperty("phone")
@@ -44,12 +44,11 @@ public class MaximoRequest implements Serializable {
 	@JsonProperty("registration2")
 	private String registration2;
 
-	public MaximoRequest(String company, String orgid, String name, String changeby, String phone, String sm_pwemail,
+	public MaximoRequest(String company, String name, String changeby, String phone, String sm_pwemail,
 			String sm_country, String address1, String address2, String address3, String address4, String homepage,
-			String registration1, String registration2) {
+			String registration1, String registration2,String orgid) {
 		super();
 		this.company = company;
-		this.orgid = orgid;
 		this.name = name;
 		this.changeby = changeby;
 		this.phone = phone;
@@ -62,6 +61,7 @@ public class MaximoRequest implements Serializable {
 		this.homepage = homepage;
 		this.registration1 = registration1;
 		this.registration2 = registration2;
+		this.orgid=orgid;
 
 	}
 
@@ -77,13 +77,6 @@ public class MaximoRequest implements Serializable {
 		this.company = company;
 	}
 
-	public String getOrgid() {
-		return orgid;
-	}
-
-	public void setOrgid(String orgid) {
-		this.orgid = orgid;
-	}
 
 	public String getName() {
 		return name;
@@ -188,5 +181,15 @@ public class MaximoRequest implements Serializable {
 	public void setCompaniesid(Long companiesid) {
 		this.companiesid = companiesid;
 	}
+
+	public String getOrgid() {
+		return orgid;
+	}
+
+	public void setOrgid(String orgid) {
+		this.orgid = orgid;
+	}
+	
+	
 
 }

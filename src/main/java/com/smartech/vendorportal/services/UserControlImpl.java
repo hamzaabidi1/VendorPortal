@@ -12,6 +12,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.ERole;
 import com.smartech.vendorportal.entities.EStatus;
 import com.smartech.vendorportal.entities.MaximoRequest;
@@ -35,7 +36,10 @@ public class UserControlImpl implements UserControl {
 	RoleRepository roleRepository;
 	@Autowired
 	Utilities utilities;
-
+	@Autowired
+	ConfigService configService;
+	
+	
 	@Autowired
 	UserHistoryRepository userHistoryRepository;
 	@Autowired
@@ -221,10 +225,11 @@ public class UserControlImpl implements UserControl {
 
 	public MaximoRequest addUserToMaximo(Long idUser, String email) {
 		User createdBy = userRepository.findByEmail(email);
+		Config configs = configService.retriveAllConfig();
 		User u = retrieveOneUser(idUser);
-		return new MaximoRequest(u.getUsername(), org, u.getFirstname(), createdBy.getUsername(), u.getPhone(),
+		return new MaximoRequest(u.getUsername(), u.getFirstname(), createdBy.getUsername(), u.getPhone(),
 				u.getEmail(), u.getCountry(), u.getAddress(), u.getCity(), u.getRegion(), u.getPostalcode(),
-				u.getCompanywebsite(), u.getTaxregistrationnumber(), u.getTaxclassificationcode());
+				u.getCompanywebsite(), u.getTaxregistrationnumber(), u.getTaxclassificationcode(),configs.getOrganization());
 	}
 
 	@Override

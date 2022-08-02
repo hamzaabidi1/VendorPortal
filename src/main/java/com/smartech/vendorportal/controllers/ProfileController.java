@@ -21,10 +21,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.MaximoRequest;
 import com.smartech.vendorportal.entities.MaximoRequestList;
 import com.smartech.vendorportal.entities.RequestUpdateProfile;
 import com.smartech.vendorportal.entities.User;
+import com.smartech.vendorportal.services.ConfigService;
 import com.smartech.vendorportal.services.RequestUpdateProfileService;
 import com.smartech.vendorportal.services.UserControl;
 
@@ -35,15 +37,15 @@ public class ProfileController {
 
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
-	@Value("${VendorPortal.app.header.value}")
-	private String value;
-	@Value("${VendorPortal.app.urlmaximo}")
-	private String maximourl;
+
+
 
 	@Autowired
 	RequestUpdateProfileService requestUpdateProfileService;
 	@Autowired
 	UserControl usercontrol;
+	@Autowired
+	ConfigService configService;
 
 	@GetMapping("/getProfiles")
 	@PreAuthorize("hasRole('ADMIN')")
@@ -56,6 +58,8 @@ public class ProfileController {
 	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<?> updateProfile(@Valid @PathVariable("email") String email,
 			@Valid @PathVariable("emailconnected") String emailconnected) {
+		Config configs = configService.retriveAllConfig();
+
 		User userForUpdate = usercontrol.updateUserfromRequest(email);
 		RequestUpdateProfile request = requestUpdateProfileService.retrieveRequestUpdateProfileByEmail(email);
 		MaximoRequest maximoRequest = usercontrol.addUserToMaximo(userForUpdate.getId(), emailconnected);
@@ -65,20 +69,20 @@ public class ProfileController {
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set(key, value);
+		headers.set(key, configs.getHeaderMaximo());
 		headers.set("x-method-override", "PATCH");
 		headers.set("properties", "*");
 		// Data attached to the request.
 		HttpEntity<MaximoRequest> requestBody = new HttpEntity<>(maximoRequest, headers);
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
-		String url = maximourl + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0&oslc.where=company=\""
+		String url = configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0&oslc.where=company=\""
 				+ maximoRequest.getCompany() + "\"";
 		ResponseEntity<MaximoRequestList> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,
 				MaximoRequestList.class);
 		if (resultGet.getBody().getMember().get(0).getCompany() != null) {
 			restTemplate
 					.postForEntity(
-							maximourl + "/maxrest/oslc/os/MXVENDOR/"
+							configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR/"
 									+ resultGet.getBody().getMember().get(0).getCompaniesid() + "?lean=1",
 							requestBody, MaximoRequest.class);
 			requestUpdateProfileService.deleteRequestUpdateProfile(request.getId());

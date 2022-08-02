@@ -20,7 +20,7 @@ public class PropertiesCache
    public PropertiesCache()
    {
       //Private constructor to restrict new instances
-      InputStream in = this.getClass().getClassLoader().getResourceAsStream("application.properties");
+      InputStream in = getClass().getClassLoader().getResourceAsStream("application.properties");
       System.out.println("Reading all properties from the file");
       try {
           configProp.load(in);
@@ -58,8 +58,8 @@ public class PropertiesCache
 	 }
 	  
 	 public void flush() throws FileNotFoundException, IOException {
-	   try (final OutputStream outputstream 
-	         = new FileOutputStream("application.properties");) {
+	   try (final OutputStream outputstream = new FileOutputStream("application.properties");) 
+	   {
 	     configProp.store(outputstream,"File Updated");
 	     outputstream.close();
 	   }
@@ -83,15 +83,8 @@ public class PropertiesCache
 		 if(cache.containsKey("VendorPortal.app.header.value") == true){
 				String originalInput =config.getUsermaximo()+":"+config.getPasswordmaximo();
 				String header = Base64.getEncoder().encodeToString(originalInput.getBytes());
-				System.out.println(header);
 			  cache.setProperty("VendorPortal.app.header.value", header);
-			 }
-		  
-		 //Verify property
-		 System.out.println(cache.getProperty("VendorPortal.app.email")); 
-		 System.out.println(cache.getProperty("VendorPortal.app.password"));
-		 System.out.println(cache.getProperty("VendorPortal.app.urlmaximo"));
-		 System.out.println(cache.getProperty("logging.file.name"));
+		 }
 		  
 		 //Write to the file
 		 PropertiesCache.getInstance().flush(); 

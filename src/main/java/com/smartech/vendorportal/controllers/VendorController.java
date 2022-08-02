@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.InvoiceDto;
 import com.smartech.vendorportal.entities.InvoiceRequestList;
 import com.smartech.vendorportal.entities.MaximoRequest;
@@ -33,6 +34,7 @@ import com.smartech.vendorportal.entities.RequestProfile;
 import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqRequestListDto;
 import com.smartech.vendorportal.entities.User;
+import com.smartech.vendorportal.services.ConfigService;
 import com.smartech.vendorportal.services.RequestUpdateProfileService;
 import com.smartech.vendorportal.services.UserControl;
 
@@ -42,27 +44,27 @@ import com.smartech.vendorportal.services.UserControl;
 public class VendorController {
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
-	@Value("${VendorPortal.app.header.value}")
-	private String value;
-	@Value("${VendorPortal.app.urlmaximo}")
-	private String maximourl;
+
 
 	@Autowired
 	RequestUpdateProfileService requestUpdateProfileService;
 	@Autowired
 	UserControl userControl;
+	@Autowired
+	ConfigService configService;
 
 	@GetMapping("/invoices/{vendor}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<InvoiceDto> getinvoice(@PathVariable("vendor") String vendor) {
-		String uri = maximourl + "/maxrest/oslc/os/SMINVOICE?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\""
+		Config configs = configService.retriveAllConfig();
+		String uri = configs.getMaximopath() + "/maxrest/oslc/os/SMINVOICE?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\""
 				+ vendor + "\"";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set(key, value);
+		headers.set(key, configs.getHeaderMaximo());
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
 		ResponseEntity<InvoiceRequestList> result = restTemplate.exchange(uri, HttpMethod.GET, getBody,
 				InvoiceRequestList.class);
@@ -80,14 +82,15 @@ public class VendorController {
 	@ResponseBody
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<PoDto> getPo(@PathVariable("vendor") String vendor) {
-		String uri = maximourl + "/maxrest/oslc/os/SMPO?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\"" + vendor
+		Config configs = configService.retriveAllConfig();
+		String uri = configs.getMaximopath() + "/maxrest/oslc/os/SMPO?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\"" + vendor
 				+ "\"";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set(key, value);
+		headers.set(key, configs.getHeaderMaximo());
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
 		ResponseEntity<PoRequestList> result = restTemplate.exchange(uri, HttpMethod.GET, getBody, PoRequestList.class);
 		List<PoDto> pos = new ArrayList<PoDto>();
@@ -103,12 +106,13 @@ public class VendorController {
 	@RequestMapping("/rfq/{vendor}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<RfqDto> getRfq(@PathVariable("vendor") String vendor) {
-		String uri = maximourl
+		Config configs = configService.retriveAllConfig();
+		String uri = configs.getMaximopath()
 				+ "/maxrest/oslc/os/SMRFQ?lean=1&oslc.select=*&_dropnulls=0&oslc.where=rfqvendor.vendor=\"" + vendor
 				+ "\"";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set(key, value);
+		headers.set(key, configs.getHeaderMaximo());
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
 		ResponseEntity<RfqRequestListDto> result = restTemplate.exchange(uri, HttpMethod.GET, getBody,
 				RfqRequestListDto.class);

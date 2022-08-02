@@ -24,11 +24,13 @@ import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.EStatus;
 import com.smartech.vendorportal.entities.MaximoRequest;
 import com.smartech.vendorportal.entities.MaximoRequestList;
 import com.smartech.vendorportal.entities.User;
 import com.smartech.vendorportal.entities.UserHistory;
+import com.smartech.vendorportal.services.ConfigService;
 import com.smartech.vendorportal.services.UserControl;
 import com.smartech.vendorportal.services.UserHistoryServiceImpl;
 
@@ -39,10 +41,8 @@ public class AdminController {
 
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
-	@Value("${VendorPortal.app.header.value}")
-	private String value;
-	@Value("${VendorPortal.app.urlmaximo}")
-	private String maximourl;
+	
+	
 
 	@Autowired
 	UserControl usercontrol;
@@ -50,6 +50,8 @@ public class AdminController {
 	UserHistoryServiceImpl userHistoryServiceImpl;
 	@Autowired
 	MaximoRequestList maximoRequestList;
+	@Autowired
+	ConfigService configService;
 
 	@GetMapping("/all")
 	@PreAuthorize("hasRole('ADMIN')")
@@ -123,13 +125,15 @@ public class AdminController {
 	@GetMapping("/allcompanies")
 	@PreAuthorize("hasRole('ADMIN')")
 	public String retrieveAllCompanies() {
-		String url = maximourl + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0";
+		Config configs = configService.retriveAllConfig();
+
+		String url = configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0";
 		// HttpHeaders
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set(key, value);
+		headers.set(key, configs.getHeaderMaximo());
 
 		// HttpEntity<String>: To get result as String.
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
@@ -142,6 +146,8 @@ public class AdminController {
 	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<?> addCompany(@Valid @PathVariable("idUser") Long idUser,
 			@Valid @PathVariable("email") String email) throws JsonMappingException, JsonProcessingException {
+		Config configs = configService.retriveAllConfig();
+
 		MaximoRequest maximoRequest = usercontrol.addUserToMaximo(idUser, email);
 		RestTemplate restTemplate = new RestTemplate();
 		// HttpHeaders
@@ -150,7 +156,7 @@ public class AdminController {
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set(key, value);
+		headers.set(key, configs.getHeaderMaximo());
 		headers.set("x-method-override", "PATCH");
 		headers.set("properties", "*");
 
@@ -159,19 +165,19 @@ public class AdminController {
 		headersadd.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
 		headersadd.setContentType(MediaType.APPLICATION_JSON);
-		headersadd.set(key, value);
+		headersadd.set(key, configs.getHeaderMaximo());
 		headersadd.set("properties", "*");
 		HttpEntity<MaximoRequest> addbody = new HttpEntity<>(maximoRequest, headersadd);
 		// Data attached to the request.
 		HttpEntity<MaximoRequest> requestBody = new HttpEntity<>(maximoRequest, headers);
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
 		// send get method
-		String url = maximourl + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0&oslc.where=company=\""
+		String url = configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0&oslc.where=company=\""
 				+ maximoRequest.getCompany() + "\"";
 		ResponseEntity<MaximoRequestList> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,
 				MaximoRequestList.class);
 		if (resultGet.getBody().getMember().size() == 0) { // Send request with POST method.
-			ResponseEntity<MaximoRequest> result = restTemplate.exchange(maximourl + "/maxrest/oslc/os/MXVENDOR?lean=1",
+			ResponseEntity<MaximoRequest> result = restTemplate.exchange(configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR?lean=1",
 					HttpMethod.POST, addbody, MaximoRequest.class);
 			System.out.println("Status code:" + result.getStatusCode());
 			// Code = 201.
@@ -182,7 +188,7 @@ public class AdminController {
 		} else {
 			Long s = resultGet.getBody().getMember().get(0).getCompaniesid();
 			ResponseEntity<MaximoRequest> result = restTemplate.exchange(
-					maximourl + "/maxrest/oslc/os/MXVENDOR/" + s + "?lean=1", HttpMethod.POST, requestBody,
+					configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR/" + s + "?lean=1", HttpMethod.POST, requestBody,
 					MaximoRequest.class);
 			System.out.println("Status code:" + result.getStatusCode());
 			// Code = 200.
