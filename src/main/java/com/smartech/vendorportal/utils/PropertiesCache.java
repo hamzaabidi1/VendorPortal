@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Base64;
 import java.util.Properties;
 import org.springframework.context.annotation.Configuration;
 import com.smartech.vendorportal.entities.Config;
@@ -78,6 +79,12 @@ public class PropertiesCache
 			 }
 		 if(cache.containsKey("logging.file.name") == true){
 			  cache.setProperty("logging.file.name", config.getLogpath());
+			 }
+		 if(cache.containsKey("VendorPortal.app.header.value") == true){
+				String originalInput =config.getUsermaximo()+":"+config.getPasswordmaximo();
+				String header = Base64.getEncoder().encodeToString(originalInput.getBytes());
+				System.out.println(header);
+			  cache.setProperty("VendorPortal.app.header.value", header);
 			 }
 		  
 		 //Verify property

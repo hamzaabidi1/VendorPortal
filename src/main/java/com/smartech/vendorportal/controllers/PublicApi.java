@@ -44,9 +44,12 @@ public class PublicApi {
 	@Autowired
 	private FileStorageService storageService;
 	
-	
+	@Value("${VendorPortal.app.urlmaximo}")
+	private String maximourl;
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
+	@Value("${VendorPortal.app.header.value}")
+	private String value;
 
 	@PostMapping("/addRfq/{email}")
 	public Rfq addRfq(@RequestBody Rfq rfq, @PathVariable("email") String email) {
@@ -64,11 +67,11 @@ public class PublicApi {
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
+		headers.set(key,value);
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
 		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes());
 		HttpEntity<Rfq> getBody = new HttpEntity<>(headers);
-		String url = "http://demo.smartech-tn.com/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
+		String url = maximourl+"/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
 		ResponseEntity<FileExchangeMaximoDto> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,FileExchangeMaximoDto.class);
 		System.out.println("********  success ********");
 		

@@ -103,15 +103,15 @@ public class RfqController {
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public void addRfqmaximo(@PathVariable("id") Long id) {
 		RfqDto rfqDto = rfqService.addRfqTORfqDtomaximo(id);
-		String uri = "http://demo.smartech-tn.com/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
+		String uri = maximourl+"/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
+		headers.set(key, value);
 		HttpEntity<RfqDto> requestBody = new HttpEntity<>(rfqDto, headers);
 		ResponseEntity<String> resultGet = restTemplate.exchange(uri, HttpMethod.POST, requestBody, String.class);
 		Rfq rfq = rfqService.retrieveOneById(id);
 		HttpHeaders headersfile = new HttpHeaders();
-		headersfile.set(key, "bWF4YWRtaW46bWF4YWRtaW4xMjM=");
+		headersfile.set(key, value);
 		headersfile.set("x-method-override", "PATCH");
 		headersfile.set("patchtype", "MERGE");
 		headersfile.set("Content-Type", "application/json");
@@ -133,7 +133,7 @@ public class RfqController {
 		HttpEntity<?> getBodyFile = new HttpEntity<>(maximoSendFileDto,headersfile);
 		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
 		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
-		String urifile = "http://demo.smartech-tn.com/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
+		String urifile =maximourl+ "/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
 		ResponseEntity<String> resultGetfile = restTemplate.exchange(urifile, HttpMethod.POST, getBodyFile,String.class);
 		rfq.setStatusofSend(true);
 		LocalDate today = LocalDate.now();
