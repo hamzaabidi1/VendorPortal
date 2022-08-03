@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.smartech.vendorportal.entities.Config;
+import com.smartech.vendorportal.entities.Invoice;
 import com.smartech.vendorportal.entities.InvoiceDto;
 import com.smartech.vendorportal.entities.InvoiceRequestList;
 import com.smartech.vendorportal.entities.MaximoRequest;
@@ -36,6 +37,7 @@ import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqRequestListDto;
 import com.smartech.vendorportal.entities.User;
 import com.smartech.vendorportal.services.ConfigService;
+import com.smartech.vendorportal.services.InvoiceService;
 import com.smartech.vendorportal.services.PoService;
 import com.smartech.vendorportal.services.RequestUpdateProfileService;
 import com.smartech.vendorportal.services.UserControl;
@@ -56,6 +58,8 @@ public class VendorController {
 	ConfigService configService;
 	@Autowired
 	PoService poService;
+	@Autowired
+	InvoiceService invoiceService;
 
 	@GetMapping("/invoices/{vendor}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
@@ -75,6 +79,17 @@ public class VendorController {
 		List<InvoiceDto> invoices = new ArrayList<InvoiceDto>();
 		try {
 			invoices = result.getBody().getMember();
+			
+			User user = userControl.getbyUserName(vendor);
+			List<Invoice> invoicesLocal = new ArrayList<>();
+			poService.deleteAllPos	();
+			for (int i=0;i<invoices.size();i++)
+			{
+				Invoice invoice =invoiceService.InvoiceDtoToInvoice(invoices.get(i));
+				invoice.setUser(user);
+				invoicesLocal.add(invoice);
+				invoiceService.addInvoice(invoicesLocal.get(i));	
+			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

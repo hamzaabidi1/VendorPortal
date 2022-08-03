@@ -1641,3 +1641,474 @@ org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found:
 2022-08-03 12:07:56.566  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
 2022-08-03 12:07:56.566  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
 2022-08-03 12:07:56.566  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.566  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.566  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.569  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.569  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.572  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.572  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.574  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.574  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.574  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.574  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.577  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.577  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.580  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.582  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.582  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.582  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.582  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.582  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.583  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.583  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.587  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.587  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.587  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.587  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.587  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.587  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.590  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.590  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.593  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.593  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.593  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.594  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.594  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.594  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.597  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.597  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.601  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.601  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.601  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.601  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:07:56.601  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.601  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.603  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.604  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.607  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:07:56.607  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:07:56.607  INFO 18644 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-03 12:07:56.621  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 12:07:56.621  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:07:56.622  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:07:56.624  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 12:07:56.626  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-03 12:07:56.626  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-03 12:07:56.626  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-03 12:07:56.629  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-03 12:07:56.629  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-03 12:07:56.630  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-03 12:17:08.169  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-03 12:17:08.170  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-03 12:17:08.170  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-03 12:17:08.173  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-03 12:17:08.174  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-03 12:17:08.174  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-03 12:17:08.270  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 12:17:08.270  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:17:08.273  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:17:08.274  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 12:17:08.278  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-03 12:17:08.278  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 12:17:08.282  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 12:17:08.571  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.services.UserControlImpl.getbyUserName(String))
+2022-08-03 12:17:08.571  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:17:08.573  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:17:08.573  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:17:08.574  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:17:08.575  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.services.UserControlImpl.getbyUserName(String))
+2022-08-03 12:17:08.575  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(void com.smartech.vendorportal.services.PoServiceImpl.deleteAllPos())
+2022-08-03 12:17:08.575  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(void org.springframework.data.repository.CrudRepository.deleteAll())
+2022-08-03 12:17:08.599  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(void org.springframework.data.repository.CrudRepository.deleteAll())
+2022-08-03 12:17:08.600  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(void com.smartech.vendorportal.services.PoServiceImpl.deleteAllPos())
+2022-08-03 12:17:08.600  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.600  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.600  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.600  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.604  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.604  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.607  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.608  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.611  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.611  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.611  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.611  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.611  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.611  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.614  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.614  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.617  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.617  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.624  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.624  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.624  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.624  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.624  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.624  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.627  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.627  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.630  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.630  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.631  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.631  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.631  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.631  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.633  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.633  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.639  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.639  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.639  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.639  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.639  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.639  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.642  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.642  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.646  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.646  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.646  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.646  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.646  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.646  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.650  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.650  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.654  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.655  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.655  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.655  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.655  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.655  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.658  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.658  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.662  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.662  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.663  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.663  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.poDtoToPo(PoDto))
+2022-08-03 12:17:08.663  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.663  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.666  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.666  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.670  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 12:17:08.670  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Po com.smartech.vendorportal.services.PoServiceImpl.addPO(Po))
+2022-08-03 12:17:08.670  INFO 18644 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-03 12:17:08.685  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 12:17:08.685  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:17:08.688  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 12:17:08.689  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 12:17:08.691  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-03 12:17:08.691  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-03 12:17:08.692  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-03 12:17:08.695  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-03 12:17:08.695  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-03 12:17:08.695  INFO 18644 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-03 13:25:44.020  WARN 18644 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=1h4m15s506ms375µs600ns).
+2022-08-03 13:32:54.613  INFO 18644 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:32:54.614  INFO 18644 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-08-03 13:32:54.616  INFO 18644 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-08-03 13:32:54.788  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 18644 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-08-03 13:32:54.788  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-03 13:32:55.137  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-03 13:32:55.201  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 12 JPA repository interfaces.
+2022-08-03 13:32:55.487  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-03 13:32:55.488  INFO 18644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-03 13:32:55.488  INFO 18644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-08-03 13:32:55.526  INFO 18644 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-03 13:32:55.526  INFO 18644 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 735 ms
+2022-08-03 13:32:55.581  WARN 18644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-03 13:32:55.650  INFO 18644 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-03 13:32:55.657  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-08-03 13:32:55.662  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-08-03 13:32:55.662  INFO 18644 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-08-03 13:32:55.748  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-08-03 13:32:55.768  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-08-03 13:32:55.802  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-08-03 13:32:55.832  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-08-03 13:32:55.895  INFO 18644 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-03 13:32:55.895  INFO 18644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:32:56.283  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:32:56.289  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:32:56.436  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:32:56.440  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:32:56.469  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:32:56.471  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:32:56.637  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:32:56.637  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:32:56.638  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:32:56.639  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:32:57.185  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:32:57.185  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:32:57.194  INFO 18644 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-08-03 13:32:57.703  INFO 18644 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-03 13:32:57.725  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-08-03 13:32:57.730  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 3.016 seconds (JVM running for 5545.105)
+2022-08-03 13:32:57.732  INFO 18644 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-03 13:32:59.178  INFO 18644 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:32:59.180  INFO 18644 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-08-03 13:32:59.182  INFO 18644 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2022-08-03 13:32:59.306  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 18644 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-08-03 13:32:59.306  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-03 13:32:59.586  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-03 13:32:59.640  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 12 JPA repository interfaces.
+2022-08-03 13:32:59.932  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-03 13:32:59.932  INFO 18644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-03 13:32:59.932  INFO 18644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-08-03 13:32:59.968  INFO 18644 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-03 13:32:59.968  INFO 18644 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 658 ms
+2022-08-03 13:33:00.022  WARN 18644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-03 13:33:00.097  INFO 18644 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-03 13:33:00.104  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-08-03 13:33:00.108  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-08-03 13:33:00.109  INFO 18644 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-08-03 13:33:00.187  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-08-03 13:33:00.210  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-08-03 13:33:00.263  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-08-03 13:33:00.289  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-08-03 13:33:00.343  INFO 18644 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-03 13:33:00.343  INFO 18644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:33:00.659  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:33:00.665  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:33:00.765  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:33:00.767  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:33:00.787  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:33:00.788  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:33:00.904  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:33:00.905  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:33:00.907  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:33:00.907  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:33:01.362  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:33:01.363  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:33:01.372  INFO 18644 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-08-03 13:33:01.888  INFO 18644 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-03 13:33:01.910  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-08-03 13:33:01.914  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 2.642 seconds (JVM running for 5549.289)
+2022-08-03 13:33:01.916  INFO 18644 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-03 13:33:21.043  INFO 18644 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:33:21.043  INFO 18644 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-08-03 13:33:21.045  INFO 18644 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-08-03 13:33:21.180  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 18644 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-08-03 13:33:21.181  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-03 13:33:21.556  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-03 13:33:21.613  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 12 JPA repository interfaces.
+2022-08-03 13:33:21.865  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-03 13:33:21.866  INFO 18644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-03 13:33:21.866  INFO 18644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-08-03 13:33:21.906  INFO 18644 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-03 13:33:21.906  INFO 18644 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 720 ms
+2022-08-03 13:33:21.970  WARN 18644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-03 13:33:22.052  INFO 18644 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-03 13:33:22.058  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-08-03 13:33:22.063  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-08-03 13:33:22.063  INFO 18644 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-08-03 13:33:22.159  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-08-03 13:33:22.187  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-08-03 13:33:22.218  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-08-03 13:33:22.244  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-08-03 13:33:22.298  INFO 18644 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-03 13:33:22.299  INFO 18644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:33:22.642  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:33:22.648  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:33:22.779  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:33:22.782  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:33:22.810  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:33:22.811  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:33:22.916  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:33:22.917  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:33:22.918  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:33:22.919  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:33:23.400  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:33:23.401  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:33:23.423  INFO 18644 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-08-03 13:33:24.000  INFO 18644 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-03 13:33:24.020  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-08-03 13:33:24.025  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 2.89 seconds (JVM running for 5571.4)
+2022-08-03 13:33:24.027  INFO 18644 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-03 13:37:23.557  INFO 18644 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:37:23.558  INFO 18644 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-08-03 13:37:23.559  INFO 18644 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-08-03 13:37:23.688  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 18644 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-08-03 13:37:23.688  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-03 13:37:23.963  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-03 13:37:24.020  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 12 JPA repository interfaces.
+2022-08-03 13:37:24.229  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-03 13:37:24.229  INFO 18644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-03 13:37:24.230  INFO 18644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-08-03 13:37:24.263  INFO 18644 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-03 13:37:24.264  INFO 18644 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 573 ms
+2022-08-03 13:37:24.312  WARN 18644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-03 13:37:24.374  INFO 18644 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-03 13:37:24.381  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-08-03 13:37:24.387  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-08-03 13:37:24.387  INFO 18644 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-08-03 13:37:24.466  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-08-03 13:37:24.489  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-08-03 13:37:24.522  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-08-03 13:37:24.547  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-08-03 13:37:24.599  INFO 18644 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-03 13:37:24.600  INFO 18644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:37:24.951  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:37:24.957  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:37:25.065  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:37:25.067  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:37:25.088  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:37:25.089  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:37:25.207  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:37:25.207  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:37:25.209  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:37:25.210  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:37:25.717  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:37:25.718  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:37:25.728  INFO 18644 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-08-03 13:37:26.171  INFO 18644 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-03 13:37:26.192  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-08-03 13:37:26.197  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 2.547 seconds (JVM running for 5813.573)
+2022-08-03 13:37:26.199  INFO 18644 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-03 13:42:06.144  INFO 18644 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:42:06.144  INFO 18644 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-08-03 13:42:06.146  INFO 18644 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-08-03 13:42:06.271  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 18644 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-08-03 13:42:06.271  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-03 13:42:06.560  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-03 13:42:06.623  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 12 JPA repository interfaces.
+2022-08-03 13:42:06.844  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-03 13:42:06.845  INFO 18644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-03 13:42:06.845  INFO 18644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-08-03 13:42:06.878  INFO 18644 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-03 13:42:06.878  INFO 18644 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 603 ms
+2022-08-03 13:42:06.948  WARN 18644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-03 13:42:07.027  INFO 18644 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-03 13:42:07.035  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-08-03 13:42:07.040  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-08-03 13:42:07.040  INFO 18644 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-08-03 13:42:07.129  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-08-03 13:42:07.153  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-08-03 13:42:07.185  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-08-03 13:42:07.211  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-08-03 13:42:07.268  INFO 18644 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-03 13:42:07.268  INFO 18644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:42:07.649  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:42:07.657  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:42:07.781  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:42:07.784  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:42:07.806  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:42:07.808  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:42:07.921  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:42:07.921  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:42:07.922  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:42:07.923  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:42:08.393  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:42:08.393  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:42:08.403  INFO 18644 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-08-03 13:42:08.956  INFO 18644 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-03 13:42:08.983  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-08-03 13:42:08.992  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 2.759 seconds (JVM running for 6096.367)
+2022-08-03 13:42:08.994  INFO 18644 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-03 13:42:12.026  INFO 18644 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-03 13:42:12.026  INFO 18644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-03 13:42:12.029  INFO 18644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-08-03 13:42:12.042  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 13:42:12.046  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:42:12.048  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:42:12.051  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 13:42:12.061  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.InvoiceController.getAllInvoice(String))
+2022-08-03 13:42:12.063  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.InvoiceServiceImpl.retriveAllInvoiceByUser(String))
+2022-08-03 13:42:12.065  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.InvoiceRepository.findAllInvoiceByUser(String))
+2022-08-03 13:42:12.078  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.InvoiceRepository.findAllInvoiceByUser(String))
+2022-08-03 13:42:12.079  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.InvoiceServiceImpl.retriveAllInvoiceByUser(String))
+2022-08-03 13:42:12.079  INFO 18644 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.InvoiceController.getAllInvoice(String))
+2022-08-03 13:42:14.439  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-03 13:42:14.445  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-03 13:42:14.453  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-03 13:42:14.458  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-03 13:42:14.458  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-03 13:42:14.458  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-03 13:42:14.541  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 13:42:14.541  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:42:14.544  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:42:14.546  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 13:42:14.548  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.InvoiceController.getAllInvoice(String))
+2022-08-03 13:42:14.548  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.InvoiceServiceImpl.retriveAllInvoiceByUser(String))
+2022-08-03 13:42:14.548  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.InvoiceRepository.findAllInvoiceByUser(String))
+2022-08-03 13:42:14.553  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.InvoiceRepository.findAllInvoiceByUser(String))
+2022-08-03 13:42:14.553  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.InvoiceServiceImpl.retriveAllInvoiceByUser(String))
+2022-08-03 13:42:14.553  INFO 18644 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.InvoiceController.getAllInvoice(String))
+2022-08-03 13:42:25.149  INFO 18644 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:42:25.150  INFO 18644 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2022-08-03 13:42:25.152  INFO 18644 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2022-08-03 13:42:25.271  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 18644 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-08-03 13:42:25.272  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-03 13:42:25.558  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-03 13:42:25.617  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 12 JPA repository interfaces.
+2022-08-03 13:42:25.832  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-03 13:42:25.833  INFO 18644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-03 13:42:25.833  INFO 18644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-08-03 13:42:25.868  INFO 18644 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-03 13:42:25.868  INFO 18644 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 594 ms
+2022-08-03 13:42:25.935  WARN 18644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-03 13:42:26.050  INFO 18644 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-03 13:42:26.062  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-08-03 13:42:26.067  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-08-03 13:42:26.068  INFO 18644 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-08-03 13:42:26.196  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-08-03 13:42:26.228  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-08-03 13:42:26.260  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-08-03 13:42:26.295  INFO 18644 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-08-03 13:42:26.358  INFO 18644 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-03 13:42:26.359  INFO 18644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:42:26.679  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:42:26.684  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-03 13:42:26.836  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:42:26.841  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:42:26.881  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:42:26.884  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-03 13:42:27.076  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:42:27.076  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-03 13:42:27.078  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:42:27.078  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-03 13:42:27.596  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:42:27.597  INFO 18644 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
+2022-08-03 13:42:27.607  INFO 18644 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-08-03 13:42:28.028  INFO 18644 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-03 13:42:28.046  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-08-03 13:42:28.051  INFO 18644 --- [restartedMain] c.s.v.VendorPortalApplication            : Started VendorPortalApplication in 2.812 seconds (JVM running for 6115.427)
+2022-08-03 13:42:28.053  INFO 18644 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-03 13:44:06.144  INFO 18644 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-03 13:44:06.145  INFO 18644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-03 13:44:06.147  INFO 18644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-08-03 13:44:06.157  INFO 18644 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-03 13:44:06.163  INFO 18644 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-03 13:44:06.170  INFO 18644 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-03 13:44:06.175  INFO 18644 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-03 13:44:06.175  INFO 18644 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-03 13:44:06.175  INFO 18644 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-03 13:44:06.252  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 13:44:06.255  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:44:06.259  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:44:06.264  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-03 13:44:06.268  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.VendorController.getinvoice(String))
+2022-08-03 13:44:06.271  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:44:06.274  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-03 13:44:06.539  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.services.UserControlImpl.getbyUserName(String))
+2022-08-03 13:44:06.540  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:44:06.542  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:44:06.543  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:44:06.545  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-03 13:44:06.545  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.services.UserControlImpl.getbyUserName(String))
+2022-08-03 13:44:06.545  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(void com.smartech.vendorportal.services.PoServiceImpl.deleteAllPos())
+2022-08-03 13:44:06.552  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(void org.springframework.data.repository.CrudRepository.deleteAll())
+2022-08-03 13:44:06.572  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(void org.springframework.data.repository.CrudRepository.deleteAll())
+2022-08-03 13:44:06.572  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(void com.smartech.vendorportal.services.PoServiceImpl.deleteAllPos())
+2022-08-03 13:44:06.572  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Invoice com.smartech.vendorportal.services.InvoiceServiceImpl.InvoiceDtoToInvoice(InvoiceDto))
+2022-08-03 13:44:06.575  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Invoice com.smartech.vendorportal.services.InvoiceServiceImpl.InvoiceDtoToInvoice(InvoiceDto))
+2022-08-03 13:44:06.576  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Invoice com.smartech.vendorportal.services.InvoiceServiceImpl.addInvoice(Invoice))
+2022-08-03 13:44:06.576  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 13:44:06.585  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 13:44:06.586  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 13:44:06.593  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 13:44:06.593  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Invoice com.smartech.vendorportal.services.InvoiceServiceImpl.addInvoice(Invoice))
+2022-08-03 13:44:06.594  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Invoice com.smartech.vendorportal.services.InvoiceServiceImpl.InvoiceDtoToInvoice(InvoiceDto))
+2022-08-03 13:44:06.594  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Invoice com.smartech.vendorportal.services.InvoiceServiceImpl.InvoiceDtoToInvoice(InvoiceDto))
+2022-08-03 13:44:06.594  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Invoice com.smartech.vendorportal.services.InvoiceServiceImpl.addInvoice(Invoice))
+2022-08-03 13:44:06.594  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 13:44:06.597  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 13:44:06.597  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 13:44:06.604  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-03 13:44:06.604  INFO 18644 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Invoice com.smartech.vendorportal.services.InvoiceServiceImpl.addInvoice(Invoice))
