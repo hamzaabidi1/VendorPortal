@@ -48,6 +48,11 @@ public class PoLine {
 		this.vendeliverydate=vendeliverydate;
 		this.po = po;
 	}
+	
+	public PoLine(String polinenum,String vendeliverydate) {
+		this.polinenum = polinenum;
+		this.vendeliverydate=vendeliverydate;
+	}
 
 	public PoLine() {
 		super();

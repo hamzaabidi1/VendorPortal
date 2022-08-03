@@ -8,9 +8,10 @@ public class PolineDto {
 	private String orderunit;
 	private String unitcost;
 	private String linecost;
+	private String vendeliverydate;
 
 	public PolineDto(String polinenum, String itemnum, String description, String orderqty, String orderunit, String unitcost,
-			String linecost) {
+			String linecost,String vendeliverydate) {
 		super();
 		this.polinenum = polinenum;
 		this.itemnum = itemnum;
@@ -19,6 +20,7 @@ public class PolineDto {
 		this.orderunit = orderunit;
 		this.unitcost = unitcost;
 		this.linecost = linecost;
+		this.vendeliverydate=vendeliverydate;
 	}
 
 	public PolineDto() {
@@ -80,5 +82,15 @@ public class PolineDto {
 	public void setLinecost(String linecost) {
 		this.linecost = linecost;
 	}
+
+	public String getVendeliverydate() {
+		return vendeliverydate;
+	}
+
+	public void setVendeliverydate(String vendeliverydate) {
+		this.vendeliverydate = vendeliverydate;
+	}
+	
+	
 
 }

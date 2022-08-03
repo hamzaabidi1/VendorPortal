@@ -1,5 +1,7 @@
 package com.smartech.vendorportal.controllers;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -29,8 +31,11 @@ import com.smartech.vendorportal.entities.Invoice;
 import com.smartech.vendorportal.entities.InvoiceDto;
 import com.smartech.vendorportal.entities.InvoiceRequestList;
 import com.smartech.vendorportal.entities.MaximoRequest;
+import com.smartech.vendorportal.entities.MaximoUpdatePo;
 import com.smartech.vendorportal.entities.Po;
 import com.smartech.vendorportal.entities.PoDto;
+import com.smartech.vendorportal.entities.PoLine;
+import com.smartech.vendorportal.entities.PoLineUpdate;
 import com.smartech.vendorportal.entities.PoRequestList;
 import com.smartech.vendorportal.entities.RequestProfile;
 import com.smartech.vendorportal.entities.RfqDto;
@@ -38,6 +43,7 @@ import com.smartech.vendorportal.entities.RfqRequestListDto;
 import com.smartech.vendorportal.entities.User;
 import com.smartech.vendorportal.services.ConfigService;
 import com.smartech.vendorportal.services.InvoiceService;
+import com.smartech.vendorportal.services.PoLineService;
 import com.smartech.vendorportal.services.PoService;
 import com.smartech.vendorportal.services.RequestUpdateProfileService;
 import com.smartech.vendorportal.services.UserControl;
@@ -58,6 +64,8 @@ public class VendorController {
 	ConfigService configService;
 	@Autowired
 	PoService poService;
+	@Autowired
+	PoLineService polineService;
 	@Autowired
 	InvoiceService invoiceService;
 
@@ -82,7 +90,7 @@ public class VendorController {
 			
 			User user = userControl.getbyUserName(vendor);
 			List<Invoice> invoicesLocal = new ArrayList<>();
-			poService.deleteAllPos	();
+			invoiceService.deleteAllInvoices();
 			for (int i=0;i<invoices.size();i++)
 			{
 				Invoice invoice =invoiceService.InvoiceDtoToInvoice(invoices.get(i));
@@ -95,6 +103,30 @@ public class VendorController {
 		}
 		return invoices;
 
+	}
+	
+	
+	@PostMapping("/po/updateline/{poid}")
+	@ResponseBody
+	@PreAuthorize("hasRole('FOURNISSEUR')")
+	public void updatePoLine(@PathVariable("poid") String poid,@RequestBody PoLine polineupdate) {
+		
+		Config configs = configService.retriveAllConfig();
+		String uri = configs.getMaximopath() + "/maxrest/oslc/os/SMPO/+"+poid+"?lean=1";
+		RestTemplate restTemplate = new RestTemplate();
+		HttpHeaders headers = new HttpHeaders();
+		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
+		// Request to return JSON format
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		headers.set(key, configs.getHeaderMaximo());
+		headers.set("x-method-override","PATCH");
+		headers.set("patchtype","MERGE");
+		PoLineUpdate poline =new PoLineUpdate(polineupdate.getPolinenum(),polineupdate.getVendeliverydate().substring(0,10));
+		MaximoUpdatePo maximoUpdatePo = new MaximoUpdatePo();
+		maximoUpdatePo.setPoline(poline);
+	
+		HttpEntity<MaximoUpdatePo> getBody = new HttpEntity<>(maximoUpdatePo,headers);
+		ResponseEntity<String> result = restTemplate.exchange(uri, HttpMethod.POST, getBody, String.class);
 	}
 
 	@GetMapping("/po/{vendor}")

@@ -68,6 +68,7 @@ public class PoServiceImpl implements PoService {
 		po.setCurrencycode(poDto.getCurrencycode());
 		po.setPurchaseagent(poDto.getPurchaseagent());
 		po.setVendeliverydate(poDto.getVendeliverydate());
+		po.setPoid(poDto.getPoid());
 		List<PoLine> polinelist=new ArrayList<>();
 		for (int i =0 ;i<poDto.getPoline().size();i++) {
 			
@@ -79,6 +80,7 @@ public class PoServiceImpl implements PoService {
 			poline.setOrderunit(poDto.getPoline().get(i).getOrderunit());
 			poline.setUnitcost(poDto.getPoline().get(i).getUnitcost());
 			poline.setLinecost(poDto.getPoline().get(i).getLinecost());	
+			poline.setVendeliverydate(poDto.getPoline().get(i).getVendeliverydate());	
 			polinelist.add(poline);
 			
 		}
