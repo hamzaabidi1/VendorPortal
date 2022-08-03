@@ -21,10 +21,11 @@ public class PoDto implements Serializable {
 	private String totaltax1;
 	private String currencycode;
 	private String purchaseagent;
+	private String vendeliverydate;
 	private List<PolineDto> poline;
 
 	public PoDto(String ponum, String description, String status, String requireddate, String totalcost, String totaltax1,
-			String currencycode, String purchaseagent, List<PolineDto> poline) {
+			String currencycode, String purchaseagent,String vendeliverydate, List<PolineDto> poline) {
 		super();
 		this.ponum = ponum;
 		this.description = description;
@@ -35,6 +36,7 @@ public class PoDto implements Serializable {
 		this.currencycode = currencycode;
 		this.purchaseagent = purchaseagent;
 		this.poline = poline;
+		this.vendeliverydate=vendeliverydate;
 	}
 
 	public PoDto() {
@@ -112,5 +114,15 @@ public class PoDto implements Serializable {
 	public void setPoline(List<PolineDto> poline) {
 		this.poline = poline;
 	}
+
+	public String getVendeliverydate() {
+		return vendeliverydate;
+	}
+
+	public void setVendeliverydate(String vendeliverydate) {
+		this.vendeliverydate = vendeliverydate;
+	}
+	
+	
 
 }

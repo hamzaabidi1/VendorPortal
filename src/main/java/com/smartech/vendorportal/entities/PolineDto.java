@@ -1,16 +1,16 @@
 package com.smartech.vendorportal.entities;
 
 public class PolineDto {
-	private int polinenum;
+	private String polinenum;
 	private String itemnum;
 	private String description;
-	private Double orderqty;
+	private String orderqty;
 	private String orderunit;
-	private Double unitcost;
-	private Double linecost;
+	private String unitcost;
+	private String linecost;
 
-	public PolineDto(int polinenum, String itemnum, String description, Double orderqty, String orderunit, Double unitcost,
-			Double linecost) {
+	public PolineDto(String polinenum, String itemnum, String description, String orderqty, String orderunit, String unitcost,
+			String linecost) {
 		super();
 		this.polinenum = polinenum;
 		this.itemnum = itemnum;
@@ -25,11 +25,11 @@ public class PolineDto {
 		super();
 	}
 
-	public int getPolinenum() {
+	public String getPolinenum() {
 		return polinenum;
 	}
 
-	public void setPolinenum(int polinenum) {
+	public void setPolinenum(String polinenum) {
 		this.polinenum = polinenum;
 	}
 
@@ -49,11 +49,11 @@ public class PolineDto {
 		this.description = description;
 	}
 
-	public Double getOrderqty() {
+	public String getOrderqty() {
 		return orderqty;
 	}
 
-	public void setOrderqty(Double orderqty) {
+	public void setOrderqty(String orderqty) {
 		this.orderqty = orderqty;
 	}
 
@@ -65,19 +65,19 @@ public class PolineDto {
 		this.orderunit = orderunit;
 	}
 
-	public Double getUnitcost() {
+	public String getUnitcost() {
 		return unitcost;
 	}
 
-	public void setUnitcost(Double unitcost) {
+	public void setUnitcost(String unitcost) {
 		this.unitcost = unitcost;
 	}
 
-	public Double getLinecost() {
+	public String getLinecost() {
 		return linecost;
 	}
 
-	public void setLinecost(Double linecost) {
+	public void setLinecost(String linecost) {
 		this.linecost = linecost;
 	}
 

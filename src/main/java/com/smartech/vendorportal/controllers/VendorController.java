@@ -28,6 +28,7 @@ import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.InvoiceDto;
 import com.smartech.vendorportal.entities.InvoiceRequestList;
 import com.smartech.vendorportal.entities.MaximoRequest;
+import com.smartech.vendorportal.entities.Po;
 import com.smartech.vendorportal.entities.PoDto;
 import com.smartech.vendorportal.entities.PoRequestList;
 import com.smartech.vendorportal.entities.RequestProfile;
@@ -35,6 +36,7 @@ import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqRequestListDto;
 import com.smartech.vendorportal.entities.User;
 import com.smartech.vendorportal.services.ConfigService;
+import com.smartech.vendorportal.services.PoService;
 import com.smartech.vendorportal.services.RequestUpdateProfileService;
 import com.smartech.vendorportal.services.UserControl;
 
@@ -52,6 +54,8 @@ public class VendorController {
 	UserControl userControl;
 	@Autowired
 	ConfigService configService;
+	@Autowired
+	PoService poService;
 
 	@GetMapping("/invoices/{vendor}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
@@ -96,6 +100,17 @@ public class VendorController {
 		List<PoDto> pos = new ArrayList<PoDto>();
 		try {
 			pos = result.getBody().getMember();
+			User user = userControl.getbyUserName(vendor);
+			List<Po> posLocal = new ArrayList<>();
+			poService.deleteAllPos	();
+			for (int i=0;i<pos.size();i++)
+			{
+				Po po =poService.poDtoToPo(pos.get(i));
+				po.setUser(user);
+				posLocal.add(po);
+				poService.addPO(posLocal.get(i));	
+			}
+			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
