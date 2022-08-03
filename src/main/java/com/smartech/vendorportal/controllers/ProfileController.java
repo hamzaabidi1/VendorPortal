@@ -38,8 +38,6 @@ public class ProfileController {
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
 
-
-
 	@Autowired
 	RequestUpdateProfileService requestUpdateProfileService;
 	@Autowired
@@ -75,16 +73,16 @@ public class ProfileController {
 		// Data attached to the request.
 		HttpEntity<MaximoRequest> requestBody = new HttpEntity<>(maximoRequest, headers);
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
-		String url = configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0&oslc.where=company=\""
+		String url = configs.getMaximopath()
+				+ "/maxrest/oslc/os/MXVENDOR?lean=1&oslc.select=*&_dropnulls=0&oslc.where=company=\""
 				+ maximoRequest.getCompany() + "\"";
 		ResponseEntity<MaximoRequestList> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,
 				MaximoRequestList.class);
 		if (resultGet.getBody().getMember().get(0).getCompany() != null) {
-			restTemplate
-					.postForEntity(
-							configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR/"
-									+ resultGet.getBody().getMember().get(0).getCompaniesid() + "?lean=1",
-							requestBody, MaximoRequest.class);
+			restTemplate.postForEntity(
+					configs.getMaximopath() + "/maxrest/oslc/os/MXVENDOR/"
+							+ resultGet.getBody().getMember().get(0).getCompaniesid() + "?lean=1",
+					requestBody, MaximoRequest.class);
 			requestUpdateProfileService.deleteRequestUpdateProfile(request.getId());
 			return ResponseEntity.ok().body(true);
 		}

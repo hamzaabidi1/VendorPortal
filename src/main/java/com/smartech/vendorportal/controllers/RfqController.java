@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
 import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.Docklinks;
 import com.smartech.vendorportal.entities.MaximoSendFileDto;
@@ -46,7 +45,6 @@ public class RfqController {
 	@Autowired
 	ConfigService configService;
 
-
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
 
@@ -62,8 +60,8 @@ public class RfqController {
 	@GetMapping("/GetRfq/{email}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public List<Rfq> getAllRfq(@PathVariable("email") String email) {
-		List <Rfq> lstrfq=rfqService.retriveAllRfqByUser(email);
-		for (int i=0;i<lstrfq.size();i++) {
+		List<Rfq> lstrfq = rfqService.retriveAllRfqByUser(email);
+		for (int i = 0; i < lstrfq.size(); i++) {
 			lstrfq.get(i).setFiles(null);
 			lstrfq.get(i).setUser(null);
 		}
@@ -74,7 +72,7 @@ public class RfqController {
 	@GetMapping("/GetRfqdetails/{id}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
 	public Rfq getRfqDetails(@PathVariable("id") Long id) {
-		Rfq rfq=rfqService.retrieveOneById(id);
+		Rfq rfq = rfqService.retrieveOneById(id);
 		rfq.setUser(null);
 		rfq.setFiles(null);
 		return rfq;
@@ -109,7 +107,7 @@ public class RfqController {
 		Config configs = configService.retriveAllConfig();
 		String usermAXIMO = configs.getUsermaximo();
 		rfqDto.setUserMaximo(usermAXIMO);
-		String uri = configs.getMaximopath()+"/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
+		String uri = configs.getMaximopath() + "/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.set(key, configs.getHeaderMaximo());
@@ -125,21 +123,21 @@ public class RfqController {
 		maximoSendFileDto.setRfqnum(rfq.getRfqnum());
 		maximoSendFileDto.setSiteid(rfq.getSiteid());
 		List<Docklinks> docklist = new ArrayList<>();
-		for (int i=0 ; i<rfq.getFiles().size();i++) {
-			Docklinks docklinks=new Docklinks();
+		for (int i = 0; i < rfq.getFiles().size(); i++) {
+			Docklinks docklinks = new Docklinks();
 			docklinks.setUrlname(rfq.getFiles().get(i).getName());
 			docklinks.setDescription(rfq.getFiles().get(i).getName());
 			docklinks.setDocumentdata(Base64.getEncoder().encodeToString(rfq.getFiles().get(i).getData()));
 			docklinks.setUrltype("FILE");
 			docklinks.setDoctype("Attachments");
 			docklist.add(docklinks);
-			
+
 		}
 		maximoSendFileDto.setDoclinks(docklist);
-		HttpEntity<?> getBodyFile = new HttpEntity<>(maximoSendFileDto,headersfile);
-		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
-		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
-		String urifile =configs.getMaximopath()+ "/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"?lean=1";
+		HttpEntity<?> getBodyFile = new HttpEntity<>(maximoSendFileDto, headersfile);
+		String originalInput = rfq.getRfqnum() + "/" + rfq.getSiteid();
+		String rfqIdentity = "_" + Base64.getEncoder().encodeToString(originalInput.getBytes()).toString();
+		String urifile = configs.getMaximopath() + "/maxrest/oslc/os/SMRFQ_DOCLINKS/" + rfqIdentity + "?lean=1";
 		ResponseEntity<String> resultGetfile = restTemplate.exchange(urifile, HttpMethod.POST, getBodyFile,String.class);
 		rfq.setStatusofSend(true);
 		LocalDate today = LocalDate.now();

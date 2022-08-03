@@ -58,8 +58,6 @@ public class AuthController {
 
 	Logger logger = LogManager.getLogger(AuthController.class);
 
-	
-
 	@Autowired
 	AuthenticationManager authenticationManager;
 	@Autowired

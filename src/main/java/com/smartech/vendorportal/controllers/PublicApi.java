@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
-
 import com.smartech.vendorportal.entities.Config;
 import com.smartech.vendorportal.entities.FileDB;
 import com.smartech.vendorportal.entities.FileExchangeMaximoDto;
@@ -32,7 +31,6 @@ import com.smartech.vendorportal.services.FileStorageService;
 import com.smartech.vendorportal.services.RfqLineService;
 import com.smartech.vendorportal.services.RfqService;
 import com.smartech.vendorportal.services.UserControl;
-
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -48,11 +46,9 @@ public class PublicApi {
 	private FileStorageService storageService;
 	@Autowired
 	ConfigService configService;
-	
+
 	@Value("${VendorPortal.app.header.key}")
 	private String key;
-
-	
 
 	@PostMapping("/addRfq/{email}")
 	public Rfq addRfq(@RequestBody Rfq rfq, @PathVariable("email") String email) {
@@ -67,46 +63,42 @@ public class PublicApi {
 		Config configs = configService.retriveAllConfig();
 		User user = userControl.getbyUserName(username);
 		rfq.setUser(user);
-		
-		
+
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set(key,configs.getHeaderMaximo());
-		String originalInput =rfq.getRfqnum()+"/"+rfq.getSiteid();
-		String rfqIdentity = "_"+Base64.getEncoder().encodeToString(originalInput.getBytes());
+		headers.set(key, configs.getHeaderMaximo());
+		String originalInput = rfq.getRfqnum() + "/" + rfq.getSiteid();
+		String rfqIdentity = "_" + Base64.getEncoder().encodeToString(originalInput.getBytes());
 		HttpEntity<Rfq> getBody = new HttpEntity<>(headers);
-		String url = configs.getMaximopath()+"/maxrest/oslc/os/SMRFQ_DOCLINKS/"+rfqIdentity+"/doclinks?lean=1";
-		ResponseEntity<FileExchangeMaximoDto> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,FileExchangeMaximoDto.class);
+		String url = configs.getMaximopath() + "/maxrest/oslc/os/SMRFQ_DOCLINKS/" + rfqIdentity + "/doclinks?lean=1";
+		ResponseEntity<FileExchangeMaximoDto> resultGet = restTemplate.exchange(url, HttpMethod.GET, getBody,
+				FileExchangeMaximoDto.class);
 		System.out.println("********  success ********");
-		
-		List<FileDB> dbfiles= new ArrayList<FileDB>();
-		
-		for (int i = 0;i<resultGet.getBody().getMember().size();i++) {
-			FileDB dbfile=new FileDB();
+
+		List<FileDB> dbfiles = new ArrayList<FileDB>();
+
+		for (int i = 0; i < resultGet.getBody().getMember().size(); i++) {
+			FileDB dbfile = new FileDB();
 			dbfile.setName(resultGet.getBody().getMember().get(i).getDescribedBy().getFileName());
 			dbfile.setType(resultGet.getBody().getMember().get(i).getDescribedBy().getFormat().getLabel());
-			
-			ResponseEntity<byte[]> resultGetfile = restTemplate.exchange(resultGet.getBody().getMember().get(i).getHref(), HttpMethod.GET, getBody,byte[].class);
+
+			ResponseEntity<byte[]> resultGetfile = restTemplate
+					.exchange(resultGet.getBody().getMember().get(i).getHref(), HttpMethod.GET, getBody, byte[].class);
 			dbfile.setData(resultGetfile.getBody());
 			dbfiles.add(dbfile);
 		}
-		
+
 		rfq.setFiles(dbfiles);
 		return rfqService.addRFQ(rfq);
 
 	}
-	
-	
 
-	
-	
 	@PostMapping("/AddRfqwithfile/{username}")
-	public ResponseEntity<ResponseMessage> uploadFile( @RequestPart Rfq rfq, 
-			@RequestPart List<MultipartFile> file
-			, @PathVariable("username") String username) {
+	public ResponseEntity<ResponseMessage> uploadFile(@RequestPart Rfq rfq, @RequestPart List<MultipartFile> file,
+			@PathVariable("username") String username) {
 		User user = userControl.getbyUserName(username);
 		rfq.setUser(user);
-		
+
 		String message = "";
 		ResponseEntity<ResponseMessage> re = ResponseEntity.status(HttpStatus.EXPECTATION_FAILED)
 				.body(new ResponseMessage("no file to upload"));
@@ -127,6 +119,5 @@ public class PublicApi {
 		rfqService.addRFQ(rfq);
 		return re;
 	}
-
 
 }
