@@ -1,6 +1,12 @@
 package com.smartech.vendorportal.entities;
 
-public class PolineDto {
+import java.io.Serializable;
+
+public class PolineDto implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4199602463916465149L;
 	private String polinenum;
 	private String itemnum;
 	private String description;

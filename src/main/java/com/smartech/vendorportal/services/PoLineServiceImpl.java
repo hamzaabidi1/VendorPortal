@@ -36,4 +36,9 @@ public class PoLineServiceImpl implements PoLineService {
 		return poLineRepository.save(poline);
 	}
 
+	@Override
+	public void deleteAllPoLines() {
+		poLineRepository.deleteAll();
+	}
+
 }

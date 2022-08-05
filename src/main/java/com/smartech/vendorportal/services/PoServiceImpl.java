@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 import com.smartech.vendorportal.entities.Po;
 import com.smartech.vendorportal.entities.PoDto;
 import com.smartech.vendorportal.entities.PoLine;
+import com.smartech.vendorportal.entities.Poterm;
 import com.smartech.vendorportal.repositories.PoLineRepository;
 import com.smartech.vendorportal.repositories.PoRepository;
+import com.smartech.vendorportal.repositories.PoTermRepository;
 
 @Service
 public class PoServiceImpl implements PoService {
@@ -19,6 +21,8 @@ public class PoServiceImpl implements PoService {
 	PoRepository poRepository;
 	@Autowired
 	PoLineRepository poLineRepository;
+	@Autowired
+	PoTermRepository poTermRepository;
 
 	@Override
 	public List<Po> retriveAllPO() {
@@ -29,7 +33,16 @@ public class PoServiceImpl implements PoService {
 	public Po addPO(Po po) {
 		for (int i = 0; i < po.getPoline().size(); i++) {
 			poLineRepository.save(po.getPoline().get(i));
+			
+			
 		}
+		
+		for (int i = 0; i < po.getPoterm().size(); i++) {
+			poTermRepository.save(po.getPoterm().get(i));			
+			
+		}
+		
+		
 		return poRepository.save(po);
 	}
 
@@ -84,7 +97,20 @@ public class PoServiceImpl implements PoService {
 			polinelist.add(poline);
 			
 		}
+		List<Poterm> potermlist=new ArrayList<>();
+		for (int i =0 ;i<poDto.getPoterm().size();i++) {
+			
+			Poterm poterm=new Poterm();
 		
+			poterm.setSeqnum(poDto.getPoterm().get(i).getSeqnum());
+			poterm.setPotermid(poDto.getPoterm().get(i).getPotermid());
+			poterm.setDescription(poDto.getPoterm().get(i).getDescription());
+			poterm.setSendtovendor(poDto.getPoterm().get(i).getSendtovendor());
+				
+			potermlist.add(poterm);
+			
+		}
+		po.setPoterm(potermlist);
 		po.setPoline(polinelist);
 	
 		return po;

@@ -39,6 +39,11 @@ public class Po {
 	@OneToMany
 	@JoinColumn(name = "po_id")
 	List<PoLine> poline;
+	
+	@OneToMany
+	@JoinColumn(name = "po_id")
+	List<Poterm> poterm;
+
 
 
 	@ManyToOne
@@ -47,7 +52,7 @@ public class Po {
 
 
 	public Po(Long id, String ponum, String description, String status, String requireddate, String totalcost,
-			String totaltax1, String currencycode, String purchaseagent,String vendeliverydate,int poid, List<PoLine> poline, User user) {
+			String totaltax1, String currencycode, String purchaseagent,String vendeliverydate,int poid, List<PoLine> poline,List<Poterm> poterm, User user) {
 		super();
 		this.id = id;
 		this.ponum = ponum;
@@ -178,6 +183,18 @@ public class Po {
 	public void setPoline(List<PoLine> poline) {
 		this.poline = poline;
 	}
+	
+	
+
+
+	public List<Poterm> getPoterm() {
+		return poterm;
+	}
+
+
+	public void setPoterm(List<Poterm> poterm) {
+		this.poterm = poterm;
+	}
 
 
 	public User getUser() {
@@ -198,6 +215,8 @@ public class Po {
 	public void setPoid(int poid) {
 		this.poid = poid;
 	}
+	
+	
 	
 	
 	

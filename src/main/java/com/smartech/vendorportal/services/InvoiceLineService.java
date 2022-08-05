@@ -10,5 +10,6 @@ public interface InvoiceLineService {
 	InvoiceLine retriveInvoiceLine(Long invoiceLineid);
 	void addInvoiceLine(List<InvoiceLine> invoiceLine);
 	InvoiceLine updateInvoiceLine( InvoiceLine invoiceLine);
+	void deleteAllInvoiceLines();
 
 }

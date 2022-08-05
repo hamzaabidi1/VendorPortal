@@ -37,9 +37,11 @@ import com.smartech.vendorportal.entities.RfqDto;
 import com.smartech.vendorportal.entities.RfqRequestListDto;
 import com.smartech.vendorportal.entities.User;
 import com.smartech.vendorportal.services.ConfigService;
+import com.smartech.vendorportal.services.InvoiceLineService;
 import com.smartech.vendorportal.services.InvoiceService;
 import com.smartech.vendorportal.services.PoLineService;
 import com.smartech.vendorportal.services.PoService;
+import com.smartech.vendorportal.services.PoTermService;
 import com.smartech.vendorportal.services.RequestUpdateProfileService;
 import com.smartech.vendorportal.services.UserControl;
 
@@ -62,6 +64,10 @@ public class VendorController {
 	PoLineService polineService;
 	@Autowired
 	InvoiceService invoiceService;
+	@Autowired
+	InvoiceLineService invoiceLineService;
+	@Autowired
+	PoTermService poTermService;
 
 	@GetMapping("/invoices/{vendor}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
@@ -86,6 +92,7 @@ public class VendorController {
 			User user = userControl.getbyUserName(vendor);
 		
 			invoiceService.deleteAllInvoices();
+			invoiceLineService.deleteAllInvoiceLines();
 			for (int i = 0; i < invoices.size(); i++) {
 				Invoice invoice = invoiceService.InvoiceDtoToInvoice(invoices.get(i));
 				invoice.setUser(user);
@@ -148,6 +155,8 @@ public class VendorController {
 			User user = userControl.getbyUserName(vendor);
 			
 			poService.deleteAllPos();
+			polineService.deleteAllPoLines();
+			poTermService.deleteAllPoTerm();
 			for (int i = 0; i < pos.size(); i++) {
 				Po po = poService.poDtoToPo(pos.get(i));
 				po.setUser(user);

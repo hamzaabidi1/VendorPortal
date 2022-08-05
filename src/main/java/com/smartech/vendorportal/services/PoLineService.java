@@ -10,5 +10,6 @@ public interface PoLineService {
 	PoLine retrivePOLine(Long poLineid);
 	void addPOLine(List<PoLine> poline);
 	PoLine updatePOLine( PoLine poline);
+	void deleteAllPoLines();
 
 }

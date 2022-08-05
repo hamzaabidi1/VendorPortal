@@ -36,4 +36,10 @@ public class InvoiceLineServiceImpl implements InvoiceLineService {
 		return invoiceLineRepository.save(invoiceLine);
 	}
 
+	@Override
+	public void deleteAllInvoiceLines() {
+		invoiceLineRepository.deleteAll();
+		
+	}
+
 }
