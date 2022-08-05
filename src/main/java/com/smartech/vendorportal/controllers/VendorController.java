@@ -65,7 +65,7 @@ public class VendorController {
 
 	@GetMapping("/invoices/{vendor}")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
-	public List<InvoiceDto> getinvoice(@PathVariable("vendor") String vendor) {
+	public List<Invoice> getinvoice(@PathVariable("vendor") String vendor) {
 		Config configs = configService.retriveAllConfig();
 		String uri = configs.getMaximopath()
 				+ "/maxrest/oslc/os/MXINVOICE?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\"" + vendor + "\"";
@@ -79,11 +79,12 @@ public class VendorController {
 		ResponseEntity<InvoiceRequestList> result = restTemplate.exchange(uri, HttpMethod.GET, getBody,
 				InvoiceRequestList.class);
 		List<InvoiceDto> invoices = new ArrayList<InvoiceDto>();
+		List<Invoice> invoicesLocal = new ArrayList<>();
 		try {
 			invoices = result.getBody().getMember();
 
 			User user = userControl.getbyUserName(vendor);
-			List<Invoice> invoicesLocal = new ArrayList<>();
+		
 			invoiceService.deleteAllInvoices();
 			for (int i = 0; i < invoices.size(); i++) {
 				Invoice invoice = invoiceService.InvoiceDtoToInvoice(invoices.get(i));
@@ -94,7 +95,10 @@ public class VendorController {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		return invoices;
+		for (int i = 0; i < invoices.size(); i++) {
+		invoicesLocal.get(i).setInvoiceLine(null);
+		}
+		return invoicesLocal;
 
 	}
 
@@ -125,7 +129,7 @@ public class VendorController {
 	@GetMapping("/po/{vendor}")
 	@ResponseBody
 	@PreAuthorize("hasRole('FOURNISSEUR')")
-	public List<PoDto> getPo(@PathVariable("vendor") String vendor) {
+	public List<Po> getPo(@PathVariable("vendor") String vendor) {
 		Config configs = configService.retriveAllConfig();
 		String uri = configs.getMaximopath()
 				+ "/maxrest/oslc/os/MXPO?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\"" + vendor + "\"";
@@ -138,10 +142,11 @@ public class VendorController {
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
 		ResponseEntity<PoRequestList> result = restTemplate.exchange(uri, HttpMethod.GET, getBody, PoRequestList.class);
 		List<PoDto> pos = new ArrayList<PoDto>();
+		List<Po> posLocal = new ArrayList<>();
 		try {
 			pos = result.getBody().getMember();
 			User user = userControl.getbyUserName(vendor);
-			List<Po> posLocal = new ArrayList<>();
+			
 			poService.deleteAllPos();
 			for (int i = 0; i < pos.size(); i++) {
 				Po po = poService.poDtoToPo(pos.get(i));
@@ -153,7 +158,11 @@ public class VendorController {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		return pos;
+		for (int i = 0; i < posLocal.size(); i++) {
+			posLocal.get(i).setPoline(null);
+			posLocal.get(i).setUser(null);
+			}
+		return posLocal;
 
 	}
 
