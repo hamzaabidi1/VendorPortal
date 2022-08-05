@@ -96,6 +96,9 @@ public class VendorController {
 			for (int i = 0; i < invoices.size(); i++) {
 				Invoice invoice = invoiceService.InvoiceDtoToInvoice(invoices.get(i));
 				invoice.setUser(user);
+				if (invoices.get(i).getEnterdate().length()>0) {		
+					invoice.setEnterdate(invoices.get(i).getEnterdate().substring(0, 10));
+					}
 				invoicesLocal.add(invoice);
 				invoiceService.addInvoice(invoicesLocal.get(i));
 			}
@@ -159,7 +162,21 @@ public class VendorController {
 			poTermService.deleteAllPoTerm();
 			for (int i = 0; i < pos.size(); i++) {
 				Po po = poService.poDtoToPo(pos.get(i));
+				
 				po.setUser(user);
+				if (pos.get(i).getRequireddate().length()>0) {		
+				po.setRequireddate(pos.get(i).getRequireddate().substring(0, 10));
+				}
+				if (pos.get(i).getVendeliverydate().length()>0) {
+				po.setVendeliverydate(pos.get(i).getVendeliverydate().substring(0, 10));
+				}
+				for (int j=0 ;j<pos.get(i).getPoline().size();j++)
+				{
+					if (pos.get(i).getPoline().get(j).getVendeliverydate().length()>0) {
+						po.getPoline().get(j).setVendeliverydate(pos.get(i).getPoline().get(j).getVendeliverydate().substring(0, 10));
+					}
+				}
+				
 				posLocal.add(po);
 				poService.addPO(posLocal.get(i));
 			}
