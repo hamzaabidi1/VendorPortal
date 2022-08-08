@@ -32,6 +32,8 @@ public class PoServiceImpl implements PoService {
 	@Override
 	public Po addPO(Po po) {
 		for (int i = 0; i < po.getPoline().size(); i++) {
+			String poLinedate=po.getPoline().get(i).getVendeliverydate().substring(0, 10);
+			po.getPoline().get(i).setVendeliverydate(poLinedate);
 			poLineRepository.save(po.getPoline().get(i));
 			
 			

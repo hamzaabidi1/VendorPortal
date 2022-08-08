@@ -32,7 +32,8 @@ public class PoLineServiceImpl implements PoLineService {
 
 	@Override
 	public PoLine updatePOLine(PoLine poline) {
-
+		String poLinedate=poline.getVendeliverydate().substring(0, 10);
+		poline.setVendeliverydate(poLinedate);
 		return poLineRepository.save(poline);
 	}
 
