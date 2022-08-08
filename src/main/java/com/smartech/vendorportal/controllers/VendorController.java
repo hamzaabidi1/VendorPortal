@@ -143,6 +143,7 @@ public class VendorController {
 		Config configs = configService.retriveAllConfig();
 		String uri = configs.getMaximopath()
 				+ "/maxrest/oslc/os/MXPO?lean=1&oslc.select=*&_dropnulls=0&oslc.where=vendor=\"" + vendor + "\"";
+		System.out.println(uri);
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
