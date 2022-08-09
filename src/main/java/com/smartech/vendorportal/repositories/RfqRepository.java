@@ -12,4 +12,6 @@ import com.smartech.vendorportal.entities.Rfq;
 public interface RfqRepository extends JpaRepository<Rfq, Long> {
 	@Query("SELECT r FROM Rfq r WHERE r.user.email =?1 ")
 	List<Rfq> findAllRfqByUser(String email);
+	@Query("SELECT r FROM Rfq r WHERE r.rfqnum =?1 ")
+	Rfq findRfqByRfqNum(String rfqnum);
 }

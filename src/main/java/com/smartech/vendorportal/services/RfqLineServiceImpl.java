@@ -37,4 +37,11 @@ public class RfqLineServiceImpl implements RfqLineService {
 		return rfqLineRepository.save(rfqline);
 	}
 
+	@Override
+	public void DeleteById(Long id) {
+		rfqLineRepository.deleteById(id);
+		
+	}
+
+	
 }

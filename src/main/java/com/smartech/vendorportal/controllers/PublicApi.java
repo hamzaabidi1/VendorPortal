@@ -25,6 +25,7 @@ import com.smartech.vendorportal.entities.FileDB;
 import com.smartech.vendorportal.entities.FileExchangeMaximoDto;
 import com.smartech.vendorportal.entities.ResponseMessage;
 import com.smartech.vendorportal.entities.Rfq;
+import com.smartech.vendorportal.entities.RfqLine;
 import com.smartech.vendorportal.entities.User;
 import com.smartech.vendorportal.services.ConfigService;
 import com.smartech.vendorportal.services.FileStorageService;
@@ -60,6 +61,13 @@ public class PublicApi {
 
 	@PostMapping("/addRfqUsername/{username}")
 	public Rfq addRfqUserName(@RequestBody Rfq rfq, @PathVariable("username") String username) throws IOException {
+		if (rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()) != null) {
+			rfqService.deleteRFQById(rfq.getId());
+		List <RfqLine> reLines = rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()).getRfqline();
+		for (int i=0 ;i<reLines.size();i++) {
+			rfqLineService.DeleteById(reLines.get(i).getId());
+		}
+		}
 		Config configs = configService.retriveAllConfig();
 		User user = userControl.getbyUserName(username);
 		rfq.setUser(user);

@@ -13,5 +13,5 @@ public interface PoRepository extends JpaRepository<Po, Long>{
 	
 	@Query("SELECT p FROM Po p WHERE p.user.email =?1 ")
 	List<Po> findAllPoByUser(String email);
-
+	
 }

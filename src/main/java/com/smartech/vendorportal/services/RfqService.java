@@ -16,6 +16,7 @@ public interface RfqService {
 	Rfq retrieveOneById(Long id);
 	List<Rfq> retriveAllRfqByUser(String email);
 	public RfqDto addRfqTORfqDtomaximo(Long id);
+	Rfq retrieveRfqByRfqNum(String rfqnum);
 
 	
 	

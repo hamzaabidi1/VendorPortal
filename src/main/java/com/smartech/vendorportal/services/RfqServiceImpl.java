@@ -90,4 +90,10 @@ public class RfqServiceImpl implements RfqService {
 
 	}
 
+	@Override
+	public Rfq retrieveRfqByRfqNum(String rfqnum) {
+		
+		return rfqRepository.findRfqByRfqNum(rfqnum);
+	}
+
 }

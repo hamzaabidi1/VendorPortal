@@ -11,5 +11,6 @@ public interface RfqLineService {
 	RfqLine retriveRfqLine(Long rfqLineid);
 	void addRFQLine(List<RfqLine> rfqline);
 	 RfqLine updateRFQLine( RfqLine rfqline);
+	 void DeleteById(Long id);
 
 }
