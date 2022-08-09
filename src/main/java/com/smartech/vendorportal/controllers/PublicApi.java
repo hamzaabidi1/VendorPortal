@@ -66,7 +66,7 @@ public class PublicApi {
 		for (int i=0 ;i<reLines.size();i++) {
 			rfqLineService.DeleteById(reLines.get(i).getId());
 		}
-		rfqService.deleteRFQById(rfq.getId());
+		rfqService.deleteRFQById(rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()).getId());
 		}
 		Config configs = configService.retriveAllConfig();
 		User user = userControl.getbyUserName(username);
