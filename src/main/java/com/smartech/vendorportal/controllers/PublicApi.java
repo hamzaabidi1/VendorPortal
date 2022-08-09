@@ -61,12 +61,12 @@ public class PublicApi {
 
 	@PostMapping("/addRfqUsername/{username}")
 	public Rfq addRfqUserName(@RequestBody Rfq rfq, @PathVariable("username") String username) throws IOException {
-		if (rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()) != null) {
-			rfqService.deleteRFQById(rfq.getId());
+		if (rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()) != null) {	
 		List <RfqLine> reLines = rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()).getRfqline();
 		for (int i=0 ;i<reLines.size();i++) {
 			rfqLineService.DeleteById(reLines.get(i).getId());
 		}
+		rfqService.deleteRFQById(rfq.getId());
 		}
 		Config configs = configService.retriveAllConfig();
 		User user = userControl.getbyUserName(username);
