@@ -92,7 +92,7 @@ public class AuthController {
 				List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority())
 						.collect(Collectors.toList());
 				return ResponseEntity.ok(new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(),
-						userDetails.getEmail(), roles, userDetails.getStatus(), encodedString));
+						userDetails.getEmail(), roles, userDetails.getStatus(), encodedString,userDetails.getLangue()));
 			} catch (Exception e) {
 				e.getMessage();
 				return ResponseEntity.badRequest().body(new MessageResponse("verify your password please ! "));
@@ -122,7 +122,7 @@ public class AuthController {
 					userverified.getStatus(), signUpRequest.getTaxregistrationnumber(),
 					signUpRequest.getTaxclassificationcode(), signUpRequest.getCompanywebsite(),
 					signUpRequest.getRevenu(), signUpRequest.getDateestablished(), userverified.getVerifyAccountToken(),
-					userverified.getDateCreation());
+					userverified.getDateCreation(),signUpRequest.getLangue());
 			user.setRoles(userverified.getRoles());
 			LocalDate today = LocalDate.now();
 			user.setDateCreation(java.sql.Date.valueOf(today));

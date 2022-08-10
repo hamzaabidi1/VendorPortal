@@ -55,6 +55,7 @@ public class User {
 	private boolean isEnabled;
 	private String verifyAccountToken;
 	private String resetPasswordToken;
+	private String langue;
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
@@ -81,7 +82,7 @@ public class User {
 			String dptProvinance, String codePostal, String pays, String phone, boolean isVendor, boolean isAdmin,
 			boolean isEnabled, String password, EStatus status, String taxRegistrationNumber,
 			String taxClassificationCode, String webSite, String revenu, Date dateEstablished,
-			String verifyAccountToken, Date dateCreation) {
+			String verifyAccountToken, Date dateCreation,String langue) {
 		super();
 		this.id = id;
 		this.firstname = firstName;
@@ -106,6 +107,15 @@ public class User {
 		this.companywebsite = webSite;
 		this.verifyAccountToken = verifyAccountToken;
 		this.dateCreation = dateCreation;
+		this.langue=langue;
+	}
+
+	public String getLangue() {
+		return langue;
+	}
+
+	public void setLangue(String langue) {
+		this.langue = langue;
 	}
 
 	public User(Long id, @Size(max = 20) String username, @Size(max = 50) @Email String email, EStatus status,

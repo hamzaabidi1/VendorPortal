@@ -11,9 +11,10 @@ public class JwtResponse {
 	private List<String> roles;
 	private EStatus status;
 	private String encode;
+	private String langue;
 
 	public JwtResponse(String accessToken, Long id, String username, String email, List<String> roles, EStatus status,
-			String encode) {
+			String encode,String langue) {
 		this.token = accessToken;
 		this.id = id;
 		this.username = username;
@@ -21,6 +22,15 @@ public class JwtResponse {
 		this.roles = roles;
 		this.status = status;
 		this.encode = encode;
+		this.langue=langue;
+	}
+
+	public String getLangue() {
+		return langue;
+	}
+
+	public void setLangue(String langue) {
+		this.langue = langue;
 	}
 
 	public String getAccessToken() {

@@ -43,6 +43,15 @@ public class SignUpRequest {
 	private Boolean isVendor;
 	private Boolean isAdmin;
 	private EStatus status;
+	private String langue;
+
+	public String getLangue() {
+		return langue;
+	}
+
+	public void setLangue(String langue) {
+		this.langue = langue;
+	}
 
 	public String getUsername() {
 		return username;

@@ -32,6 +32,7 @@ public class UserDetailsImpl implements UserDetails {
 	private Boolean isVendor;
 	private Boolean isAdmin;
 	private EStatus status;
+	private String langue;
 	@JsonIgnore
 	private String password;
 	private Collection<? extends GrantedAuthority> authorities;
@@ -39,7 +40,7 @@ public class UserDetailsImpl implements UserDetails {
 	public UserDetailsImpl(Long id, String firstName, String lastName, String userName, String email, String address,
 			String city, String region, String postalcode, String country, String phone, Date dateEstablished,
 			String webSite, String revenu, String taxRegistrationNumber, String taxClassificationCode, Boolean isVendor,
-			Boolean isAdmin, EStatus status, String password, Collection<? extends GrantedAuthority> authorities) {
+			Boolean isAdmin, EStatus status, String password, Collection<? extends GrantedAuthority> authorities,String langue) {
 		super();
 		this.id = id;
 		this.firstname = firstName;
@@ -62,6 +63,7 @@ public class UserDetailsImpl implements UserDetails {
 		this.status = status;
 		this.password = password;
 		this.authorities = authorities;
+		this.langue=langue;
 	}
 
 	public static UserDetailsImpl build(User user) {
@@ -71,12 +73,17 @@ public class UserDetailsImpl implements UserDetails {
 				user.getEmail(), user.getAddress(), user.getCity(), user.getRegion(), user.getPostalcode(),
 				user.getCountry(), user.getPhone(), user.getDateEstablished(), user.getCompanywebsite(),
 				user.getRevenu(), user.getTaxregistrationnumber(), user.getTaxclassificationcode(), user.isVendor(),
-				user.isAdmin(), user.getStatus(), user.getPassword(), authorities);
+				user.isAdmin(), user.getStatus(), user.getPassword(), authorities,user.getLangue());
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return authorities;
+	}
+	
+
+	public String getLangue() {
+		return langue;
 	}
 
 	public Long getId() {
