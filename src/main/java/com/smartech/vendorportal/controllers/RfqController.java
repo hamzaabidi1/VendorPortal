@@ -107,7 +107,7 @@ public class RfqController {
 		Config configs = configService.retriveAllConfig();
 		String usermAXIMO = configs.getUsermaximo();
 		rfqDto.setUserMaximo(usermAXIMO);
-		String uri = configs.getMaximopath() + "/maximo/oslc/script/COPYRFQLINESTOQUOTATIONLINES";
+		String uri = configs.getMaximopath() + "/maximo/oslc/script/SM_CREATERFQQUATATIONLINESFROMVENDORPORTAL";
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.set(key, configs.getHeaderMaximo());
