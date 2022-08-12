@@ -388,7 +388,7 @@ CREATE TABLE IF NOT EXISTS `users_history` (
 -- Déchargement des données de la table `users_history`
 --
 
-INSERT INTO `users_history` (`id`, `address`, `city`, `companywebsite`, `country`, `date_established`, `email`, `firstname`, `is_admin`, `is_enabled`, `is_vendor`, `lastname`, `password`, `phone`, `postalcode`, `region`, `reset_password_token`, `revenu`, `status`, `taxclassificationcode`, `taxregistrationnumber`, `username`, `verify_account_token`, `status_date`, `user_id`) VALUES
+
 
 
 
