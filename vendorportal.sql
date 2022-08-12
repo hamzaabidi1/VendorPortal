@@ -114,7 +114,6 @@ CREATE TABLE IF NOT EXISTS `invoices` (
 --
 
 
-
 -- --------------------------------------------------------
 
 --
@@ -168,7 +167,6 @@ CREATE TABLE IF NOT EXISTS `pos` (
 -- Déchargement des données de la table `pos`
 --
 
-
 -- --------------------------------------------------------
 
 --
@@ -194,7 +192,6 @@ CREATE TABLE IF NOT EXISTS `po_line` (
 --
 -- Déchargement des données de la table `po_line`
 --
-
 
 
 -- --------------------------------------------------------
@@ -387,9 +384,6 @@ CREATE TABLE IF NOT EXISTS `users_history` (
 --
 -- Déchargement des données de la table `users_history`
 --
-
-
-
 
 
 -- --------------------------------------------------------
