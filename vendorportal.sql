@@ -86,8 +86,6 @@ CREATE TABLE IF NOT EXISTS `config` (
 -- Déchargement des données de la table `config`
 --
 
-INSERT INTO `config` (`id`, `email`, `logpath`, `maximopath`, `password`) VALUES
-(1, 'hamza.abidi1@esprit.tn', 'C:/Users/ASUS/Desktop/VendorPortalFront/vendorportal/logs/vendorportal.log', 'http://maxgps.smartech-tn.com:9876', '193JMT0786');
 
 -- --------------------------------------------------------
 
@@ -115,8 +113,7 @@ CREATE TABLE IF NOT EXISTS `invoices` (
 -- Déchargement des données de la table `invoices`
 --
 
-INSERT INTO `invoices` (`id`, `currencycode`, `description`, `enterby`, `enterdate`, `invoicenum`, `status`, `totalcost`, `totaltax1`, `user_id`) VALUES
-(1, '5242', 'b,bjkghjg', 'hfgh', '2022-04-13', '7587', 'hfg', 45, 7, 11);
+
 
 -- --------------------------------------------------------
 
@@ -143,8 +140,6 @@ CREATE TABLE IF NOT EXISTS `invoice_line` (
 -- Déchargement des données de la table `invoice_line`
 --
 
-INSERT INTO `invoice_line` (`id`, `description`, `invoicelinenum`, `invoiceunit`, `itemnum`, `linecost`, `qtyforui`, `unitcost`, `invoice_id`) VALUES
-(1, 'gbfnf', 25, ',b', '257', 27, 72, 27, 1);
 
 -- --------------------------------------------------------
 
@@ -173,8 +168,6 @@ CREATE TABLE IF NOT EXISTS `pos` (
 -- Déchargement des données de la table `pos`
 --
 
-INSERT INTO `pos` (`id`, `currencycode`, `description`, `ponum`, `purchaseagent`, `requireddate`, `status`, `totalcost`, `totaltax1`, `user_id`, `vendeliverydate`) VALUES
-(1, '335496', 'ergege', '68754', 'gezge', '2022-04-13', 'RYRU', '24', '4', 11, '2022-04-11');
 
 -- --------------------------------------------------------
 
@@ -202,8 +195,7 @@ CREATE TABLE IF NOT EXISTS `po_line` (
 -- Déchargement des données de la table `po_line`
 --
 
-INSERT INTO `po_line` (`id`, `description`, `itemnum`, `linecost`, `orderqty`, `orderunit`, `polinenum`, `unitcost`, `po_id`, `vendeliverydate`) VALUES
-(1, 'tyitiy', '2725', '257', '24', '65', '275', '657', 1, '2022-04-11');
+
 
 -- --------------------------------------------------------
 
@@ -257,10 +249,7 @@ CREATE TABLE IF NOT EXISTS `rfqs` (
 -- Déchargement des données de la table `rfqs`
 --
 
-INSERT INTO `rfqs` (`id`, `description`, `purchaseagent`, `requireddate`, `rfqnum`, `status`, `user_id`, `siteid`, `statusof_send`, `date_envoie`) VALUES
-(15, 'jthjgfh,gf', 'fhjfj', '2022-04-13', '2658', 'fhjfj', 11, 'hg', b'0', '2022-06-14'),
-(16, 'jthjgfh,gf', 'fhjfj', '2022-04-13', '2658', 'fhjfj', 11, 'hjj', b'1', '2022-06-14'),
-(19, 'jthjgfh,gf', 'fhjfj', '2022-04-13', '2658', 'fhjfj', 11, 'kuk', b'1', NULL);
+
 
 -- --------------------------------------------------------
 
@@ -291,10 +280,6 @@ CREATE TABLE IF NOT EXISTS `rfq_line` (
 -- Déchargement des données de la table `rfq_line`
 --
 
-INSERT INTO `rfq_line` (`id`, `description`, `itemnum`, `linecost`, `orderqty`, `orderunit`, `rfqlinenum`, `unitcost`, `rfq_id`, `delivry_date`, `quotationqty`, `quote_end_date`, `quote_start_date`) VALUES
-(5, '1634', '658', 34, 0, 'usd', '658', 17, 15, '2022-04-13', 2, '2022-04-13', '2022-04-13'),
-(7, '1634', '658', 7, 0, 'usd', '658', 3, 16, '2022-04-13', 1, '2022-04-13', '2022-04-13'),
-(10, '1634', '658', 70, 0, 'usd', '658', 14, 19, '2022-04-13', 5, '2022-04-13', '2022-04-13');
 
 -- --------------------------------------------------------
 
@@ -360,7 +345,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `address`, `city`, `companywebsite`, `country`, `date_established`, `email`, `firstname`, `is_admin`, `is_enabled`, `is_vendor`, `lastname`, `password`, `phone`, `postalcode`, `region`, `reset_password_token`, `revenu`, `status`, `taxclassificationcode`, `taxregistrationnumber`, `username`, `verify_account_token`, `date_creation`) VALUES
-(11, 'bardo', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'COMPDEP', 'KR416Hd8nl7yw4EjodYIbUhEdLLD9a', NULL),
 (12, NULL, NULL, NULL, NULL, NULL, 'labidihamza099@gmail.com', NULL, b'1', b'1', b'0', NULL, '$2a$10$6MyvXX3cBpraFJe8Ej1tBems1E3PEhyVL1Rj7B9w8.RVy.xT/pShi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'maxadmin', 'pkytczOs6xfCW4JgcYk1OCuBgJGVjL', NULL);
 
 -- --------------------------------------------------------
@@ -405,44 +389,8 @@ CREATE TABLE IF NOT EXISTS `users_history` (
 --
 
 INSERT INTO `users_history` (`id`, `address`, `city`, `companywebsite`, `country`, `date_established`, `email`, `firstname`, `is_admin`, `is_enabled`, `is_vendor`, `lastname`, `password`, `phone`, `postalcode`, `region`, `reset_password_token`, `revenu`, `status`, `taxclassificationcode`, `taxregistrationnumber`, `username`, `verify_account_token`, `status_date`, `user_id`) VALUES
-(12, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Submitted', '123456', '123456', 'hamzaabidi', NULL, '2022-04-14', 12),
-(13, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-06-22', 'hamza199611@live.fr', 'sdvs', b'0', b'1', b'1', 'gsgd', '$2a$10$tOAZAqCLxKPZhOWr4X2E9OYfPHTBkrJsuziAxdo4EqsNCtKCoHBK2', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Submitted', '123456', '123456', 'abidihamza', NULL, '2022-06-08', NULL),
-(14, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-06-20', 'hamza199611@live.fr', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$QfIC0iXa2Z6UqjVIMgKPp.4wLpm4i0boWWWg4U/dd9DMl3Rk5nd.6', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Deleted', '123456', '123456', 'hamz', NULL, '2022-06-07', 12),
-(15, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'hamzaabidi', NULL, '2022-04-14', 12),
-(16, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Draft', '123456', '123456', 'hamzaabidi', NULL, '2022-04-14', 12),
-(17, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-06-26', 'hamza199611@live.fr', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$PL/EnYXJ7ysl5ERrvays4uDC5YIM2iH6is1RPJO7jXZTub5KhwvzW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Submitted', '123456', '123456', 'hhhhh', NULL, '2022-06-14', NULL),
-(18, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-05-28', 'hamza199611@live.fr', 'ghassen', b'0', b'1', b'1', 'dridi', '$2a$10$DJE1ZL4nsLzVKcqw11CYG.gFK7KHAR5yzF3AQNQIA4WBwhlmsHO0S', '58660243', '2074', 'Ben Arous', NULL, 'kgk', 'Submitted', 'kgk', 'gkgk', 'ghassen', NULL, '2022-05-28', NULL),
-(19, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Submitted', '123456', '123456', 'hamzaabidi', NULL, '2022-04-14', 12),
-(20, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'hamzaabidi', NULL, '2022-04-14', 12),
-(21, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(22, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(23, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(24, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(25, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(26, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Submitted', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(27, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(28, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(29, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'hamzaabidi1', NULL, '2022-04-14', 12),
-(30, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'ha', NULL, '2022-04-14', 12),
-(31, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'ha', NULL, '2022-04-15', 12),
-(32, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'ham', NULL, '2022-04-15', 12),
-(33, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'ham', NULL, '2022-04-15', 12),
-(34, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'ham', NULL, '2022-04-15', 12),
-(35, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'hamz', NULL, '2022-04-15', 12),
-(36, 'Rue ennasr mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '26364259', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'hamz', NULL, '2022-04-21', 12),
-(37, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'COMPDEP', NULL, '2022-05-09', 12),
-(38, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Submitted', '123456', '123456', 'COMPDEP', NULL, '2022-05-09', 12),
-(39, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Draft', '123456', '123456', 'COMPDEP', NULL, '2022-05-09', 12),
-(40, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'COMPDEP', NULL, '2022-05-09', 12),
-(41, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'COMPDEP', NULL, '2022-05-10', 12),
-(42, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'COMPDEP', NULL, '2022-05-10', 12),
-(43, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'COMPDEP', NULL, '2022-05-10', 12),
-(44, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'COMPDEP', NULL, '2022-05-10', 12),
-(45, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'COMPDEP', NULL, '2022-05-10', 12),
-(46, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'COMPDEP', NULL, '2022-05-10', 12),
-(47, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'InProgress', '123456', '123456', 'COMPDEP', NULL, '2022-05-10', 12),
-(48, 'hamza.abidi1@esprit.tn', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'COMPDEP', NULL, '2022-05-10', 12),
-(49, 'rue ennasr el mourouj 3', 'elmourouJ', 'www.vendorportal.com', 'Tunisie', '2022-04-13', 'hamza.abidi1@esprit.tn', 'hamza', b'0', b'1', b'1', 'ABIDI', '$2a$10$WUpK0RTVh9cxsUDycnFq6.qpC3XZGdr.tZHFkl.O4A.UwnbJQfEEW', '51331321', '2074', 'Ben Arous', NULL, '0287', 'Confirmed', '123456', '123456', 'COMPDEP', NULL, '2022-05-17', 12);
+
+
 
 -- --------------------------------------------------------
 
@@ -463,7 +411,6 @@ CREATE TABLE IF NOT EXISTS `user_roles` (
 --
 
 INSERT INTO `user_roles` (`user_id`, `role_id`) VALUES
-(11, 2),
 (12, 3);
 
 -- --------------------------------------------------------
