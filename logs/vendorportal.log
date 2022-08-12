@@ -2,3 +2,9 @@
 2022-08-12 04:30:00.214  WARN 8664 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2h59m20s968ms523µs700ns).
 2022-08-12 07:44:21.604  WARN 8664 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2h59m21s238ms614µs800ns).
 2022-08-12 09:00:21.831  WARN 8664 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1h1m33ms733µs400ns).
+2022-08-12 10:48:51.191  INFO 8664 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-12 10:48:51.193  INFO 8664 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-12 10:48:51.194  INFO 8664 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-12 10:48:51.207  INFO 8664 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-12 10:48:51.207  INFO 8664 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-12 10:48:51.207  INFO 8664 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
