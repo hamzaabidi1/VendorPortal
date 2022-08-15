@@ -27,8 +27,11 @@ public class InvoiceServiceImpl implements InvoiceService {
 
 	@Override
 	public Invoice addInvoice(Invoice invoice) {
-		for (int i = 0; i < invoice.getInvoiceLine().size(); i++) {
-			invoiceLineRepository.save(invoice.getInvoiceLine().get(i));
+		if (invoice.getInvoiceLine() != null) {
+
+			for (int i = 0; i < invoice.getInvoiceLine().size(); i++) {
+				invoiceLineRepository.save(invoice.getInvoiceLine().get(i));
+			}
 		}
 		return invoiceRepository.save(invoice);
 	}
@@ -57,7 +60,7 @@ public class InvoiceServiceImpl implements InvoiceService {
 	@Override
 	public Invoice InvoiceDtoToInvoice(InvoiceDto invoiceDto) {
 		Invoice invoice = new Invoice();
-	
+
 		invoice.setInvoicenum(invoiceDto.getInvoicenum());
 		invoice.setDescription(invoiceDto.getDescription());
 		invoice.setStatus(invoiceDto.getStatus());
@@ -66,29 +69,32 @@ public class InvoiceServiceImpl implements InvoiceService {
 		invoice.setCurrencycode(invoiceDto.getCurrencycode());
 		invoice.setEnterby(invoiceDto.getEnterby());
 		invoice.setEnterdate(invoiceDto.getEnterdate());
-		List<InvoiceLine> invoicelinelist=new ArrayList<>();
-		for (int i =0 ;i<invoiceDto.getInvoiceline().size();i++) {
-			
-			InvoiceLine invoiceline=new InvoiceLine();
-			invoiceline.setInvoicelinenum(invoiceDto.getInvoiceline().get(i).getInvoicelinenum());
-			invoiceline.setItemnum(invoiceDto.getInvoiceline().get(i).getItemnum());
-			invoiceline.setDescription(invoiceDto.getInvoiceline().get(i).getDescription());
-			invoiceline.setQtyforui(invoiceDto.getInvoiceline().get(i).getQtyforui());
-			invoiceline.setInvoiceunit(invoiceDto.getInvoiceline().get(i).getInvoiceunit());
-			invoiceline.setUnitcost(invoiceDto.getInvoiceline().get(i).getUnitcost());
-			invoiceline.setLinecost(invoiceDto.getInvoiceline().get(i).getLinecost());	
-			invoicelinelist.add(invoiceline);
-			
+		List<InvoiceLine> invoicelinelist = new ArrayList<>();
+
+		if (invoiceDto.getInvoiceline() != null) {
+
+			for (int i = 0; i < invoiceDto.getInvoiceline().size(); i++) {
+
+				InvoiceLine invoiceline = new InvoiceLine();
+				invoiceline.setInvoicelinenum(invoiceDto.getInvoiceline().get(i).getInvoicelinenum());
+				invoiceline.setItemnum(invoiceDto.getInvoiceline().get(i).getItemnum());
+				invoiceline.setDescription(invoiceDto.getInvoiceline().get(i).getDescription());
+				invoiceline.setQtyforui(invoiceDto.getInvoiceline().get(i).getQtyforui());
+				invoiceline.setInvoiceunit(invoiceDto.getInvoiceline().get(i).getInvoiceunit());
+				invoiceline.setUnitcost(invoiceDto.getInvoiceline().get(i).getUnitcost());
+				invoiceline.setLinecost(invoiceDto.getInvoiceline().get(i).getLinecost());
+				invoicelinelist.add(invoiceline);
+
+			}
+
+			invoice.setInvoiceLine(invoicelinelist);
 		}
-		
-		invoice.setInvoiceLine(invoicelinelist);
-	
 		return invoice;
 	}
 
 	@Override
 	public void deleteAllInvoices() {
-		
+
 		invoiceRepository.deleteAll();
 	}
 

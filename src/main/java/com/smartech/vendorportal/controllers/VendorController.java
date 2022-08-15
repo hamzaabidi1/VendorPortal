@@ -91,8 +91,9 @@ public class VendorController {
 
 			User user = userControl.getbyUserName(vendor);
 		
-			invoiceService.deleteAllInvoices();
+			
 			invoiceLineService.deleteAllInvoiceLines();
+			invoiceService.deleteAllInvoices();
 			for (int i = 0; i < invoices.size(); i++) {
 				Invoice invoice = invoiceService.InvoiceDtoToInvoice(invoices.get(i));
 				invoice.setUser(user);
@@ -158,9 +159,10 @@ public class VendorController {
 			pos = result.getBody().getMember();
 			User user = userControl.getbyUserName(vendor);
 			
-			poService.deleteAllPos();
+		
 			polineService.deleteAllPoLines();
 			poTermService.deleteAllPoTerm();
+			poService.deleteAllPos();
 			for (int i = 0; i < pos.size(); i++) {
 				Po po = poService.poDtoToPo(pos.get(i));
 				

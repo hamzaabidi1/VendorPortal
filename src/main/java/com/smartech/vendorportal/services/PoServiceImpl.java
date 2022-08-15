@@ -31,18 +31,21 @@ public class PoServiceImpl implements PoService {
 
 	@Override
 	public Po addPO(Po po) {
-		for (int i = 0; i < po.getPoline().size(); i++) {
-			poLineRepository.save(po.getPoline().get(i));
-			
-			
+
+		if (po.getPoline() != null) {
+
+			for (int i = 0; i < po.getPoline().size(); i++) {
+				poLineRepository.save(po.getPoline().get(i));
+
+			}
 		}
-		
-		for (int i = 0; i < po.getPoterm().size(); i++) {
-			poTermRepository.save(po.getPoterm().get(i));			
-			
+		if (po.getPoterm() != null) {
+			for (int i = 0; i < po.getPoterm().size(); i++) {
+				poTermRepository.save(po.getPoterm().get(i));
+
+			}
 		}
-		
-		
+
 		return poRepository.save(po);
 	}
 
@@ -51,8 +54,6 @@ public class PoServiceImpl implements PoService {
 		poRepository.deleteById(id);
 
 	}
-	
-	
 
 	@Override
 	public Po updatePO(Po po) {
@@ -68,9 +69,10 @@ public class PoServiceImpl implements PoService {
 	public List<Po> retriveAllPOByUser(String email) {
 		return poRepository.findAllPoByUser(email);
 	}
+
 	@Override
 	public Po poDtoToPo(PoDto poDto) {
-		
+
 		Po po = new Po();
 		po.setPonum(poDto.getPonum());
 		po.setDescription(poDto.getDescription());
@@ -82,44 +84,50 @@ public class PoServiceImpl implements PoService {
 		po.setPurchaseagent(poDto.getPurchaseagent());
 		po.setVendeliverydate(poDto.getVendeliverydate());
 		po.setPoid(poDto.getPoid());
-		List<PoLine> polinelist=new ArrayList<>();
-		for (int i =0 ;i<poDto.getPoline().size();i++) {
-			
-			PoLine poline=new PoLine();
-			poline.setPolinenum(poDto.getPoline().get(i).getPolinenum());
-			poline.setItemnum(poDto.getPoline().get(i).getItemnum());
-			poline.setDescription(poDto.getPoline().get(i).getDescription());
-			poline.setOrderqty(poDto.getPoline().get(i).getOrderqty());
-			poline.setOrderunit(poDto.getPoline().get(i).getOrderunit());
-			poline.setUnitcost(poDto.getPoline().get(i).getUnitcost());
-			poline.setLinecost(poDto.getPoline().get(i).getLinecost());	
-			poline.setVendeliverydate(poDto.getPoline().get(i).getVendeliverydate());	
-			polinelist.add(poline);
-			
+		List<PoLine> polinelist = new ArrayList<>();
+		if (poDto.getPoterm() != null) {
+			for (int i = 0; i < poDto.getPoline().size(); i++) {
+
+				PoLine poline = new PoLine();
+				poline.setPolinenum(poDto.getPoline().get(i).getPolinenum());
+				poline.setItemnum(poDto.getPoline().get(i).getItemnum());
+				poline.setDescription(poDto.getPoline().get(i).getDescription());
+				poline.setOrderqty(poDto.getPoline().get(i).getOrderqty());
+				poline.setOrderunit(poDto.getPoline().get(i).getOrderunit());
+				poline.setUnitcost(poDto.getPoline().get(i).getUnitcost());
+				poline.setLinecost(poDto.getPoline().get(i).getLinecost());
+				poline.setVendeliverydate(poDto.getPoline().get(i).getVendeliverydate());
+				polinelist.add(poline);
+
+			}
+			po.setPoline(polinelist);
 		}
-		List<Poterm> potermlist=new ArrayList<>();
-		for (int i =0 ;i<poDto.getPoterm().size();i++) {
-			
-			Poterm poterm=new Poterm();
-		
-			poterm.setSeqnum(poDto.getPoterm().get(i).getSeqnum());
-			poterm.setPotermid(poDto.getPoterm().get(i).getPotermid());
-			poterm.setDescription(poDto.getPoterm().get(i).getDescription());
-			poterm.setSendtovendor(poDto.getPoterm().get(i).getSendtovendor());
-				
-			potermlist.add(poterm);
-			
+		List<Poterm> potermlist = new ArrayList<>();
+		if (poDto.getPoterm() != null) {
+
+			for (int i = 0; i < poDto.getPoterm().size(); i++) {
+
+				Poterm poterm = new Poterm();
+
+				poterm.setSeqnum(poDto.getPoterm().get(i).getSeqnum());
+				poterm.setPotermid(poDto.getPoterm().get(i).getPotermid());
+				poterm.setDescription(poDto.getPoterm().get(i).getDescription());
+				poterm.setSendtovendor(poDto.getPoterm().get(i).getSendtovendor());
+
+				potermlist.add(poterm);
+
+			}
+
+			po.setPoterm(potermlist);
 		}
-		po.setPoterm(potermlist);
-		po.setPoline(polinelist);
-	
+
 		return po;
-		
+
 	}
 
 	@Override
 	public void deleteAllPos() {
-		poRepository.deleteAll();		
+		poRepository.deleteAll();
 	}
 
 }

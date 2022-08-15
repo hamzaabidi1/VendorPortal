@@ -84,7 +84,7 @@ public class PublicApi {
 		System.out.println("********  success ********");
 
 		List<FileDB> dbfiles = new ArrayList<FileDB>();
-
+				if (resultGet.getBody() != null){	
 		for (int i = 0; i < resultGet.getBody().getMember().size(); i++) {
 			FileDB dbfile = new FileDB();
 			dbfile.setName(resultGet.getBody().getMember().get(i).getDescribedBy().getFileName());
@@ -97,6 +97,7 @@ public class PublicApi {
 		}
 
 		rfq.setFiles(dbfiles);
+				}
 		return rfqService.addRFQ(rfq);
 
 	}
