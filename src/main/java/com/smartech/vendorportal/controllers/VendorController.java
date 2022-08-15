@@ -153,7 +153,7 @@ public class VendorController {
 		headers.set(key, configs.getHeaderMaximo());
 		HttpEntity<MaximoRequest> getBody = new HttpEntity<>(headers);
 		ResponseEntity<PoRequestList> result = restTemplate.exchange(uri, HttpMethod.GET, getBody, PoRequestList.class);
-		List<PoDto> pos = new ArrayList<PoDto>();
+		List<PoDto> pos = new ArrayList<>();
 		List<Po> posLocal = new ArrayList<>();
 		try {
 			pos = result.getBody().getMember();
@@ -173,11 +173,13 @@ public class VendorController {
 				if (pos.get(i).getVendeliverydate().length()>0) {
 				po.setVendeliverydate(pos.get(i).getVendeliverydate().substring(0, 10));
 				}
+				if (pos.get(i).getPoline() != null) {
 				for (int j=0 ;j<pos.get(i).getPoline().size();j++)
 				{
 					if (pos.get(i).getPoline().get(j).getVendeliverydate().length()>0) {
 						po.getPoline().get(j).setVendeliverydate(pos.get(i).getPoline().get(j).getVendeliverydate().substring(0, 10));
 					}
+				}
 				}
 				
 				posLocal.add(po);

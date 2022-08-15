@@ -32,10 +32,11 @@ public class RfqServiceImpl implements RfqService {
 		for (int i = 0; i < rfq.getRfqline().size(); i++) {
 			rfqLineRepository.save(rfq.getRfqline().get(i));
 		}
-		if (rfq.getFiles() != null)
+		if (rfq.getFiles() != null) {
 		for (int i=0 ;i<rfq.getFiles().size();i++)
 		{
 			fileDBRepository.save(rfq.getFiles().get(i));
+		}
 		}
 		return rfqRepository.save(rfq);
 	}

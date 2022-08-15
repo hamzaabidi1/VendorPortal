@@ -85,7 +85,7 @@ public class PoServiceImpl implements PoService {
 		po.setVendeliverydate(poDto.getVendeliverydate());
 		po.setPoid(poDto.getPoid());
 		List<PoLine> polinelist = new ArrayList<>();
-		if (poDto.getPoterm() != null) {
+		if (poDto.getPoline() != null) {
 			for (int i = 0; i < poDto.getPoline().size(); i++) {
 
 				PoLine poline = new PoLine();
