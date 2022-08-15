@@ -31,12 +31,9 @@ public class RfqLine {
 	private double unitcost;
 	private double linecost;
 	private double quotationqty;
-	@Temporal(TemporalType.DATE)
-	private Date quoteStartDate;
-	@Temporal(TemporalType.DATE)
-	private Date quoteEndDate;
-	@Temporal(TemporalType.DATE)
-	private Date delivryDate;
+	private String quoteStartDate;
+	private String quoteEndDate;
+	private String delivryDate;
 	
 	@ManyToOne
 	@JoinColumn(name = "rfq_id")
@@ -44,8 +41,8 @@ public class RfqLine {
 	
 	
 	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, double orderqty, String orderunit,
-			double unitcost, double linecost, double quotationqty, Date quoteStartDate, Date quoteEndDate,
-			Date delivryDate, Rfq rfq) {
+			double unitcost, double linecost, double quotationqty, String quoteStartDate, String quoteEndDate,
+			String delivryDate, Rfq rfq) {
 		super();
 		this.id = id;
 		this.rfqlinenum = rfqlinenum;
@@ -118,22 +115,22 @@ public class RfqLine {
 	public void setQuotationqty(double quotationqty) {
 		this.quotationqty = quotationqty;
 	}
-	public Date getQuoteStartDate() {
+	public String getQuoteStartDate() {
 		return quoteStartDate;
 	}
-	public void setQuoteStartDate(Date quoteStartDate) {
+	public void setQuoteStartDate(String quoteStartDate) {
 		this.quoteStartDate = quoteStartDate;
 	}
-	public Date getQuoteEndDate() {
+	public String getQuoteEndDate() {
 		return quoteEndDate;
 	}
-	public void setQuoteEndDate(Date quoteEndDate) {
+	public void setQuoteEndDate(String quoteEndDate) {
 		this.quoteEndDate = quoteEndDate;
 	}
-	public Date getDelivryDate() {
+	public String getDelivryDate() {
 		return delivryDate;
 	}
-	public void setDelivryDate(Date delivryDate) {
+	public void setDelivryDate(String delivryDate) {
 		this.delivryDate = delivryDate;
 	}
 	public Rfq getRfq() {

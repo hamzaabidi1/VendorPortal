@@ -83,7 +83,7 @@ public class PublicApi {
 				FileExchangeMaximoDto.class);
 		System.out.println("********  success ********");
 
-		List<FileDB> dbfiles = new ArrayList<FileDB>();
+		List<FileDB> dbfiles = new ArrayList<>();
 				if (resultGet.getBody() != null){	
 		for (int i = 0; i < resultGet.getBody().getMember().size(); i++) {
 			FileDB dbfile = new FileDB();
