@@ -323,3 +323,1032 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2022-08-16 09:36:51.984  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
 2022-08-16 09:36:51.991  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
 2022-08-16 09:36:51.991  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
+2022-08-16 09:36:51.991  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
+2022-08-16 09:38:13.496  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:38:13.496  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:38:13.496  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 09:38:13.500  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 09:38:13.500  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:38:13.501  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:38:13.562  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:38:13.562  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:38:13.564  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:38:13.566  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:38:13.568  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
+2022-08-16 09:38:13.568  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
+2022-08-16 09:38:13.568  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-08-16 09:38:13.572  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-08-16 09:38:13.572  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
+2022-08-16 09:38:13.572  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
+2022-08-16 09:38:13.666  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:38:13.666  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:38:13.670  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:38:13.672  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:38:13.676  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(ResponseEntity com.smartech.vendorportal.controllers.FileController.getListFilesPerRfq(Long))
+2022-08-16 09:38:13.676  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Stream com.smartech.vendorportal.services.FileStorageServiceImpl.getAllFilesPerRfq(Long))
+2022-08-16 09:38:13.676  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.FileDBRepository.getAllFilePerRfq(Long))
+2022-08-16 09:38:13.678  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.FileDBRepository.getAllFilePerRfq(Long))
+2022-08-16 09:38:13.679  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Stream com.smartech.vendorportal.services.FileStorageServiceImpl.getAllFilesPerRfq(Long))
+2022-08-16 09:38:13.679  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(ResponseEntity com.smartech.vendorportal.controllers.FileController.getListFilesPerRfq(Long))
+2022-08-16 09:58:20.035  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:58:20.035  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:58:20.039  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:58:20.042  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:58:20.045  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.RfqController.getAllRfq(String))
+2022-08-16 09:58:20.045  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.RfqServiceImpl.retriveAllRfqByUser(String))
+2022-08-16 09:58:20.045  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.RfqRepository.findAllRfqByUser(String))
+2022-08-16 09:58:20.050  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.RfqRepository.findAllRfqByUser(String))
+2022-08-16 09:58:20.051  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.RfqServiceImpl.retriveAllRfqByUser(String))
+2022-08-16 09:58:20.051  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.RfqController.getAllRfq(String))
+2022-08-16 09:58:23.585  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:58:23.585  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:58:23.587  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:58:23.589  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:58:23.593  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-16 09:58:23.597  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-16 09:58:23.600  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-16 09:58:23.602  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-16 09:58:23.602  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-16 09:58:23.602  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-16 09:58:23.615  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:58:23.615  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:58:23.617  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:58:23.619  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:58:23.621  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-16 09:58:23.625  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 09:58:23.628  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 09:58:25.721  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-16 09:58:25.743 ERROR 8920 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.1.209:9081/maxrest/oslc/os/MXPO": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:576) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:565) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:645) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:595) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:497) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:600) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:372) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1299) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1120) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1051) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController.getPo(VendorController.java:155) ~[classes/:na]
+	at com.smartech.vendorportal.controllers.VendorController$$FastClassBySpringCGLIB$$cc28a4d5.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61) ~[spring-security-core-5.6.2.jar:5.6.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController$$EnhancerBySpringCGLIB$$73a78786.getPo(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at com.smartech.vendorportal.services.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-08-16 09:59:02.938  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:59:02.939  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:59:02.939  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 09:59:02.943  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 09:59:02.943  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:59:02.944  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:59:02.991  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:59:02.991  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:59:02.993  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:59:02.995  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:59:02.999  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-16 09:59:02.999  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-16 09:59:02.999  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-16 09:59:03.000  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-16 09:59:03.001  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-16 09:59:03.001  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-16 09:59:03.152  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:59:03.152  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:59:03.156  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:59:03.158  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:59:03.160  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-16 09:59:03.160  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 09:59:03.164  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 09:59:05.216  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-16 09:59:05.219 ERROR 8920 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.1.209:9081/maxrest/oslc/os/MXPO": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:576) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:565) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:645) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:595) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:497) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:600) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:372) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1299) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1120) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1051) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController.getPo(VendorController.java:155) ~[classes/:na]
+	at com.smartech.vendorportal.controllers.VendorController$$FastClassBySpringCGLIB$$cc28a4d5.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61) ~[spring-security-core-5.6.2.jar:5.6.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController$$EnhancerBySpringCGLIB$$73a78786.getPo(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at com.smartech.vendorportal.services.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-08-16 09:59:12.160  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:59:12.161  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:59:12.161  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 09:59:12.163  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 09:59:12.164  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:59:12.164  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 09:59:12.209  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:59:12.209  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:59:12.211  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:59:12.212  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:59:12.214  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-16 09:59:12.214  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-16 09:59:12.215  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-16 09:59:12.216  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-16 09:59:12.216  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-16 09:59:12.216  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-16 09:59:12.319  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:59:12.319  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:59:12.323  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 09:59:12.325  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 09:59:12.328  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-16 09:59:12.329  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 09:59:12.333  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 09:59:14.368  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-16 09:59:14.371 ERROR 8920 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.1.209:9081/maxrest/oslc/os/MXPO": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:576) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:565) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:645) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:595) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:497) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:600) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:372) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1299) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1120) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1051) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController.getPo(VendorController.java:155) ~[classes/:na]
+	at com.smartech.vendorportal.controllers.VendorController$$FastClassBySpringCGLIB$$cc28a4d5.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61) ~[spring-security-core-5.6.2.jar:5.6.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController$$EnhancerBySpringCGLIB$$73a78786.getPo(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at com.smartech.vendorportal.services.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-08-16 10:00:32.448  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:00:32.449  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:00:32.450  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:00:32.456  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:00:32.456  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:00:32.464  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:02.364  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : executing execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:02.364  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:01:02.365  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:01:02.368  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:01:02.368  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:01:02.368  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:04.479  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:04.479  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:01:04.479  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:01:04.481  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:01:04.481  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:01:04.481  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:11.450  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:11.450  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:01:11.450  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:01:11.454  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:01:11.454  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:01:11.568  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:11.568  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:11.570  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:11.571  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:11.688  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:13.087  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Long com.smartech.vendorportal.controllers.AuthController.getNumberofRequests())
+2022-08-16 10:01:13.088  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Long com.smartech.vendorportal.services.RequestUpdateProfileServiceImpl.numberofRequest())
+2022-08-16 10:01:13.098  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(long org.springframework.data.repository.CrudRepository.count())
+2022-08-16 10:01:13.106  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(long org.springframework.data.repository.CrudRepository.count())
+2022-08-16 10:01:13.106  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Long com.smartech.vendorportal.services.RequestUpdateProfileServiceImpl.numberofRequest())
+2022-08-16 10:01:13.106  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Long com.smartech.vendorportal.controllers.AuthController.getNumberofRequests())
+2022-08-16 10:01:17.669  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:17.670  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:17.672  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:17.674  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:17.677  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.AdminController.retrieveAllUsers())
+2022-08-16 10:01:17.684  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.UserControlImpl.retriveAllVendor())
+2022-08-16 10:01:17.684  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.UserRepository.findAllVendors())
+2022-08-16 10:01:17.725  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.UserRepository.findAllVendors())
+2022-08-16 10:01:17.725  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.UserControlImpl.retriveAllVendor())
+2022-08-16 10:01:17.725  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.AdminController.retrieveAllUsers())
+2022-08-16 10:01:32.484  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:32.484  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:01:32.484  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:01:32.486  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:01:32.486  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:01:32.487  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:32.487  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:32.490  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:32.492  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:32.596  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:01:33.444  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 10:01:33.444  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 10:01:33.444  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 10:01:33.447  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 10:01:33.447  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 10:01:33.447  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 10:01:38.516  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:38.517  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:38.519  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:38.521  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:38.523  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.RfqController.getAllRfq(String))
+2022-08-16 10:01:38.524  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.RfqServiceImpl.retriveAllRfqByUser(String))
+2022-08-16 10:01:38.524  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.RfqRepository.findAllRfqByUser(String))
+2022-08-16 10:01:38.526  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.RfqRepository.findAllRfqByUser(String))
+2022-08-16 10:01:38.526  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.RfqServiceImpl.retriveAllRfqByUser(String))
+2022-08-16 10:01:38.526  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.RfqController.getAllRfq(String))
+2022-08-16 10:01:41.570  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:41.571  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:41.572  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:41.574  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:41.576  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-16 10:01:41.576  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-16 10:01:41.576  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-16 10:01:41.578  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.PoRepository.findAllPoByUser(String))
+2022-08-16 10:01:41.578  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.PoServiceImpl.retriveAllPOByUser(String))
+2022-08-16 10:01:41.579  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.PoController.getAllPo(String))
+2022-08-16 10:01:41.603  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:41.603  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:41.606  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:41.607  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:41.609  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-16 10:01:41.609  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 10:01:41.612  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 10:01:43.666  INFO 8920 --- [http-nio-8080-exec-4] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.VendorController.getPo(String))
+2022-08-16 10:01:43.670 ERROR 8920 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.1.209:9081/maxrest/oslc/os/MXPO": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:576) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:565) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:645) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:595) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:497) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:600) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:372) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1299) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1120) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1051) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController.getPo(VendorController.java:155) ~[classes/:na]
+	at com.smartech.vendorportal.controllers.VendorController$$FastClassBySpringCGLIB$$cc28a4d5.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61) ~[spring-security-core-5.6.2.jar:5.6.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController$$EnhancerBySpringCGLIB$$73a78786.getPo(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at com.smartech.vendorportal.services.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-08-16 10:01:56.273  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:56.273  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:56.276  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:56.278  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:56.282  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.InvoiceController.getAllInvoice(String))
+2022-08-16 10:01:56.285  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.InvoiceServiceImpl.retriveAllInvoiceByUser(String))
+2022-08-16 10:01:56.288  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.InvoiceRepository.findAllInvoiceByUser(String))
+2022-08-16 10:01:56.290  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.InvoiceRepository.findAllInvoiceByUser(String))
+2022-08-16 10:01:56.290  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.InvoiceServiceImpl.retriveAllInvoiceByUser(String))
+2022-08-16 10:01:56.290  INFO 8920 --- [http-nio-8080-exec-6] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.InvoiceController.getAllInvoice(String))
+2022-08-16 10:01:56.302  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:56.303  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:56.304  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:01:56.305  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:01:56.307  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.VendorController.getinvoice(String))
+2022-08-16 10:01:56.308  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 10:01:56.310  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 10:01:58.378  INFO 8920 --- [http-nio-8080-exec-8] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.VendorController.getinvoice(String))
+2022-08-16 10:01:58.381 ERROR 8920 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.1.209:9081/maxrest/oslc/os/MXINVOICE": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:576) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:565) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:645) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:595) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:497) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:600) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:372) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1299) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1120) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1051) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602) ~[spring-web-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController.getinvoice(VendorController.java:85) ~[classes/:na]
+	at com.smartech.vendorportal.controllers.VendorController$$FastClassBySpringCGLIB$$cc28a4d5.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61) ~[spring-security-core-5.6.2.jar:5.6.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.16.jar:5.3.16]
+	at com.smartech.vendorportal.controllers.VendorController$$EnhancerBySpringCGLIB$$73a78786.getinvoice(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at com.smartech.vendorportal.services.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-08-16 10:02:00.714  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:00.715  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:00.718  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:00.719  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:00.721  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.RfqController.getAllRfq(String))
+2022-08-16 10:02:00.721  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.RfqServiceImpl.retriveAllRfqByUser(String))
+2022-08-16 10:02:00.721  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.RfqRepository.findAllRfqByUser(String))
+2022-08-16 10:02:00.723  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.RfqRepository.findAllRfqByUser(String))
+2022-08-16 10:02:00.723  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.RfqServiceImpl.retriveAllRfqByUser(String))
+2022-08-16 10:02:00.723  INFO 8920 --- [http-nio-8080-exec-10] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.RfqController.getAllRfq(String))
+2022-08-16 10:02:18.714  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:02:18.715  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:02:18.715  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:02:18.717  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.repositories.UserRepository.existsByUsername(String))
+2022-08-16 10:02:18.717  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Boolean com.smartech.vendorportal.services.UserControlImpl.retrieveUserByUserName(String))
+2022-08-16 10:02:18.718  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:18.718  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:18.720  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:18.722  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:18.826  INFO 8920 --- [http-nio-8080-exec-2] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(ResponseEntity com.smartech.vendorportal.controllers.AuthController.authenticateUser(LoginRequest))
+2022-08-16 10:02:19.580  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 10:02:19.581  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 10:02:19.581  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 10:02:19.584  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(User com.smartech.vendorportal.repositories.UserRepository.findByEmail(String))
+2022-08-16 10:02:19.584  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.services.UserControlImpl.retrieveStatusOneUserByEmail(String))
+2022-08-16 10:02:19.584  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(String com.smartech.vendorportal.controllers.AuthController.retrieveStatusOneUserByEmail(String))
+2022-08-16 10:02:22.731  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:22.731  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:22.733  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:22.734  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:22.737  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.controllers.RfqController.getAllRfq(String))
+2022-08-16 10:02:22.737  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.services.RfqServiceImpl.retriveAllRfqByUser(String))
+2022-08-16 10:02:22.737  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.RfqRepository.findAllRfqByUser(String))
+2022-08-16 10:02:22.743  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.RfqRepository.findAllRfqByUser(String))
+2022-08-16 10:02:22.743  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.services.RfqServiceImpl.retriveAllRfqByUser(String))
+2022-08-16 10:02:22.743  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.controllers.RfqController.getAllRfq(String))
+2022-08-16 10:02:25.810  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:25.810  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:25.812  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:25.813  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:25.816  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
+2022-08-16 10:02:25.816  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
+2022-08-16 10:02:25.816  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-08-16 10:02:25.819  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-08-16 10:02:25.819  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
+2022-08-16 10:02:25.819  INFO 8920 --- [http-nio-8080-exec-7] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
+2022-08-16 10:02:25.850  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:25.850  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:25.852  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:25.853  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:25.855  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : executing execution(ResponseEntity com.smartech.vendorportal.controllers.FileController.getListFilesPerRfq(Long))
+2022-08-16 10:02:25.856  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Stream com.smartech.vendorportal.services.FileStorageServiceImpl.getAllFilesPerRfq(Long))
+2022-08-16 10:02:25.856  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : executing execution(List com.smartech.vendorportal.repositories.FileDBRepository.getAllFilePerRfq(Long))
+2022-08-16 10:02:25.867  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(List com.smartech.vendorportal.repositories.FileDBRepository.getAllFilePerRfq(Long))
+2022-08-16 10:02:25.867  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Stream com.smartech.vendorportal.services.FileStorageServiceImpl.getAllFilesPerRfq(Long))
+2022-08-16 10:02:25.869  INFO 8920 --- [http-nio-8080-exec-9] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(ResponseEntity com.smartech.vendorportal.controllers.FileController.getListFilesPerRfq(Long))
+2022-08-16 10:02:27.098  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:27.098  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:27.099  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:27.101  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:27.103  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(RfqLine com.smartech.vendorportal.controllers.RfqController.getRfqLineByid(Long))
+2022-08-16 10:02:27.103  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(RfqLine com.smartech.vendorportal.services.RfqLineServiceImpl.retriveRfqLine(Long))
+2022-08-16 10:02:27.103  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-08-16 10:02:27.106  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-08-16 10:02:27.107  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(RfqLine com.smartech.vendorportal.services.RfqLineServiceImpl.retriveRfqLine(Long))
+2022-08-16 10:02:27.107  INFO 8920 --- [http-nio-8080-exec-1] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(RfqLine com.smartech.vendorportal.controllers.RfqController.getRfqLineByid(Long))
+2022-08-16 10:02:34.723  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:34.723  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:34.725  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:34.727  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:34.732  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(void com.smartech.vendorportal.controllers.RfqController.updateRfqLineByid(RfqLine))
+2022-08-16 10:02:34.732  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(RfqLine com.smartech.vendorportal.services.RfqLineServiceImpl.updateRFQLine(RfqLine))
+2022-08-16 10:02:34.732  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-16 10:02:34.738  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Object org.springframework.data.repository.CrudRepository.save(Object))
+2022-08-16 10:02:34.738  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(RfqLine com.smartech.vendorportal.services.RfqLineServiceImpl.updateRFQLine(RfqLine))
+2022-08-16 10:02:34.739  INFO 8920 --- [http-nio-8080-exec-3] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(void com.smartech.vendorportal.controllers.RfqController.updateRfqLineByid(RfqLine))
+2022-08-16 10:02:34.752  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:34.752  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:34.753  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional com.smartech.vendorportal.repositories.UserRepository.findByUsername(String))
+2022-08-16 10:02:34.755  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(UserDetails com.smartech.vendorportal.services.UserDetailsServiceImpl.loadUserByUsername(String))
+2022-08-16 10:02:34.758  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
+2022-08-16 10:02:34.758  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
+2022-08-16 10:02:34.758  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-08-16 10:02:34.763  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Optional org.springframework.data.repository.CrudRepository.findById(Object))
+2022-08-16 10:02:34.763  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.services.RfqServiceImpl.retrieveOneById(Long))
+2022-08-16 10:02:34.763  INFO 8920 --- [http-nio-8080-exec-5] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Rfq com.smartech.vendorportal.controllers.RfqController.getRfqDetails(Long))
+2022-08-16 10:37:41.586  INFO 8920 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-16 10:37:41.587  INFO 8920 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-08-16 10:37:41.590  INFO 8920 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-08-16 10:37:41.738  INFO 8920 --- [restartedMain] c.s.v.VendorPortalApplication            : Starting VendorPortalApplication using Java 16.0.2 on DESKTOP-QOEUFNO with PID 8920 (C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal\target\classes started by ASUS in C:\Users\ASUS\Desktop\VendorPortalFront\vendorportal)
+2022-08-16 10:37:41.738  INFO 8920 --- [restartedMain] c.s.v.VendorPortalApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-16 10:37:42.680  INFO 8920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-16 10:37:42.752  INFO 8920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 13 JPA repository interfaces.
+2022-08-16 10:37:42.986  INFO 8920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-16 10:37:42.987  INFO 8920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-16 10:37:42.987  INFO 8920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-08-16 10:37:43.023  INFO 8920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-16 10:37:43.023  INFO 8920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1281 ms
+2022-08-16 10:37:43.076  WARN 8920 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-16 10:37:43.148  INFO 8920 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-16 10:37:43.157  INFO 8920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-16 10:37:43.162  INFO 8920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-16 10:37:43.162  INFO 8920 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-08-16 10:37:43.261  INFO 8920 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.ClientReference (class must be instantiated by Interceptor)
+2022-08-16 10:37:43.277  INFO 8920 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Commoditie (class must be instantiated by Interceptor)
+2022-08-16 10:37:43.314  INFO 8920 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.Attachement (class must be instantiated by Interceptor)
+2022-08-16 10:37:43.341  INFO 8920 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.smartech.vendorportal.entities.VendorCommodities (class must be instantiated by Interceptor)
+2022-08-16 10:37:43.507  INFO 8920 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-16 10:37:43.507  INFO 8920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-16 10:37:43.871  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-16 10:37:43.877  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthTokenFilter com.smartech.vendorportal.utils.WebSecurityConfig.authenticationJwtTokenFilter())
+2022-08-16 10:37:43.994  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-16 10:37:43.997  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 10:37:44.020  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(Config com.smartech.vendorportal.services.ConfigServiceImpl.retriveAllConfig())
+2022-08-16 10:37:44.021  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(JavaMailSender com.smartech.vendorportal.utils.MailConfig.getJavaMailSender())
+2022-08-16 10:37:44.138  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-16 10:37:44.138  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(AuthenticationManager com.smartech.vendorportal.utils.WebSecurityConfig.authenticationManagerBean())
+2022-08-16 10:37:44.139  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-16 10:37:44.140  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : Complete execution of execution(PasswordEncoder com.smartech.vendorportal.utils.WebSecurityConfig.passwordEncoder())
+2022-08-16 10:37:44.608  INFO 8920 --- [restartedMain] c.s.vendorportal.aspect.LoggingConfig    : executing execution(CorsConfigurationSource com.smartech.vendorportal.utils.WebSecurityConfig.corsConfigurationSource())
