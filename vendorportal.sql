@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 12 août 2022 à 10:59
+-- Généré le : mar. 16 août 2022 à 15:30
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `tt`
+-- Base de données : `vendorportal`
 --
 
 -- --------------------------------------------------------
@@ -459,10 +459,52 @@ ALTER TABLE `invoice_line`
 --
 ALTER TABLE `pos`
   ADD CONSTRAINT `FK9m740mi52bb7paoe336y0j8wh` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Contraintes pour la table `po_line`
+--
+ALTER TABLE `po_line`
+  ADD CONSTRAINT `FKqiptmiqxvdx67iyxsly8m4qy6` FOREIGN KEY (`po_id`) REFERENCES `pos` (`id`);
+
+--
+-- Contraintes pour la table `po_term`
+--
+ALTER TABLE `po_term`
+  ADD CONSTRAINT `FKsde8bpxo903mv8t7f9bbtligl` FOREIGN KEY (`po_id`) REFERENCES `pos` (`id`);
+
+--
+-- Contraintes pour la table `rfqs`
+--
+ALTER TABLE `rfqs`
+  ADD CONSTRAINT `FK8b2of6iv9la2qd0ufh2vjg9h3` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Contraintes pour la table `rfq_line`
+--
+ALTER TABLE `rfq_line`
+  ADD CONSTRAINT `FKrq4ntmsa8p91fcvu96lhlu6tp` FOREIGN KEY (`rfq_id`) REFERENCES `rfqs` (`id`);
+
+--
+-- Contraintes pour la table `users_history`
+--
+ALTER TABLE `users_history`
+  ADD CONSTRAINT `FK6jy4fsyuq0378806oscioau17` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Contraintes pour la table `user_roles`
+--
+ALTER TABLE `user_roles`
+  ADD CONSTRAINT `FKh8ciramu9cc9q3qcqiv4ue8a6` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`),
+  ADD CONSTRAINT `FKhfh9dx7w3ubf1co1vdev94g3f` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Contraintes pour la table `vendor_commodities`
+--
+ALTER TABLE `vendor_commodities`
+  ADD CONSTRAINT `FK58unwt52orymlx834vdjuktj2` FOREIGN KEY (`commoditie_id`) REFERENCES `commoditie` (`commodities_id`),
+  ADD CONSTRAINT `FKhs4d58s84ffap7goh31gu1qt0` FOREIGN KEY (`vendor_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
