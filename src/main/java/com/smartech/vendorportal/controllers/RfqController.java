@@ -95,8 +95,8 @@ public class RfqController {
 
 	@PutMapping("/updateRfqLine")
 	@PreAuthorize("hasRole('FOURNISSEUR')")
-	public RfqLine updateRfqLineByid(@RequestBody RfqLine rfqline) {
-		return rfqLineService.updateRFQLine(rfqline);
+	public void updateRfqLineByid(@RequestBody RfqLine rfqline) {
+		rfqLineService.updateRFQLine(rfqline);
 
 	}
 
