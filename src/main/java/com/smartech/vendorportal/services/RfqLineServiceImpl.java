@@ -32,13 +32,12 @@ public class RfqLineServiceImpl implements RfqLineService {
 	}
 
 	@Override
-	public RfqLine updateRFQLine(RfqLine rfqline) {
-
-		return rfqLineRepository.save(rfqline);
+	public void updateRFQLine(RfqLine rfqline) {
+		 rfqLineRepository.save(rfqline);
 	}
 
 	@Override
-	public void DeleteById(Long id) {
+	public void deleteById(Long id) {
 		rfqLineRepository.deleteById(id);
 		
 	}

@@ -64,7 +64,7 @@ public class PublicApi {
 		if (rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()) != null) {	
 		List <RfqLine> reLines = rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()).getRfqline();
 		for (int i=0 ;i<reLines.size();i++) {
-			rfqLineService.DeleteById(reLines.get(i).getId());
+			rfqLineService.deleteById(reLines.get(i).getId());
 		}
 		rfqService.deleteRFQById(rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()).getId());
 		}

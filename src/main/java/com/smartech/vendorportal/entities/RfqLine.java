@@ -32,7 +32,6 @@ public class RfqLine {
 	private String quoteStartDate;
 	private String quoteEndDate;
 	private String delivryDate;
-	
 	@ManyToOne
 	@JoinColumn(name = "rfq_id")
 	private Rfq rfq;
@@ -56,7 +55,6 @@ public class RfqLine {
 		this.quoteEndDate = quoteEndDate;
 		this.delivryDate = delivryDate;
 	}
-	
 	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, double orderqty, String orderunit,
 			double unitcost, double linecost, double quotationqty, String quoteStartDate, String quoteEndDate,
 			String delivryDate, Rfq rfq) {

@@ -35,6 +35,7 @@ public class Rfq {
 	private boolean statusofSend;
 	@Temporal(TemporalType.DATE)
 	private Date dateEnvoie;
+
     @OneToMany
 	@JoinColumn(name = "rfq_id")
 	List<RfqLine> rfqline;

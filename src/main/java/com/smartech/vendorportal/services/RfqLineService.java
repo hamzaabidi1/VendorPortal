@@ -10,7 +10,7 @@ public interface RfqLineService {
 	List<RfqLine> retriveAllRfqLine(Long rfqid);
 	RfqLine retriveRfqLine(Long rfqLineid);
 	void addRFQLine(List<RfqLine> rfqline);
-	 RfqLine updateRFQLine( RfqLine rfqline);
-	 void DeleteById(Long id);
+	 void updateRFQLine( RfqLine rfqline);
+	 void deleteById(Long id);
 
 }
