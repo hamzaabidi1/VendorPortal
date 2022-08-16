@@ -99,6 +99,7 @@ INSERT INTO `config` (`id`, `email`, `logpath`, `maximopath`, `password`, `passw
 -- Structure de la table `files`
 --
 
+
 DROP TABLE IF EXISTS `files`;
 CREATE TABLE IF NOT EXISTS `files` (
   `id` varchar(255) NOT NULL,
@@ -130,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `invoices` (
   `user_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKbwr4d4vyqf2bkoetxtt8j9dx7` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -151,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `invoice_line` (
   `invoice_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK2b91edluue12qy0l4ttn2comt` (`invoice_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -175,13 +176,14 @@ CREATE TABLE IF NOT EXISTS `pos` (
   `poid` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK9m740mi52bb7paoe336y0j8wh` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1476 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `po_line`
 --
+
 
 DROP TABLE IF EXISTS `po_line`;
 CREATE TABLE IF NOT EXISTS `po_line` (
@@ -197,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `po_line` (
   `vendeliverydate` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKqiptmiqxvdx67iyxsly8m4qy6` (`po_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1848 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -215,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `po_term` (
   `po_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKsde8bpxo903mv8t7f9bbtligl` (`po_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1173 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -241,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `request_update_profile` (
   `taxclassificationcode` varchar(255) DEFAULT NULL,
   `taxregistrationnumber` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -348,7 +350,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKr43af9ap4edm43mmtq01oddj6` (`username`),
   UNIQUE KEY `UK6dotkott2kjsp8vw4d0m25fb7` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
