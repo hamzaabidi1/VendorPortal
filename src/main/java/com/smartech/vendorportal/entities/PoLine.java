@@ -49,6 +49,22 @@ public class PoLine {
 		this.po = po;
 	}
 	
+	
+	public PoLine(Long id, String polinenum, String itemnum, String description, String orderqty, String orderunit,
+			String unitcost, String linecost, String vendeliverydate) {
+		super();
+		this.id = id;
+		this.polinenum = polinenum;
+		this.itemnum = itemnum;
+		this.description = description;
+		this.orderqty = orderqty;
+		this.orderunit = orderunit;
+		this.unitcost = unitcost;
+		this.linecost = linecost;
+		this.vendeliverydate = vendeliverydate;
+	}
+
+
 	public PoLine(String polinenum,String vendeliverydate) {
 		this.polinenum = polinenum;
 		this.vendeliverydate=vendeliverydate;

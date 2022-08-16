@@ -1,6 +1,6 @@
 package com.smartech.vendorportal.entities;
 
-import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
@@ -39,6 +37,25 @@ public class RfqLine {
 	@JoinColumn(name = "rfq_id")
 	private Rfq rfq;
 	
+	
+	
+	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, double orderqty, String orderunit,
+			double unitcost, double linecost, double quotationqty, String quoteStartDate, String quoteEndDate,
+			String delivryDate) {
+		super();
+		this.id = id;
+		this.rfqlinenum = rfqlinenum;
+		this.itemnum = itemnum;
+		this.description = description;
+		this.orderqty = orderqty;
+		this.orderunit = orderunit;
+		this.unitcost = unitcost;
+		this.linecost = linecost;
+		this.quotationqty = quotationqty;
+		this.quoteStartDate = quoteStartDate;
+		this.quoteEndDate = quoteEndDate;
+		this.delivryDate = delivryDate;
+	}
 	
 	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, double orderqty, String orderunit,
 			double unitcost, double linecost, double quotationqty, String quoteStartDate, String quoteEndDate,
