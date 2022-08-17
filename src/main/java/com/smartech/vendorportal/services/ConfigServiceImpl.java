@@ -2,7 +2,6 @@ package com.smartech.vendorportal.services;
 
 
 import java.util.Base64;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,10 @@ public class ConfigServiceImpl implements ConfigService {
 
 	@Override
 	public Config retriveAllConfig() {
-		return configRepository.findAll().get(0);
+		Config config= new Config();
+		if (!configRepository.findAll().isEmpty())
+			config = configRepository.findAll().get(0);
+		return config;
 	}
 
 	@Override

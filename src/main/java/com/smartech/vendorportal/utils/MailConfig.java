@@ -13,18 +13,24 @@ import com.smartech.vendorportal.services.ConfigService;
 
 @Configuration
 public class MailConfig {
-	@Autowired
-	ConfigService configService;
+//	@Autowired
+//	ConfigService configService;
 
 
 	@Bean
-	public JavaMailSender getJavaMailSender() {
-		Config configs = configService.retriveAllConfig();
+	public JavaMailSenderImpl getJavaMailSender() {
+//		Config configs = configService.retriveAllConfig();
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 		mailSender.setHost("smtp.gmail.com");
 		mailSender.setPort(587);
-		mailSender.setUsername(configs.getEmail());
-		mailSender.setPassword(configs.getPassword());
+//		if (configs.getEmail() != null) {
+//		mailSender.setUsername(configs.getEmail());
+//		mailSender.setPassword(configs.getPassword());
+//		}
+//		else {
+//			mailSender.setUsername("hamza.abidi1@esprit.tn");
+//			mailSender.setPassword("193JMT0786");
+//		}
 		Properties props = mailSender.getJavaMailProperties();
 		props.put("mail.transport.protocol", "smtp");
 		props.put("mail.smtp.auth", "true");
