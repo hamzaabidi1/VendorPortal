@@ -1,6 +1,8 @@
 package com.smartech.vendorportal.entities;
 
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,27 +10,27 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 
 @Entity
 @Table(name = "rfq_line")
-@JsonIdentityInfo(
-		  generator = ObjectIdGenerators.PropertyGenerator.class, 
-		  property = "id")
-public class RfqLine {
+public class RfqLine implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5641460718074875004L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String rfqlinenum;
 	private String itemnum;
 	private String description;
-	private double orderqty;
+	private String orderqty;
 	private String orderunit;
-	private double unitcost;
-	private double linecost;
-	private double quotationqty;
+	private String unitcost;
+	private String linecost;
+	private String quotationqty;
 	private String quoteStartDate;
 	private String quoteEndDate;
 	private String delivryDate;
@@ -38,8 +40,8 @@ public class RfqLine {
 	
 	
 	
-	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, double orderqty, String orderunit,
-			double unitcost, double linecost, double quotationqty, String quoteStartDate, String quoteEndDate,
+	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, String orderqty, String orderunit,
+			String unitcost, String linecost, String quotationqty, String quoteStartDate, String quoteEndDate,
 			String delivryDate) {
 		super();
 		this.id = id;
@@ -55,8 +57,8 @@ public class RfqLine {
 		this.quoteEndDate = quoteEndDate;
 		this.delivryDate = delivryDate;
 	}
-	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, double orderqty, String orderunit,
-			double unitcost, double linecost, double quotationqty, String quoteStartDate, String quoteEndDate,
+	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, String orderqty, String orderunit,
+			String unitcost, String linecost, String quotationqty, String quoteStartDate, String quoteEndDate,
 			String delivryDate, Rfq rfq) {
 		super();
 		this.id = id;
@@ -100,10 +102,10 @@ public class RfqLine {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public double getOrderqty() {
+	public String getOrderqty() {
 		return orderqty;
 	}
-	public void setOrderqty(double orderqty) {
+	public void setOrderqty(String orderqty) {
 		this.orderqty = orderqty;
 	}
 	public String getOrderunit() {
@@ -112,22 +114,22 @@ public class RfqLine {
 	public void setOrderunit(String orderunit) {
 		this.orderunit = orderunit;
 	}
-	public double getUnitcost() {
+	public String getUnitcost() {
 		return unitcost;
 	}
-	public void setUnitcost(double unitcost) {
+	public void setUnitcost(String unitcost) {
 		this.unitcost = unitcost;
 	}
-	public double getLinecost() {
+	public String getLinecost() {
 		return linecost;
 	}
-	public void setLinecost(double linecost) {
+	public void setLinecost(String linecost) {
 		this.linecost = linecost;
 	}
-	public double getQuotationqty() {
+	public String getQuotationqty() {
 		return quotationqty;
 	}
-	public void setQuotationqty(double quotationqty) {
+	public void setQuotationqty(String quotationqty) {
 		this.quotationqty = quotationqty;
 	}
 	public String getQuoteStartDate() {
@@ -154,6 +156,7 @@ public class RfqLine {
 	public void setRfq(Rfq rfq) {
 		this.rfq = rfq;
 	}
+	
 	
 	
 

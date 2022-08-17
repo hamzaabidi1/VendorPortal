@@ -1,5 +1,6 @@
 package com.smartech.vendorportal.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
@@ -21,8 +22,12 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 		  property = "id")
 @Entity
 @Table(name = "rfqs")
-public class Rfq {
+public class Rfq implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2836367404750489993L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

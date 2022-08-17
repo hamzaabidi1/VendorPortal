@@ -9,9 +9,9 @@ public class RfqLineDto {
 	@JsonProperty("rfqlinenum")
 	private String rfqlinenum;
 	@JsonProperty("cost")
-	private double unitcost;
+	private String unitcost;
 	@JsonProperty("quantity")
-	private double quotationqty;
+	private String quotationqty;
 	@JsonProperty("QUOTESTARTDATE")
 	private String quoteStartDate;
 	@JsonProperty("QUOTEENDDATE")
@@ -20,7 +20,7 @@ public class RfqLineDto {
 	private String delivryDate;
 
 	public RfqLineDto(String rfqlinenum ,
-			double unitcost, double linecost,double quotationqty,String quoteStartDate,String quoteEndDate, String delivryDate) {
+			String unitcost, String linecost,String quotationqty,String quoteStartDate,String quoteEndDate, String delivryDate) {
 		super();
 		this.rfqlinenum = rfqlinenum;
 		this.unitcost = unitcost;
@@ -44,19 +44,19 @@ public class RfqLineDto {
 
 
 
-	public double getUnitcost() {
+	public String getUnitcost() {
 		return unitcost;
 	}
 
-	public void setUnitcost(double unitcost) {
+	public void setUnitcost(String unitcost) {
 		this.unitcost = unitcost;
 	}
 
-	public double getQuotationqty() {
+	public String getQuotationqty() {
 		return quotationqty;
 	}
 
-	public void setQuotationqty(double quotationqty) {
+	public void setQuotationqty(String quotationqty) {
 		this.quotationqty = quotationqty;
 	}
 
