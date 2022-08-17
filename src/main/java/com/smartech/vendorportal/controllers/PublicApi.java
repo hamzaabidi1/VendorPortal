@@ -69,6 +69,11 @@ public class PublicApi {
 		rfqService.deleteRFQById(rfqService.retrieveRfqByRfqNum(rfq.getRfqnum()).getId());
 		}
 		Config configs = configService.retriveAllConfig();
+		
+		
+
+		if (userControl.checkUserfoundandconfirmed(username)) {
+			
 		User user = userControl.getbyUserName(username);
 		rfq.setUser(user);
 
@@ -98,7 +103,11 @@ public class PublicApi {
 
 		rfq.setFiles(dbfiles);
 				}
-		return rfqService.addRFQ(rfq);
+			
+				rfqService.addRFQ(rfq);
+		}
+		return rfq;
+		 
 
 	}
 
@@ -126,6 +135,8 @@ public class PublicApi {
 			}
 		}
 		rfqService.addRFQ(rfq);
+		
+		
 		return re;
 	}
 

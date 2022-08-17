@@ -72,4 +72,6 @@ public interface UserControl {
 	User checkUser(String password, String username);
 	
 	void updateUserPassword (String email,String password);
+	
+	public boolean checkUserfoundandconfirmed(String username);
 }

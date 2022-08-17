@@ -26,11 +26,11 @@ public class RfqLine implements Serializable {
 	private String rfqlinenum;
 	private String itemnum;
 	private String description;
-	private String orderqty;
+	private Double orderqty;
 	private String orderunit;
-	private String unitcost;
-	private String linecost;
-	private String quotationqty;
+	private Double unitcost;
+	private Double linecost;
+	private Double quotationqty;
 	private String quoteStartDate;
 	private String quoteEndDate;
 	private String delivryDate;
@@ -40,8 +40,8 @@ public class RfqLine implements Serializable {
 	
 	
 	
-	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, String orderqty, String orderunit,
-			String unitcost, String linecost, String quotationqty, String quoteStartDate, String quoteEndDate,
+	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, Double orderqty, String orderunit,
+			Double unitcost, Double linecost, Double quotationqty, String quoteStartDate, String quoteEndDate,
 			String delivryDate) {
 		super();
 		this.id = id;
@@ -57,8 +57,8 @@ public class RfqLine implements Serializable {
 		this.quoteEndDate = quoteEndDate;
 		this.delivryDate = delivryDate;
 	}
-	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, String orderqty, String orderunit,
-			String unitcost, String linecost, String quotationqty, String quoteStartDate, String quoteEndDate,
+	public RfqLine(Long id, String rfqlinenum, String itemnum, String description, Double orderqty, String orderunit,
+			Double unitcost, Double linecost, Double quotationqty, String quoteStartDate, String quoteEndDate,
 			String delivryDate, Rfq rfq) {
 		super();
 		this.id = id;
@@ -102,10 +102,10 @@ public class RfqLine implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getOrderqty() {
+	public Double getOrderqty() {
 		return orderqty;
 	}
-	public void setOrderqty(String orderqty) {
+	public void setOrderqty(Double orderqty) {
 		this.orderqty = orderqty;
 	}
 	public String getOrderunit() {
@@ -114,22 +114,22 @@ public class RfqLine implements Serializable {
 	public void setOrderunit(String orderunit) {
 		this.orderunit = orderunit;
 	}
-	public String getUnitcost() {
+	public Double getUnitcost() {
 		return unitcost;
 	}
-	public void setUnitcost(String unitcost) {
+	public void setUnitcost(Double unitcost) {
 		this.unitcost = unitcost;
 	}
-	public String getLinecost() {
+	public Double getLinecost() {
 		return linecost;
 	}
-	public void setLinecost(String linecost) {
+	public void setLinecost(Double linecost) {
 		this.linecost = linecost;
 	}
-	public String getQuotationqty() {
+	public Double getQuotationqty() {
 		return quotationqty;
 	}
-	public void setQuotationqty(String quotationqty) {
+	public void setQuotationqty(Double quotationqty) {
 		this.quotationqty = quotationqty;
 	}
 	public String getQuoteStartDate() {

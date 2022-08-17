@@ -170,6 +170,15 @@ public class UserControlImpl implements UserControl {
 			throw new TaskException(HttpStatus.NOT_FOUND, "User Not Found!");
 		return userRepository.findByUsername(username).get();
 	}
+	
+	public boolean checkUserfoundandconfirmed(String username) {
+		if( userRepository.findByUsername(username).isEmpty())
+			return false;
+		else 
+		 if (userRepository.findByUsername(username).get().getStatus() == EStatus.Confirmed)
+			 return true;
+		 else return false;
+	}
 
 	public User updateUserToInProgress(User user, String email) {
 		saveHistory(user, email, EStatus.InProgress);
