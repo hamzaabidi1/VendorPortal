@@ -1,6 +1,5 @@
 FROM maven:3.6.3 AS maven
 COPY src /home/app/src
-COPY vendorportal.sql /home/app/vendorportal.sql
 COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean install -Dmaven.test.skip=true
 
